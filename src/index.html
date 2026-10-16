@@ -107,13 +107,13 @@
           "Friday"
         ],
         "opens": "07:30",
-        "closes": "17:30"
+        "closes": "19:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Saturday",
         "opens": "08:00",
-        "closes": "17:00"
+        "closes": "16:00"
       }
     ],
     "vatID": "GB510546327",
@@ -299,7 +299,7 @@
    "name": "Do you work on Saturdays?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Yes. We work Monday to Friday 7:30–17:30 and Saturday 8:00–17:00."
+    "text": "Yes. We work Monday to Friday 7:30–19:00 and Saturday 8:00–16:00."
    }
   },
   {
@@ -1014,6 +1014,40 @@
       main .btn-row{flex-direction:column;gap:10px}
     }
     @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .reveal{opacity:1!important}.marquee{animation:none;width:auto}.marquee ul{flex-wrap:wrap;justify-content:center;width:100%;row-gap:6px}.marquee ul[aria-hidden]{display:none}.ticker::before,.ticker::after{display:none}}
+    /* Policies */
+    .pol-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 8px;border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden}
+    .pol-meta div{padding:14px 16px;border-right:1px solid var(--line)}
+    .pol-meta div:last-child{border-right:0}
+    .pol-meta dt{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+    .pol-meta dd{margin:2px 0 0;font-weight:600;color:var(--navy);font-size:.95rem;line-height:1.35}
+    .tbl-wrap{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+    .prose .price-table{font-size:.95rem;line-height:1.5}
+    .price-table.plain td{font-weight:400;color:var(--ink);white-space:normal}
+    .price-table.plain td:first-child{font-weight:600;color:var(--navy);min-width:150px}
+    .prose .ticks{padding-left:0;margin-bottom:1.4rem}
+    .pol-kpis{list-style:none;padding:0!important;margin:0 0 1.4rem;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .pol-kpis li{margin:0;padding:18px 14px;border-radius:var(--r);background:var(--navy);color:#cbd5e1;font-size:.85rem;line-height:1.35}
+    .pol-kpis strong{display:block;color:var(--lime);font-family:Lexend,sans-serif;font-size:1.45rem;line-height:1.15;margin-bottom:6px}
+    .pol-sign{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:2.4rem 0 0;padding:22px;border-radius:var(--r);background:var(--soft);border-left:4px solid var(--lime)}
+    .pol-sign span{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+    .pol-sign strong{display:block;font-family:Lexend,sans-serif;color:var(--navy);font-size:1.15rem}
+    .pol-sign em{font-style:normal;font-size:.9rem;color:var(--muted)}
+    .prose .chips-light{padding-left:0}
+    .pol-sign + .small-print{margin-top:18px}
+    .prose h2.pol-rel-h{font-size:1.1rem!important;margin:2rem 0 .8rem}
+    .pol-group{font-size:1.25rem;margin:36px 0 16px}
+    .pol-group:first-child{margin-top:0}
+    .pol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .pol-card{display:flex;flex-direction:column;padding:24px;border-radius:var(--r);background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .25s,transform .25s,box-shadow .25s;scroll-margin-top:110px}
+    .pol-card:hover{border-color:var(--navy);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,16,58,.08)}
+    .pol-card h3{font-size:1.12rem;margin:6px 0 8px;color:var(--navy)}
+    .pol-card p{font-size:.95rem;line-height:1.55;margin:0 0 14px;color:var(--muted)}
+    .pol-tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+    .pol-more{margin-top:auto;font-weight:600;color:var(--navy);font-size:.92rem}
+    .pol-also{margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+    .pol-also h2{font-size:1.1rem;margin:0 0 12px}
+    @media (max-width:980px){.pol-grid{grid-template-columns:1fr 1fr}.pol-kpis{grid-template-columns:1fr 1fr}.pol-meta{grid-template-columns:1fr 1fr}.pol-meta div:nth-child(2){border-right:0}.pol-meta div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+    @media (max-width:600px){.pol-grid{grid-template-columns:1fr}.pol-sign{grid-template-columns:1fr}}
   </style>
 </head>
 
@@ -1180,7 +1214,7 @@
           </div>
           <p class="supply-sub">Subcontractor? <a href="/careers">Apply to join our supply chain →</a></p>
         </div>
-        <ul class="supply-docs"><li><a href="/policies#health-safety"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Health &amp; Safety<small>Policy</small></span></a></li><li><a href="/policies#quality"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Quality<small>Policy</small></span></a></li><li><a href="/policies#environmental"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Environmental<small>Policy</small></span></a></li><li><a href="/policies#safeguarding"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Safeguarding<small>Policy</small></span></a></li><li><a href="/policies#modern-slavery"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Modern Slavery<small>Policy</small></span></a></li><li><a href="/policies#equality"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Equality &amp; Diversity<small>Policy</small></span></a></li><li class="pend"><span class="pend-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></span><span>CHAS &amp; Constructionline<small>Applications in progress · Q1 2027</small></span></li></ul>
+        <ul class="supply-docs"><li><a href="/health-safety-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Health &amp; Safety<small>Policy</small></span></a></li><li><a href="/quality-management-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Quality<small>Policy</small></span></a></li><li><a href="/environmental-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Environmental<small>Policy</small></span></a></li><li><a href="/safeguarding-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Safeguarding<small>Policy</small></span></a></li><li><a href="/modern-slavery-statement"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Modern Slavery<small>Policy</small></span></a></li><li><a href="/equality-diversity-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Equality &amp; Diversity<small>Policy</small></span></a></li><li class="pend"><span class="pend-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></span><span>CHAS &amp; Constructionline<small>Applications in progress · Q1 2027</small></span></li></ul>
       </div>
     </div>
   </section>
@@ -1288,7 +1322,7 @@
           </details>
           <details>
             <summary><h3>Do you work on Saturdays?</h3></summary>
-            <p>Yes. We work Monday to Friday 7:30–17:30 and Saturday 8:00–17:00.</p>
+            <p>Yes. We work Monday to Friday 7:30–19:00 and Saturday 8:00–16:00.</p>
           </details>
           <details>
             <summary><h3>How do I get a quote?</h3></summary>
@@ -1324,7 +1358,7 @@
           <li><a href="tel:+448001939030">0800 193 9030</a></li>
           <li><a href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Message us on WhatsApp</a></li>
           <li><a href="mailto:alex@upsizeproperty.com">alex@upsizeproperty.com</a></li>
-          <li>Mon–Fri 7:30–17:30 · Sat 8:00–17:00</li>
+          <li>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</li>
           <li>Peterborough · South Lincolnshire · East Midlands</li>
         </ul>
       </div>
@@ -1367,7 +1401,7 @@
           Headquarters: Peterborough, Cambridgeshire
         </address>
         <ul class="findus-meta">
-          <li><b>Hours</b>Mon–Fri 7:30–17:30 · Sat 8:00–17:00</li>
+          <li><b>Hours</b>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</li>
           <li><b>Covering</b>Peterborough, Cambridgeshire, South Lincolnshire &amp; East Midlands</li>
         </ul>
         <div class="btn-row">
@@ -1461,9 +1495,11 @@
     </nav>
     <nav class="foot-col" aria-label="Policies">
       <h3>Policies</h3>
-      <a href="/policies#health-safety">Health &amp; Safety</a>
-      <a href="/policies#quality">Quality</a>
-      <a href="/policies#environmental">Environmental</a>
+      <a href="/health-safety-policy">Health &amp; Safety</a>
+      <a href="/quality-management-policy">Quality</a>
+      <a href="/environmental-policy">Environmental</a>
+      <a href="/safeguarding-policy">Safeguarding</a>
+      <a href="/modern-slavery-statement">Modern Slavery</a>
       <a href="/policies">All policies</a>
     </nav>
   </div>
@@ -1474,7 +1510,7 @@
   </div>
   <div class="wrap legal">
     <span>© <span id="yr">2026</span> Upsize Property Renovation Ltd · Registered in England &amp; Wales · Company No. 15856524 · Registered office: 4 Blenheim Court, Suite 595, Peterborough, PE1 2DU · VAT No. GB510546327</span>
-    <nav aria-label="Legal"><a href="/privacy-policy">Privacy</a><a href="/privacy-policy#cookies">Cookies</a><a href="/terms-and-conditions">Terms</a><a href="/policies#accessibility">Accessibility</a></nav>
+    <nav aria-label="Legal"><a href="/privacy-policy">Privacy</a><a href="/privacy-policy#cookies">Cookies</a><a href="/terms-and-conditions">Terms</a><a href="/accessibility-statement">Accessibility</a></nav>
   </div>
 </footer>
 

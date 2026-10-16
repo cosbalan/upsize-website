@@ -10,12 +10,7 @@
 /plastering-tiling-decorating-peterborough  /                                 301
 /extensions-conversions-peterborough        /                                 301
 /services                                   /                                 301
-/health-safety-policy                       /policies#health-safety           301
-/quality-management-policy                  /policies#quality                 301
-/quality-assurance-policy                   /policies#quality                 301
-/environmental-policy                       /policies#environmental           301
-/complaints-policy                          /policies#complaints              301
-/accessibility-statement                    /policies#accessibility           301
+/quality-assurance-policy                   /quality-management-policy                 301
 /website-disclaimer                         /terms-and-conditions             301
 /blog                                       /news/                            301
 /blog/*                                     /news/                            301
