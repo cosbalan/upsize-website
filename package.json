@@ -1,0 +1,6 @@
+{
+  "name": "upsize-website",
+  "private": true,
+  "description": "Upsize Property Renovation website",
+  "scripts": { "build": "node build.js" }
+}
