@@ -24,15 +24,5 @@
 /areas/*                                    /                                 302
 
 # Pages not built yet: temporary (302) until each page exists. A real page file always wins over these.
-/social-housing                              /#services          302
-/commercial                                  /#services          302
-/residential                                 /#services          302
-/kitchens-bathrooms-peterborough             /#services          302
-/wet-rooms-peterborough                      /#services          302
-/projects                                    /#projects          302
-/about-us                                    /#about             302
-/contact                                     /#contact           302
-/policies                                    /#compliance        302
-/policies/*                                  /#compliance        302
+/policies/*                                  /policies           301
 /cookie-notice                               /privacy-policy#cookies  301
-/terms-and-conditions                        /privacy-policy     302

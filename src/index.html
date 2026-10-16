@@ -852,6 +852,16 @@
     .callout a{color:var(--lime);font-weight:600}
     @media (max-width:860px){.checks{grid-template-columns:1fr 1fr}.two3,.cards2{grid-template-columns:1fr}.form-card{padding:24px 20px}}
     @media (max-width:420px){.checks{grid-template-columns:1fr}}
+    /* Inner page extras */
+    .price-table.compare td:last-child{font-weight:400;color:var(--muted);white-space:normal}
+    .price-table.compare td:nth-child(2){font-weight:600;color:var(--navy)}
+    .steps.s5{grid-template-columns:repeat(5,1fr)}
+    .fp-side.fp-two{grid-template-columns:1fr 1fr}
+    .strip.proj-grid{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none;gap:28px 24px}
+    #case-studies .fp-grid,#projects .fp-grid{margin-top:0}
+    @media (max-width:1100px){.steps.s5{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:860px){.strip.proj-grid{grid-template-columns:1fr 1fr}.fp-side.fp-two{grid-template-columns:1fr}}
+    @media (max-width:640px){.steps.s5{grid-template-columns:1fr}.strip.proj-grid{grid-template-columns:1fr}}
     /* Nav dropdown */
     .nav-dd{position:relative}
     .nav-dd-btn{display:flex;align-items:center;gap:6px;padding:0;border:0;background:none;cursor:pointer;font:inherit;font-weight:600;font-size:.97rem;color:var(--navy)}
