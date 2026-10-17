@@ -255,7 +255,7 @@ for (const f of fs.existsSync(pdir) ? fs.readdirSync(pdir).filter(f => f.endsWit
   const ld = [];
   if (meta.breadcrumb) ld.push(crumbsLd(meta.breadcrumb));
   if (meta.service) ld.push({ '@context': 'https://schema.org', '@type': 'Service', ...meta.service, provider: { '@id': SITE + '/#business' }, url: SITE + meta.path,
-    areaServed: ['Peterborough', 'Stamford', 'Spalding', 'Bourne', 'Market Deeping', 'Holbeach', 'Wisbech', 'March', 'Huntingdon', 'St Neots', 'Oakham', 'Corby', 'Kettering', 'Grantham', 'Boston', "King's Lynn", 'Cambridge'] });
+    areaServed: ['Peterborough', 'Werrington', 'Bretton', 'Orton', 'Stanground', 'Fletton', 'Castor', 'Market Deeping', 'Eye', 'Glinton', 'Crowland', 'Oundle', 'Wansford', 'Kings Cliffe', 'Bourne', 'March', 'Chatteris', 'Stamford', 'Ketton', 'Spalding', 'Pinchbeck', 'Holbeach', 'Long Sutton', 'Wisbech', 'Upwell', 'Huntingdon', 'Godmanchester', 'St Neots', 'Corby', 'Kettering', 'Oakham', 'Grantham', 'Boston', "King's Lynn", 'Cambridge'] });
   if (meta.faq) ld.push(faqLd(meta.faq));
   write(f, page({ mainHtml: raw.slice(m[0].length), withContact: meta.contact !== false, meta: { ...meta, url: meta.path, ldExtra: ld } }));
   if (!meta.noindex) pagesBuilt.push(meta.path);

@@ -71,24 +71,44 @@
     },
     "areaServed": [
       "Peterborough",
-      "Stamford",
-      "Spalding",
-      "Bourne",
+      "Werrington",
+      "Bretton",
+      "Orton",
+      "Stanground",
+      "Fletton",
+      "Castor",
       "Market Deeping",
-      "Holbeach",
-      "Wisbech",
+      "Eye",
+      "Glinton",
+      "Crowland",
+      "Oundle",
+      "Wansford",
+      "Kings Cliffe",
+      "Bourne",
       "March",
+      "Chatteris",
+      "Stamford",
+      "Ketton",
+      "Spalding",
+      "Pinchbeck",
+      "Holbeach",
+      "Long Sutton",
+      "Wisbech",
+      "Upwell",
       "Huntingdon",
+      "Godmanchester",
       "St Neots",
-      "Oakham",
       "Corby",
       "Kettering",
+      "Oakham",
       "Grantham",
       "Boston",
       "King's Lynn",
       "Cambridge",
       "Cambridgeshire",
       "Lincolnshire",
+      "Rutland",
+      "Northamptonshire",
       "East Midlands"
     ],
     "identifier": {
@@ -1028,6 +1048,18 @@
     .svc h3 a:hover{text-decoration:underline}
     .svc-more{margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
     .svc-more h3{font-size:1.1rem;margin:0 0 14px}
+    .strip.proj-grid.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .area-col{padding:26px;border-radius:var(--r);background:#fff;border:1px solid var(--line)}
+    .section.soft .area-col{background:#fff}
+    .area-col h3{font-size:1.1rem;margin:0 0 4px}
+    .area-col>p{font-size:.92rem;color:var(--muted);margin:0 0 14px}
+    .area-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .area-list li{display:grid;grid-template-columns:82px 1fr;gap:10px;font-size:.93rem;line-height:1.45;padding-top:10px;border-top:1px solid var(--line)}
+    .area-list li:first-child{border-top:0;padding-top:0}
+    .area-list strong{font-family:Lexend,sans-serif;color:var(--navy);font-size:.88rem}
+    @media (max-width:980px){.area-grid{grid-template-columns:1fr}}
+    @media (max-width:600px){.strip.proj-grid.g2{grid-template-columns:1fr}}
     /* Policies */
     .pol-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 8px;border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden}
     .pol-meta div{padding:14px 16px;border-right:1px solid var(--line)}
