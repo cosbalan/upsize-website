@@ -132,8 +132,24 @@ ${ldExtra.map(o => `  <script type="application/ld+json">\n${JSON.stringify(o, n
 <a class="skip" href="#main">Skip to content</a>
 `;
 }
+const WA = 'https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20a%20free%20quote.';
+function ctaBand(meta, withContact) {
+  if (meta.noindex || meta.cta === false) return '';
+  const quote = withContact ? '#contact' : '/contact';
+  const seq = (meta.prev || meta.next) ? `
+      <nav class="cta-seq" aria-label="${meta.seqLabel || 'Related pages'}">${meta.prev ? `<a class="seq-prev" href="${meta.prev[0]}"><small>Previous</small>${meta.prev[1]}</a>` : '<span></span>'}${meta.next ? `<a class="seq-next" href="${meta.next[0]}"><small>Next</small>${meta.next[1]}</a>` : ''}</nav>` : '';
+  return `  <section class="cta-band" aria-label="Contact options">
+    <div class="wrap">
+      <div class="cta-main">
+        <div><strong>${meta.ctaTitle || 'Talk to us today: free advice, no obligation'}</strong><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00 · Peterborough and 40 miles around</span></div>
+        <div class="cta-btns"><a class="btn btn--lime" href="tel:+448001939030">Call free 0800 193 9030</a><a class="btn btn--wa" href="${WA}" target="_blank" rel="noopener">WhatsApp us</a><a class="btn btn--ghost" href="${quote}">Get a free quote</a></div>
+      </div>${seq}
+    </div>
+  </section>
+`;
+}
 function page({ meta, mainHtml, depth = 0, withContact = true }) {
-  const html = headFor({ ...meta, depth }) + navFor(meta.nav) + '\n\n<main id="main">\n' + mainHtml + '\n' + (withContact ? contactToMainEnd : findUsToMainEnd) + '</main>' + afterMain;
+  const html = headFor({ ...meta, depth }) + navFor(meta.nav) + '\n\n<main id="main">\n' + mainHtml + '\n' + ctaBand(meta, withContact) + (withContact ? contactToMainEnd : findUsToMainEnd) + '</main>' + afterMain;
   return relAssets(html, depth);
 }
 const crumbsLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([n, u], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: SITE + u })) });
@@ -254,16 +270,18 @@ for (const f of fs.existsSync(pdir) ? fs.readdirSync(pdir).filter(f => f.endsWit
   const meta = JSON.parse(m[1]);
   const ld = [];
   if (meta.breadcrumb) ld.push(crumbsLd(meta.breadcrumb));
-  if (meta.service) ld.push({ '@context': 'https://schema.org', '@type': 'Service', ...meta.service, provider: { '@id': SITE + '/#business' }, url: SITE + meta.path,
-    areaServed: ['Peterborough', 'Werrington', 'Bretton', 'Orton', 'Stanground', 'Fletton', 'Castor', 'Market Deeping', 'Eye', 'Glinton', 'Crowland', 'Oundle', 'Wansford', 'Kings Cliffe', 'Bourne', 'March', 'Chatteris', 'Stamford', 'Ketton', 'Spalding', 'Pinchbeck', 'Holbeach', 'Long Sutton', 'Wisbech', 'Upwell', 'Huntingdon', 'Godmanchester', 'St Neots', 'Corby', 'Kettering', 'Oakham', 'Grantham', 'Boston', "King's Lynn", 'Cambridge'] });
+  if (meta.service) ld.push({ '@context': 'https://schema.org', '@type': 'Service', provider: { '@id': SITE + '/#business' }, url: SITE + meta.path,
+    areaServed: ['Peterborough', 'Werrington', 'Bretton', 'Orton', 'Stanground', 'Fletton', 'Castor', 'Market Deeping', 'Eye', 'Glinton', 'Crowland', 'Oundle', 'Wansford', 'Kings Cliffe', 'Bourne', 'March', 'Chatteris', 'Stamford', 'Ketton', 'Spalding', 'Pinchbeck', 'Holbeach', 'Long Sutton', 'Wisbech', 'Upwell', 'Huntingdon', 'Godmanchester', 'St Neots', 'Corby', 'Kettering', 'Oakham', 'Grantham', 'Boston', "King's Lynn", 'Cambridge'], ...meta.service });
   if (meta.faq) ld.push(faqLd(meta.faq));
-  write(f, page({ mainHtml: raw.slice(m[0].length), withContact: meta.contact !== false, meta: { ...meta, url: meta.path, ldExtra: ld } }));
+  const outRel = meta.path.replace(/^\//, '') + '.html';
+  const depth = outRel.split('/').length - 1;
+  write(outRel, page({ depth, mainHtml: raw.slice(m[0].length), withContact: meta.contact !== false, meta: { ...meta, url: meta.path, ldExtra: ld } }));
   if (!meta.noindex) pagesBuilt.push(meta.path);
 }
 
 /* ---------- homepage: latest news block ---------- */
 const newsBlock = featured ? `  <!-- NEWS:START (filled automatically by build.js from content/news) -->
-  <section class="section soft" id="news">
+  <section class="section" id="news">
     <div class="wrap">
       <div class="news-head">
         <div class="sec-top">

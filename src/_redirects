@@ -15,8 +15,6 @@
 /blog                                       /news/                            301
 /blog/*                                     /news/                            301
 /case-studies                               /projects                         301
-# Town pages: until /areas/<town> is built, send visitors home (an existing page always wins)
-/areas/*                                    /                                 302
 
 # Pages not built yet: temporary (302) until each page exists. A real page file always wins over these.
 /policies/*                                  /policies           301
