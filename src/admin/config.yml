@@ -4,8 +4,8 @@ backend:
   repo: cosbalan/upsize-website
   branch: main
 
-site_url: https://upsize-property.netlify.app
-display_url: https://upsize-property.netlify.app
+site_url: https://www.upsizeproperty.com
+display_url: https://www.upsizeproperty.com
 locale: en
 
 media_folder: src/images/news
