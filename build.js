@@ -82,7 +82,12 @@ rm(OUT);
 copyDir(SRC, OUT, ['_pages', 'index.html']);
 let home = fs.readFileSync(path.join(SRC, 'index.html'), 'utf8');
 
-const style = between(home, '<style>', '</style>') + '</style>';
+const cssText = between(home, '<style>', '</style>').replace(/^<style>/, '');
+const cssOut = cssText.replace(/url\(["']?(images\/[^"')]+?)\.jpg(?=["')])/g, (m, f) => fs.existsSync(path.join(OUT, f + '.webp')) ? m.replace('.jpg', '.webp') : m);
+const cssHash = require('crypto').createHash('md5').update(cssOut).digest('hex').slice(0, 8);
+fs.writeFileSync(path.join(OUT, `site.${cssHash}.css`), cssOut.trim() + '\n');
+const style = `<link rel="stylesheet" href="/site.${cssHash}.css">`;
+home = home.replace(/<style>[\s\S]*?<\/style>/, style);
 const businessLd = home.match(/<script type="application\/ld\+json">\s*\{\s*"@context": "https:\/\/schema.org",\s*"@type": \[[\s\S]*?<\/script>/)[0];
 const headerHtml = between(home, '<header class="site-header">', '</header>') + '</header>';
 const contactToMainEnd = between(home, '  <!-- ================= 7. CONTACT', '</main>');
@@ -298,7 +303,7 @@ ${others.slice(0, 3).map(listItem).join('')}        </ul>
   </section>
   <!-- NEWS:END -->` : `  <!-- NEWS:START (filled automatically by build.js from content/news) -->\n  <!-- NEWS:END -->`;
 home = home.replace(/  <!-- NEWS:START[\s\S]*?<!-- NEWS:END -->/, newsBlock);
-fs.writeFileSync(path.join(OUT, 'index.html'), home);
+fs.writeFileSync(path.join(OUT, 'index.html'), home.replace('data-nav="home"', 'data-nav="home" aria-current="page"'));
 
 /* ---------- sitemap, RSS, llms.txt ---------- */
 let sm = fs.readFileSync(path.join(SRC, 'sitemap.xml'), 'utf8');
