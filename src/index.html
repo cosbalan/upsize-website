@@ -59,8 +59,8 @@
     },
     "memberOf": {"@type": "Organization", "name": "National Federation of Roofing Contractors (NFRC)", "url": "https://www.nfrc.co.uk"},
     "employee": [
-      {"@type": "Person", "name": "Alexandru Balan", "jobTitle": "Director"},
-      {"@type": "Person", "name": "Laurentiu Dobinda", "jobTitle": "Director"}
+      {"@type": "Person", "name": "Alexandru Balan", "jobTitle": "Co-director and Project Manager", "honorificSuffix": "BSc, MSc"},
+      {"@type": "Person", "name": "Laurentiu Dobinda", "jobTitle": "Co-director and Commercial Director"}
     ],
     "address": {
       "@type": "PostalAddress",
@@ -1077,6 +1077,22 @@
     @media (max-width:520px){.dir-card{grid-template-columns:1fr}.dir-card img{max-width:260px}}
     .cta-reviews{display:block;margin-top:6px;font-size:.92rem}
     .cta-reviews a{color:var(--navy);font-weight:600}
+    .initials{display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;border-radius:12px;background:var(--navy);color:var(--lime);font-family:Lexend,sans-serif;font-size:3.2rem;font-weight:700}
+    .dir-card h3 small{font-size:.8rem;color:var(--muted);font-weight:600;margin-left:4px}
+    /* Reviews */
+    .reviews-band{padding:64px 0;background:#f5f9e6;border-top:1px solid #e3ecc4;border-bottom:1px solid #e3ecc4}
+    .rv-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+    .rv-head h2{margin:6px 0 0}
+    .rv-score{display:flex;gap:12px;flex-wrap:wrap}
+    .rv-score a{display:flex;flex-direction:column;padding:12px 18px;border-radius:12px;background:#fff;border:1px solid #e3ecc4;text-decoration:none;color:var(--navy);font-weight:600;font-size:.9rem}
+    .rv-score strong{font-family:Lexend,sans-serif;font-size:1.4rem}
+    .rv-score .st{color:#e3a008;letter-spacing:2px}
+    .rv-quotes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .rv-quotes li{margin:0;padding:22px;border-radius:var(--r);background:#fff;border:1px solid #e3ecc4}
+    .rv-quotes blockquote{margin:0 0 10px;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+    .rv-quotes cite{font-style:normal;font-size:.85rem;color:var(--muted)}
+    .rv-quotes .st{color:#e3a008;letter-spacing:2px;display:block;margin-bottom:8px}
+    @media (max-width:860px){.rv-quotes{grid-template-columns:1fr}}
     /* Illustrative price comparison */
     .save-callout{display:flex;align-items:center;gap:14px;margin:0 0 14px;padding:14px 18px;border-radius:12px;background:var(--lime);color:var(--navy)}
     .save-callout strong{font-family:Lexend,sans-serif;font-size:1.25rem;white-space:nowrap}
@@ -1317,6 +1333,23 @@
   </section>
 
   <!-- ================= 4. COMPLIANCE / SUPPLY CHAIN ================= -->
+  <section class="reviews-band" id="reviews" aria-labelledby="rv-h">
+    <div class="wrap">
+      <div class="rv-head">
+        <div><span class="eyebrow reveal">Reviews</span><h2 class="reveal d1" id="rv-h">What our customers say</h2></div>
+        <div class="rv-score reveal d1">
+          <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener"><span class="st" aria-hidden="true">★★★★★</span><strong>5.0</strong>9 Google reviews</a>
+          <a href="https://www.facebook.com/upsizeproperty/reviews" target="_blank" rel="noopener"><span class="st" aria-hidden="true">★★★★★</span><strong>5/5</strong>Facebook reviews</a>
+        </div>
+      </div>
+      <ul class="rv-quotes">
+        <li class="reveal"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Good communication, fair price, and the work was done properly.”</blockquote><cite>Google review</cite></li>
+        <li class="reveal d1"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“They upgraded my bathroom and kitchen in under a week.”</blockquote><cite>Google review</cite></li>
+        <li class="reveal d2"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“They remodel our interior, flooring and kitchen installation.”</blockquote><cite>Google review</cite></li>
+      </ul>
+    </div>
+  </section>
+
   <!-- NEWS:START (filled automatically by build.js from content/news) -->
   <!-- NEWS:END -->
 
