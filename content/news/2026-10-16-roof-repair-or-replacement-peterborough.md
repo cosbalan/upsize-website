@@ -25,8 +25,8 @@ One sign on its own usually means a repair. Several together, especially a saggi
 
 If the timbers are sound and most of the tiles are in good condition, a repair is usually the better value. Typical 2026 guide prices are:
 
-- **Replacing slipped or cracked tiles:** £150 – £400
-- **Re-bedding a full ridge:** £450 – £1,200
+- **Replacing slipped or cracked tiles:** £170 – £460
+- **Re-bedding a full ridge:** £500 – £1,400
 
 As a rule of thumb, if repairs would cost more than about a quarter of the price of a new roof, replacement starts to make more sense.
 
@@ -34,15 +34,15 @@ As a rule of thumb, if repairs would cost more than about a quarter of the price
 
 A full re-roof makes sense when the covering has reached the end of its life, the membrane underneath has failed, or repairs keep coming back. Typical guide prices for a concrete tile re-roof, including scaffolding and waste, are:
 
-- **Terraced house:** £4,500 – £7,500
-- **3-bed semi:** £6,500 – £10,500
-- **Detached house:** £8,000 – £13,000
+- **Terraced house:** £5,200 – £8,600
+- **3-bed semi:** £7,500 – £12,100
+- **Detached house:** £9,200 – £14,900
 
 Most houses take 3 to 8 working days. Building regulations approval is usually needed if you replace more than a quarter of the roof area or change the insulation.
 
 ## Flat roofs: consider EPDM
 
-For garages, extensions and dormers, EPDM rubber roofing typically costs £80 – £120 per m² fitted and can last 30 to 50 years when installed correctly, much longer than traditional felt.
+For garages, extensions and dormers, EPDM rubber roofing typically costs £90 – £140 per m² fitted and can last 30 to 50 years when installed correctly, much longer than traditional felt.
 
 ## Our approach
 

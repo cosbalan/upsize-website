@@ -11,9 +11,9 @@ EPDM is a single-sheet synthetic rubber membrane, laid in one piece over a flat 
 
 ## How much does an EPDM roof cost?
 
-As a 2026 guide, EPDM typically costs **£80 – £120 per m²** supplied and fitted. That usually means:
+As a 2026 guide, EPDM typically costs **£90 – £140 per m²** supplied and fitted. That usually means:
 
-- **Single garage or small extension roof (up to about 15 m²):** £1,200 – £2,500
+- **Single garage or small extension roof (up to about 15 m²):** £1,400 – £2,900
 - **Larger flat roof (25 – 40 m²):** £2,500 – £5,000
 
 The price depends on whether the deck underneath needs replacing, how much insulation is required, and access.

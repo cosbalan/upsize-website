@@ -141,7 +141,7 @@ function ctaBand(meta, withContact) {
   return `  <section class="cta-band" aria-label="Contact options">
     <div class="wrap">
       <div class="cta-main">
-        <div><strong>${meta.ctaTitle || 'Talk to us today: free advice, no obligation'}</strong><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00 · Peterborough and 40 miles around</span></div>
+        <div><strong>${meta.ctaTitle || 'Talk to us today: free advice, no obligation'}</strong><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00 · Peterborough and 40 miles around</span><span class="cta-reviews">★ Read our customer reviews on <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">Google</a> and <a href="https://www.facebook.com/upsizeproperty/reviews" target="_blank" rel="noopener">Facebook</a></span></div>
         <div class="cta-btns"><a class="btn btn--lime" href="tel:+448001939030">Call free 0800 193 9030</a><a class="btn btn--wa" href="${WA}" target="_blank" rel="noopener">WhatsApp us</a><a class="btn btn--ghost" href="${quote}">Get a free quote</a></div>
       </div>${seq}
     </div>
@@ -325,5 +325,21 @@ write('news/feed.xml', rss);
 let llms = fs.readFileSync(path.join(SRC, 'llms.txt'), 'utf8');
 if (posts.length) llms += `\n## News, guides and press releases\n${posts.map(p => `- [${p.title}](${SITE}${p.url}) (${p.cat}, ${p.date})${p.summary ? ': ' + p.summary : ''}`).join('\n')}\n`;
 fs.writeFileSync(path.join(OUT, 'llms.txt'), llms);
+
+
+/* ---------- swap .jpg for .webp where a WebP version exists (faster pages; og:image stays JPG) ---------- */
+(function webp(dir) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) { if (e.name !== 'admin') webp(p); continue; }
+    if (!p.endsWith('.html')) continue;
+    const h = fs.readFileSync(p, 'utf8');
+    const out = h.replace(/(src="|url\(["']?)([^"')\s]+?)\.jpg(?=["')\s])/g, (m, pre, f) => {
+      const rel = f.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
+      return fs.existsSync(path.join(OUT, rel + '.webp')) ? `${pre}${f}.webp` : m;
+    });
+    if (out !== h) fs.writeFileSync(p, out);
+  }
+})(OUT);
 
 console.log(`Built ${pagesBuilt.length} page(s), ${posts.length} news post(s) -> dist/`);
