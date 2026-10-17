@@ -376,7 +376,7 @@
     .menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0}
     @media (max-width:980px){
       .nav{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px;border-bottom:1px solid var(--line)}
-      .nav.open{display:flex}.menu-btn{display:block}.header-cta .btn,.phone{display:none}
+      .nav.open{display:flex;max-height:calc(100vh - 78px);max-height:calc(100dvh - 78px);overflow-y:auto;overscroll-behavior:contain}.menu-btn{display:block}.header-cta .btn,.phone{display:none}
     }
     @media (max-width:480px){.logo img{height:40px}}
 
@@ -1014,6 +1014,20 @@
       main .btn-row{flex-direction:column;gap:10px}
     }
     @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .reveal{opacity:1!important}.marquee{animation:none;width:auto}.marquee ul{flex-wrap:wrap;justify-content:center;width:100%;row-gap:6px}.marquee ul[aria-hidden]{display:none}.ticker::before,.ticker::after{display:none}}
+    /* Sources / references */
+    .refs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .ref{padding:22px 24px;border-radius:var(--r);background:#fff;border:1px solid var(--line);border-left:4px solid var(--lime)}
+    .ref-src{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;margin-bottom:6px}
+    .ref a{font-family:Lexend,sans-serif;font-weight:600;color:var(--navy);text-decoration:none;line-height:1.35}
+    .ref a:hover{text-decoration:underline}
+    .ref a::after{content:" ↗";font-size:.85em}
+    .ref p{margin:8px 0 0;font-size:.95rem;line-height:1.55;color:var(--ink)}
+    @media (max-width:760px){.refs{grid-template-columns:1fr}}
+    .dd-menu .dd-all{font-weight:700;border-bottom:1px solid var(--line);border-radius:8px 8px 0 0;margin-bottom:4px}
+    .svc h3 a{color:inherit;text-decoration:none}
+    .svc h3 a:hover{text-decoration:underline}
+    .svc-more{margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
+    .svc-more h3{font-size:1.1rem;margin:0 0 14px}
     /* Policies */
     .pol-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 8px;border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden}
     .pol-meta div{padding:14px 16px;border-right:1px solid var(--line)}
@@ -1066,7 +1080,19 @@
           <a href="/residential" data-nav="residential">Residential</a>
         </div>
       </div>
-      <a href="/roofing-services-peterborough" data-nav="roofing">Roofing</a>
+      <div class="nav-dd nav-dd-roof">
+        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="dd-roofing">Roofing<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="dd-menu" id="dd-roofing">
+          <a class="dd-all" href="/roofing-services-peterborough" data-nav="roofing">All roofing services</a>
+          <a href="/roof-repair-peterborough" data-nav="roof-repair-peterborough">Roof repairs</a>
+          <a href="/roof-damage-repair-peterborough" data-nav="roof-damage-repair-peterborough">Roof leak &amp; damage repair</a>
+          <a href="/emergency-roof-repair-peterborough" data-nav="emergency-roof-repair-peterborough">Emergency roof repair</a>
+          <a href="/storm-damage-roof-repair-peterborough" data-nav="storm-damage-roof-repair-peterborough">Storm &amp; wind damage</a>
+          <a href="/roof-replacement-peterborough" data-nav="roof-replacement-peterborough">New roofs &amp; replacement</a>
+          <a href="/flat-roofing-peterborough" data-nav="flat-roofing-peterborough">Flat roofing (EPDM)</a>
+          <a href="/leadwork-chimney-repair-peterborough" data-nav="leadwork-chimney-repair-peterborough">Leadwork &amp; chimneys</a>
+        </div>
+      </div>
       <a href="/projects" data-nav="projects">Projects</a>
       <a href="/news/" data-nav="news">News</a>
       <div class="nav-dd nav-dd-co">
