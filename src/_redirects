@@ -16,6 +16,12 @@
 /blog/*                                     /news/                            301
 /post/*                                     /news/                            301
 /blog-1                                     /news/                            301
+/roofing                                    /roofing-services-peterborough    301
+/roofers-peterborough                       /roofing-services-peterborough    301
+/about                                      /about-us                         301
+/gallery                                    /projects                         301
+/kitchens                                   /kitchens-bathrooms-peterborough  301
+/bathrooms                                  /kitchens-bathrooms-peterborough  301
 /case-studies                               /projects                         301
 
 # Pages not built yet: temporary (302) until each page exists. A real page file always wins over these.
