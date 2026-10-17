@@ -10,29 +10,12 @@
 /plastering-tiling-decorating-peterborough  /                                 301
 /extensions-conversions-peterborough        /                                 301
 /services                                   /                                 301
-/health-safety-policy                       /policies#health-safety           301
-/quality-management-policy                  /policies#quality                 301
-/quality-assurance-policy                   /policies#quality                 301
-/environmental-policy                       /policies#environmental           301
-/complaints-policy                          /policies#complaints              301
-/accessibility-statement                    /policies#accessibility           301
+/quality-assurance-policy                   /quality-management-policy                 301
 /website-disclaimer                         /terms-and-conditions             301
 /blog                                       /news/                            301
 /blog/*                                     /news/                            301
 /case-studies                               /projects                         301
-# Town pages: until /areas/<town> is built, send visitors home (an existing page always wins)
-/areas/*                                    /                                 302
 
 # Pages not built yet: temporary (302) until each page exists. A real page file always wins over these.
-/social-housing                              /#services          302
-/commercial                                  /#services          302
-/residential                                 /#services          302
-/kitchens-bathrooms-peterborough             /#services          302
-/wet-rooms-peterborough                      /#services          302
-/projects                                    /#projects          302
-/about-us                                    /#about             302
-/contact                                     /#contact           302
-/policies                                    /#compliance        302
-/policies/*                                  /#compliance        302
+/policies/*                                  /policies           301
 /cookie-notice                               /privacy-policy#cookies  301
-/terms-and-conditions                        /privacy-policy     302

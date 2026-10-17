@@ -82,7 +82,12 @@ rm(OUT);
 copyDir(SRC, OUT, ['_pages', 'index.html']);
 let home = fs.readFileSync(path.join(SRC, 'index.html'), 'utf8');
 
-const style = between(home, '<style>', '</style>') + '</style>';
+const cssText = between(home, '<style>', '</style>').replace(/^<style>/, '');
+const cssOut = cssText.replace(/url\(["']?(images\/[^"')]+?)\.jpg(?=["')])/g, (m, f) => fs.existsSync(path.join(OUT, f + '.webp')) ? m.replace('.jpg', '.webp') : m);
+const cssHash = require('crypto').createHash('md5').update(cssOut).digest('hex').slice(0, 8);
+fs.writeFileSync(path.join(OUT, `site.${cssHash}.css`), cssOut.trim() + '\n');
+const style = `<link rel="stylesheet" href="/site.${cssHash}.css">`;
+home = home.replace(/<style>[\s\S]*?<\/style>/, style);
 const businessLd = home.match(/<script type="application\/ld\+json">\s*\{\s*"@context": "https:\/\/schema.org",\s*"@type": \[[\s\S]*?<\/script>/)[0];
 const headerHtml = between(home, '<header class="site-header">', '</header>') + '</header>';
 const contactToMainEnd = between(home, '  <!-- ================= 7. CONTACT', '</main>');
@@ -93,6 +98,7 @@ function navFor(key) {
   let h = headerHtml;
   if (key) h = h.replace(`data-nav="${key}"`, `data-nav="${key}" aria-current="page"`);
   if (['social-housing', 'commercial', 'residential'].includes(key)) h = h.replace('<div class="nav-dd">', '<div class="nav-dd current">');
+  if (key && /^roof|leadwork|flat-roofing|emergency-roof|storm-damage/.test(key)) h = h.replace('<div class="nav-dd nav-dd-roof">', '<div class="nav-dd nav-dd-roof current">');
   if (['about', 'community', 'careers'].includes(key)) h = h.replace('<div class="nav-dd nav-dd-co">', '<div class="nav-dd nav-dd-co current">');
   return h;
 }
@@ -131,8 +137,24 @@ ${ldExtra.map(o => `  <script type="application/ld+json">\n${JSON.stringify(o, n
 <a class="skip" href="#main">Skip to content</a>
 `;
 }
+const WA = 'https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20a%20free%20quote.';
+function ctaBand(meta, withContact) {
+  if (meta.noindex || meta.cta === false) return '';
+  const quote = withContact ? '#contact' : '/contact';
+  const seq = (meta.prev || meta.next) ? `
+      <nav class="cta-seq" aria-label="${meta.seqLabel || 'Related pages'}">${meta.prev ? `<a class="seq-prev" href="${meta.prev[0]}"><small>Previous</small>${meta.prev[1]}</a>` : '<span></span>'}${meta.next ? `<a class="seq-next" href="${meta.next[0]}"><small>Next</small>${meta.next[1]}</a>` : ''}</nav>` : '';
+  return `  <section class="cta-band" aria-label="Contact options">
+    <div class="wrap">
+      <div class="cta-main">
+        <div><strong>${meta.ctaTitle || 'Talk to us today: free advice, no obligation'}</strong><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00 · Peterborough and 40 miles around</span><span class="cta-reviews">★ 5.0 from 9 Google reviews · read them on <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">Google</a> and <a href="https://www.facebook.com/upsizeproperty/reviews" target="_blank" rel="noopener">Facebook</a></span></div>
+        <div class="cta-btns"><a class="btn btn--lime" href="tel:+448001939030">Call free 0800 193 9030</a><a class="btn btn--wa" href="${WA}" target="_blank" rel="noopener">WhatsApp us</a><a class="btn btn--ghost" href="${quote}">Get a free quote</a></div>
+      </div>${seq}
+    </div>
+  </section>
+`;
+}
 function page({ meta, mainHtml, depth = 0, withContact = true }) {
-  const html = headFor({ ...meta, depth }) + navFor(meta.nav) + '\n\n<main id="main">\n' + mainHtml + '\n' + (withContact ? contactToMainEnd : findUsToMainEnd) + '</main>' + afterMain;
+  const html = headFor({ ...meta, depth }) + navFor(meta.nav) + '\n\n<main id="main">\n' + mainHtml + '\n' + ctaBand(meta, withContact) + (withContact ? contactToMainEnd : findUsToMainEnd) + '</main>' + afterMain;
   return relAssets(html, depth);
 }
 const crumbsLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([n, u], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: SITE + u })) });
@@ -253,16 +275,18 @@ for (const f of fs.existsSync(pdir) ? fs.readdirSync(pdir).filter(f => f.endsWit
   const meta = JSON.parse(m[1]);
   const ld = [];
   if (meta.breadcrumb) ld.push(crumbsLd(meta.breadcrumb));
-  if (meta.service) ld.push({ '@context': 'https://schema.org', '@type': 'Service', ...meta.service, provider: { '@id': SITE + '/#business' }, url: SITE + meta.path,
-    areaServed: ['Peterborough', 'Stamford', 'Spalding', 'Bourne', 'Market Deeping', 'Holbeach', 'Wisbech', 'March', 'Huntingdon', 'St Neots', 'Oakham', 'Corby', 'Kettering', 'Grantham', 'Boston', "King's Lynn", 'Cambridge'] });
+  if (meta.service) ld.push({ '@context': 'https://schema.org', '@type': 'Service', provider: { '@id': SITE + '/#business' }, url: SITE + meta.path,
+    areaServed: ['Peterborough', 'Werrington', 'Bretton', 'Orton', 'Stanground', 'Fletton', 'Castor', 'Market Deeping', 'Eye', 'Glinton', 'Crowland', 'Oundle', 'Wansford', 'Kings Cliffe', 'Bourne', 'March', 'Chatteris', 'Stamford', 'Ketton', 'Spalding', 'Pinchbeck', 'Holbeach', 'Long Sutton', 'Wisbech', 'Upwell', 'Huntingdon', 'Godmanchester', 'St Neots', 'Corby', 'Kettering', 'Oakham', 'Grantham', 'Boston', "King's Lynn", 'Cambridge'], ...meta.service });
   if (meta.faq) ld.push(faqLd(meta.faq));
-  write(f, page({ mainHtml: raw.slice(m[0].length), withContact: meta.contact !== false, meta: { ...meta, url: meta.path, ldExtra: ld } }));
+  const outRel = meta.path.replace(/^\//, '') + '.html';
+  const depth = outRel.split('/').length - 1;
+  write(outRel, page({ depth, mainHtml: raw.slice(m[0].length), withContact: meta.contact !== false, meta: { ...meta, url: meta.path, ldExtra: ld } }));
   if (!meta.noindex) pagesBuilt.push(meta.path);
 }
 
 /* ---------- homepage: latest news block ---------- */
 const newsBlock = featured ? `  <!-- NEWS:START (filled automatically by build.js from content/news) -->
-  <section class="section soft" id="news">
+  <section class="section" id="news">
     <div class="wrap">
       <div class="news-head">
         <div class="sec-top">
@@ -279,7 +303,7 @@ ${others.slice(0, 3).map(listItem).join('')}        </ul>
   </section>
   <!-- NEWS:END -->` : `  <!-- NEWS:START (filled automatically by build.js from content/news) -->\n  <!-- NEWS:END -->`;
 home = home.replace(/  <!-- NEWS:START[\s\S]*?<!-- NEWS:END -->/, newsBlock);
-fs.writeFileSync(path.join(OUT, 'index.html'), home);
+fs.writeFileSync(path.join(OUT, 'index.html'), home.replace('data-nav="home"', 'data-nav="home" aria-current="page"'));
 
 /* ---------- sitemap, RSS, llms.txt ---------- */
 let sm = fs.readFileSync(path.join(SRC, 'sitemap.xml'), 'utf8');
@@ -306,5 +330,21 @@ write('news/feed.xml', rss);
 let llms = fs.readFileSync(path.join(SRC, 'llms.txt'), 'utf8');
 if (posts.length) llms += `\n## News, guides and press releases\n${posts.map(p => `- [${p.title}](${SITE}${p.url}) (${p.cat}, ${p.date})${p.summary ? ': ' + p.summary : ''}`).join('\n')}\n`;
 fs.writeFileSync(path.join(OUT, 'llms.txt'), llms);
+
+
+/* ---------- swap .jpg for .webp where a WebP version exists (faster pages; og:image stays JPG) ---------- */
+(function webp(dir) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) { if (e.name !== 'admin') webp(p); continue; }
+    if (!p.endsWith('.html')) continue;
+    const h = fs.readFileSync(p, 'utf8');
+    const out = h.replace(/(src="|url\(["']?)([^"')\s]+?)\.jpg(?=["')\s])/g, (m, pre, f) => {
+      const rel = f.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
+      return fs.existsSync(path.join(OUT, rel + '.webp')) ? `${pre}${f}.webp` : m;
+    });
+    if (out !== h) fs.writeFileSync(p, out);
+  }
+})(OUT);
 
 console.log(`Built ${pagesBuilt.length} page(s), ${posts.length} news post(s) -> dist/`);

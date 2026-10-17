@@ -57,6 +57,11 @@
       "@type": "Person",
       "name": "Alexandru Balan"
     },
+    "memberOf": {"@type": "Organization", "name": "National Federation of Roofing Contractors (NFRC)", "url": "https://www.nfrc.co.uk"},
+    "employee": [
+      {"@type": "Person", "name": "Alexandru Balan", "jobTitle": "Co-director and Project Manager", "honorificSuffix": "BSc, MSc"},
+      {"@type": "Person", "name": "Laurentiu Dobinda", "jobTitle": "Co-director and Commercial Director"}
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "4 Blenheim Court, Suite 595",
@@ -71,24 +76,44 @@
     },
     "areaServed": [
       "Peterborough",
-      "Stamford",
-      "Spalding",
-      "Bourne",
+      "Werrington",
+      "Bretton",
+      "Orton",
+      "Stanground",
+      "Fletton",
+      "Castor",
       "Market Deeping",
-      "Holbeach",
-      "Wisbech",
+      "Eye",
+      "Glinton",
+      "Crowland",
+      "Oundle",
+      "Wansford",
+      "Kings Cliffe",
+      "Bourne",
       "March",
+      "Chatteris",
+      "Stamford",
+      "Ketton",
+      "Spalding",
+      "Pinchbeck",
+      "Holbeach",
+      "Long Sutton",
+      "Wisbech",
+      "Upwell",
       "Huntingdon",
+      "Godmanchester",
       "St Neots",
-      "Oakham",
       "Corby",
       "Kettering",
+      "Oakham",
       "Grantham",
       "Boston",
       "King's Lynn",
       "Cambridge",
       "Cambridgeshire",
       "Lincolnshire",
+      "Rutland",
+      "Northamptonshire",
       "East Midlands"
     ],
     "identifier": {
@@ -107,13 +132,13 @@
           "Friday"
         ],
         "opens": "07:30",
-        "closes": "17:30"
+        "closes": "19:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Saturday",
         "opens": "08:00",
-        "closes": "17:00"
+        "closes": "16:00"
       }
     ],
     "vatID": "GB510546327",
@@ -155,7 +180,7 @@
    "name": "How much does a new roof cost in Peterborough?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "As a guide, a full re-roof with concrete tiles costs around £4,500–£7,500 for a terraced house, £6,500–£10,500 for a 3-bed semi and £8,000–£13,000 for a detached house, including scaffolding and waste removal. We give you a fixed, written price after a free roof check."
+    "text": "As a guide, a full re-roof with concrete tiles costs around £5,200–£8,600 for a terraced house, £7,500–£12,100 for a 3-bed semi and £9,200–£14,900 for a detached house, including scaffolding and waste removal. We give you a fixed, written price after a free roof check."
    }
   },
   {
@@ -163,7 +188,7 @@
    "name": "How much does a roof repair cost?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Small repairs, such as replacing slipped or cracked tiles, usually cost £150–£400. Re-bedding a full ridge is typically £450–£1,200. We photograph the problem first, so you see exactly what needs fixing before you agree a price."
+    "text": "Small repairs, such as replacing slipped or cracked tiles, usually cost £170–£460. Re-bedding a full ridge is typically £500–£1,400. We photograph the problem first, so you see exactly what needs fixing before you agree a price."
    }
   },
   {
@@ -195,7 +220,7 @@
    "name": "How much does an EPDM rubber flat roof cost and how long does it last?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "EPDM rubber roofing typically costs £80–£120 per m² fitted, so a garage or small extension roof is usually £1,200–£2,500. A correctly installed EPDM roof can last 30–50 years, much longer than traditional felt."
+    "text": "EPDM rubber roofing typically costs £90–£140 per m² fitted, so a garage or small extension roof is usually £1,400–£2,900. A correctly installed EPDM roof can last 30–50 years, much longer than traditional felt."
    }
   },
   {
@@ -227,7 +252,7 @@
    "name": "Do you guarantee your roofing work?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Yes. Every roofing job comes with a written guarantee. The length depends on the work and materials, and is set out clearly in your quote."
+    "text": "Yes. Every roofing job comes with a 10-year written guarantee. It is written up and handed to you on the spot when the job is signed off."
    }
   },
   {
@@ -299,7 +324,7 @@
    "name": "Do you work on Saturdays?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Yes. We work Monday to Friday 7:30–17:30 and Saturday 8:00–17:00."
+    "text": "Yes. We work Monday to Friday 7:30–19:00 and Saturday 8:00–16:00."
    }
   },
   {
@@ -376,7 +401,7 @@
     .menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0}
     @media (max-width:980px){
       .nav{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px;border-bottom:1px solid var(--line)}
-      .nav.open{display:flex}.menu-btn{display:block}.header-cta .btn,.phone{display:none}
+      .nav.open{display:flex;max-height:calc(100vh - 78px);max-height:calc(100dvh - 78px);overflow-y:auto;overscroll-behavior:contain}.menu-btn{display:block}.header-cta .btn,.phone{display:none}
     }
     @media (max-width:480px){.logo img{height:40px}}
 
@@ -852,6 +877,16 @@
     .callout a{color:var(--lime);font-weight:600}
     @media (max-width:860px){.checks{grid-template-columns:1fr 1fr}.two3,.cards2{grid-template-columns:1fr}.form-card{padding:24px 20px}}
     @media (max-width:420px){.checks{grid-template-columns:1fr}}
+    /* Inner page extras */
+    .price-table.compare td:last-child{font-weight:400;color:var(--muted);white-space:normal}
+    .price-table.compare td:nth-child(2){font-weight:600;color:var(--navy)}
+    .steps.s5{grid-template-columns:repeat(5,1fr)}
+    .fp-side.fp-two{grid-template-columns:1fr 1fr}
+    .strip.proj-grid{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none;gap:28px 24px}
+    #case-studies .fp-grid,#projects .fp-grid{margin-top:0}
+    @media (max-width:1100px){.steps.s5{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:860px){.strip.proj-grid{grid-template-columns:1fr 1fr}.fp-side.fp-two{grid-template-columns:1fr}}
+    @media (max-width:640px){.steps.s5{grid-template-columns:1fr}.strip.proj-grid{grid-template-columns:1fr}}
     /* Nav dropdown */
     .nav-dd{position:relative}
     .nav-dd-btn{display:flex;align-items:center;gap:6px;padding:0;border:0;background:none;cursor:pointer;font:inherit;font-weight:600;font-size:.97rem;color:var(--navy)}
@@ -1004,6 +1039,169 @@
       main .btn-row{flex-direction:column;gap:10px}
     }
     @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .reveal{opacity:1!important}.marquee{animation:none;width:auto}.marquee ul{flex-wrap:wrap;justify-content:center;width:100%;row-gap:6px}.marquee ul[aria-hidden]{display:none}.ticker::before,.ticker::after{display:none}}
+    /* Sources / references */
+    .refs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .ref{padding:22px 24px;border-radius:var(--r);background:#fff;border:1px solid var(--line);border-left:4px solid var(--lime)}
+    .ref-src{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;margin-bottom:6px}
+    .ref a{font-family:Lexend,sans-serif;font-weight:600;color:var(--navy);text-decoration:none;line-height:1.35}
+    .ref a:hover{text-decoration:underline}
+    .ref a::after{content:" ↗";font-size:.85em}
+    .ref p{margin:8px 0 0;font-size:.95rem;line-height:1.55;color:var(--ink)}
+    @media (max-width:760px){.refs{grid-template-columns:1fr}}
+    .dd-menu .dd-all{font-weight:700;border-bottom:1px solid var(--line);border-radius:8px 8px 0 0;margin-bottom:4px}
+    .svc h3 a{color:inherit;text-decoration:none}
+    .svc h3 a:hover{text-decoration:underline}
+    .svc-more{margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
+    .svc-more h3{font-size:1.1rem;margin:0 0 14px}
+    .strip.proj-grid.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .area-col{padding:26px;border-radius:var(--r);background:#fff;border:1px solid var(--line)}
+    .section.soft .area-col{background:#fff}
+    .area-col h3{font-size:1.1rem;margin:0 0 4px}
+    .area-col>p{font-size:.92rem;color:var(--muted);margin:0 0 14px}
+    .area-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .area-list li{display:grid;grid-template-columns:82px 1fr;gap:10px;font-size:.93rem;line-height:1.45;padding-top:10px;border-top:1px solid var(--line)}
+    .area-list li:first-child{border-top:0;padding-top:0}
+    .area-list strong{font-family:Lexend,sans-serif;color:var(--navy);font-size:.88rem}
+    @media (max-width:980px){.area-grid{grid-template-columns:1fr}}
+    @media (max-width:600px){.strip.proj-grid.g2{grid-template-columns:1fr}}
+    /* Directors */
+    .dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .dir-card{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;padding:20px;border-radius:var(--r);background:#fff;border:1px solid var(--line)}
+    .dir-card img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
+    .dir-card h3{margin:0 0 2px;font-size:1.25rem}
+    .dir-role{margin:0 0 10px;color:var(--lime-ink);font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
+    .dir-card p{margin:0;line-height:1.6}
+    .dir-card p+p{margin-top:0}
+    @media (max-width:900px){.dir-grid{grid-template-columns:1fr}}
+    @media (max-width:520px){.dir-card{grid-template-columns:1fr}.dir-card img{max-width:260px}}
+    .cta-reviews{display:block;margin-top:6px;font-size:.92rem}
+    .cta-reviews a{color:var(--navy);font-weight:600}
+    .initials{display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;border-radius:12px;background:var(--navy);color:var(--lime);font-family:Lexend,sans-serif;font-size:3.2rem;font-weight:700}
+    .dir-card h3 small{font-size:.8rem;color:var(--muted);font-weight:600;margin-left:4px}
+    /* Reviews */
+    .reviews-band{padding:64px 0;background:#f5f9e6;border-top:1px solid #e3ecc4;border-bottom:1px solid #e3ecc4}
+    .rv-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+    .rv-head h2{margin:6px 0 0}
+    .rv-score{display:flex;gap:12px;flex-wrap:wrap}
+    .rv-score a{display:flex;flex-direction:column;padding:12px 18px;border-radius:12px;background:#fff;border:1px solid #e3ecc4;text-decoration:none;color:var(--navy);font-weight:600;font-size:.9rem}
+    .rv-score strong{font-family:Lexend,sans-serif;font-size:1.4rem}
+    .rv-score .st{color:#e3a008;letter-spacing:2px}
+    .rv-quotes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .rv-quotes li{margin:0;padding:22px;border-radius:var(--r);background:#fff;border:1px solid #e3ecc4}
+    .rv-quotes blockquote{margin:0 0 10px;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+    .rv-quotes cite{font-style:normal;font-size:.85rem;color:var(--muted)}
+    .rv-quotes .st{color:#e3a008;letter-spacing:2px;display:block;margin-bottom:8px}
+    @media (max-width:860px){.rv-quotes{grid-template-columns:1fr}}
+    /* Illustrative price comparison */
+    .save-callout{display:flex;align-items:center;gap:14px;margin:0 0 14px;padding:14px 18px;border-radius:12px;background:var(--lime);color:var(--navy)}
+    .save-callout strong{font-family:Lexend,sans-serif;font-size:1.25rem;white-space:nowrap}
+    .save-callout span{font-size:.92rem;line-height:1.35}
+    .price-table.compare td:nth-child(2){background:rgba(185,214,73,.16)}
+    .price-table.compare td:last-child{text-decoration:line-through;text-decoration-color:rgba(200,40,40,.55);text-decoration-thickness:1.5px}
+    /* Area pages */
+    .town-serv{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .town-serv a{display:flex;flex-direction:column;gap:4px;height:100%;padding:18px 20px;border-radius:12px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+    .town-serv a:hover{border-color:var(--navy);transform:translateY(-2px)}
+    .town-serv strong{color:var(--navy);font-family:Lexend,sans-serif;font-size:1rem}
+    .town-serv strong::after{content:" →"}
+    .town-serv span{font-size:.9rem;color:var(--muted)}
+    .town-districts{margin:0 0 18px;padding:16px 18px;border-radius:12px;background:var(--soft);font-size:.95rem}
+    .town-districts p{margin:0 0 6px}.town-districts p:last-child{margin:0}
+    .town-districts strong{color:var(--navy);margin-right:6px}
+    .town-split{align-items:start}
+    .area-links{list-style:none;margin:0 0 8px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 24px}
+    .area-links a{font-weight:600;color:var(--navy)}
+    .area-links small{color:var(--muted);margin-left:4px}
+    .area-col h3 a,.area-list a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--line)}
+    .area-col h3 a:hover,.area-list a:hover{border-color:var(--navy)}
+    .town-chips-h{font-size:1.1rem;margin:36px 0 14px}
+    @media (max-width:980px){.town-serv{grid-template-columns:1fr 1fr}.area-links{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.town-serv,.area-links{grid-template-columns:1fr}}
+    /* CTA band + page sequence */
+    .cta-band{padding:44px 0;background:var(--soft);border-top:1px solid var(--line)}
+    .cta-main{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .cta-main strong{display:block;font-family:Lexend,sans-serif;font-size:1.3rem;color:var(--navy);line-height:1.3}
+    .cta-main span{display:block;font-size:.92rem;color:var(--muted);margin-top:4px}
+    .cta-btns{display:flex;gap:10px;flex-wrap:wrap}
+    .cta-band .btn--ghost{border-color:var(--navy);color:var(--navy)}
+    .btn--wa{background:#25D366;color:#06301a;border:1px solid #25D366}
+    .btn--wa:hover{background:#1fbd59}
+    .cta-seq{display:flex;justify-content:space-between;gap:16px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+    .cta-seq a{display:flex;flex-direction:column;gap:2px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);text-decoration:none;font-weight:600;max-width:48%;transition:border-color .2s}
+    .cta-seq a:hover{border-color:var(--navy)}
+    .cta-seq small{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+    .seq-prev small::before{content:"← "}
+    .seq-next small::after{content:" →"}
+    .seq-next{text-align:right;margin-left:auto}
+    @media (max-width:760px){.cta-btns{width:100%;flex-direction:column}.cta-btns .btn{width:100%;justify-content:center}.cta-seq a{max-width:none;flex:1}}
+    /* ===== Mobile menu (v2) ===== */
+    .nav-home,.nav-cta{display:none}
+    @media (max-width:980px){
+      html.menu-open{overflow:hidden}
+      .nav{position:absolute;top:100%;left:0;right:0;bottom:auto;height:calc(100vh - 78px);height:calc(100dvh - 78px);max-height:none!important;padding:8px 20px 28px;gap:0;background:#fff;border-top:1px solid var(--line);overflow-y:auto;overscroll-behavior:contain;align-items:stretch}
+      .nav.open{display:flex;animation:navIn .22s var(--ease-out)}
+      @keyframes navIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+      .nav>a,.nav-dd-btn{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:56px;padding:0 4px;border-bottom:1px solid var(--line);font-size:1.08rem;font-weight:600;color:var(--navy);letter-spacing:0;text-transform:none;pointer-events:auto}
+      .nav>a::after{content:"›";font-size:1.4rem;color:var(--muted);font-weight:400}
+      .nav-home{justify-content:flex-start!important;gap:10px}
+      .nav-home svg{width:20px;height:20px;stroke:var(--lime-ink)}
+      .nav-home::after{margin-left:auto}
+      .nav-dd{width:100%}
+      .nav-dd-btn{background:none;border-left:0;border-right:0;border-top:0;cursor:pointer;font-family:inherit}
+      .nav-dd-btn svg{display:block;width:18px;height:18px;transition:transform .25s}
+      .nav-dd.open .nav-dd-btn svg{transform:rotate(180deg)}
+      .nav-dd .dd-menu{display:none;opacity:1;visibility:visible;transform:none;position:static;box-shadow:none;border:0;border-radius:0;padding:6px 0 10px;margin:0;background:var(--soft);min-width:0}
+      .nav-dd.open .dd-menu{display:flex}
+      .nav-dd:hover .dd-menu{opacity:1}
+      .dd-menu a{padding:12px 18px;font-size:.98rem;font-weight:500;border-radius:0}
+      .dd-menu .dd-all{border-bottom:0;font-weight:700}
+      .nav a[aria-current="page"]{color:var(--lime-ink)}
+      .nav-cta{display:grid;gap:10px;margin-top:22px}
+      .nav-cta .btn{width:100%;min-height:52px}
+      .nav .nav-cta .btn--navy{color:#fff}.nav .nav-cta .btn--lime,.nav .nav-cta .btn--wa{color:var(--navy)}
+      html.menu-open .site-header{background:#fff;backdrop-filter:none}
+      .nav-cta p{margin:6px 0 0;text-align:center;font-size:.88rem;color:var(--muted)}
+      .menu-btn{width:44px;height:44px;display:flex!important;flex-direction:column;justify-content:center;align-items:center;border-radius:10px}
+      .menu-btn span{flex:none;height:2px;margin:3px 0;transition:transform .25s,opacity .2s}
+      .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+      .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+      .menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+    }
+    /* Policies */
+    .pol-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 8px;border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden}
+    .pol-meta div{padding:14px 16px;border-right:1px solid var(--line)}
+    .pol-meta div:last-child{border-right:0}
+    .pol-meta dt{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+    .pol-meta dd{margin:2px 0 0;font-weight:600;color:var(--navy);font-size:.95rem;line-height:1.35}
+    .tbl-wrap{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+    .prose .price-table{font-size:.95rem;line-height:1.5}
+    .price-table.plain td{font-weight:400;color:var(--ink);white-space:normal}
+    .price-table.plain td:first-child{font-weight:600;color:var(--navy);min-width:150px}
+    .prose .ticks{padding-left:0;margin-bottom:1.4rem}
+    .pol-kpis{list-style:none;padding:0!important;margin:0 0 1.4rem;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .pol-kpis li{margin:0;padding:18px 14px;border-radius:var(--r);background:var(--navy);color:#cbd5e1;font-size:.85rem;line-height:1.35}
+    .pol-kpis strong{display:block;color:var(--lime);font-family:Lexend,sans-serif;font-size:1.45rem;line-height:1.15;margin-bottom:6px}
+    .pol-sign{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:2.4rem 0 0;padding:22px;border-radius:var(--r);background:var(--soft);border-left:4px solid var(--lime)}
+    .pol-sign span{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+    .pol-sign strong{display:block;font-family:Lexend,sans-serif;color:var(--navy);font-size:1.15rem}
+    .pol-sign em{font-style:normal;font-size:.9rem;color:var(--muted)}
+    .prose .chips-light{padding-left:0}
+    .pol-sign + .small-print{margin-top:18px}
+    .prose h2.pol-rel-h{font-size:1.1rem!important;margin:2rem 0 .8rem}
+    .pol-group{font-size:1.25rem;margin:36px 0 16px}
+    .pol-group:first-child{margin-top:0}
+    .pol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .pol-card{display:flex;flex-direction:column;padding:24px;border-radius:var(--r);background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .25s,transform .25s,box-shadow .25s;scroll-margin-top:110px}
+    .pol-card:hover{border-color:var(--navy);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,16,58,.08)}
+    .pol-card h3{font-size:1.12rem;margin:6px 0 8px;color:var(--navy)}
+    .pol-card p{font-size:.95rem;line-height:1.55;margin:0 0 14px;color:var(--muted)}
+    .pol-tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+    .pol-more{margin-top:auto;font-weight:600;color:var(--navy);font-size:.92rem}
+    .pol-also{margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+    .pol-also h2{font-size:1.1rem;margin:0 0 12px}
+    @media (max-width:980px){.pol-grid{grid-template-columns:1fr 1fr}.pol-kpis{grid-template-columns:1fr 1fr}.pol-meta{grid-template-columns:1fr 1fr}.pol-meta div:nth-child(2){border-right:0}.pol-meta div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+    @media (max-width:600px){.pol-grid{grid-template-columns:1fr}.pol-sign{grid-template-columns:1fr}}
   </style>
 </head>
 
@@ -1014,6 +1212,7 @@
   <div class="wrap">
     <a class="logo" href="/"><img src="images/upsize-logo.svg" alt="Upsize Property Renovation Ltd – home" width="181" height="48"></a>
     <nav class="nav" id="nav" aria-label="Main">
+      <a class="nav-home" href="/" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>Home</a>
       <div class="nav-dd">
         <button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="dd-sectors">Sectors<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="dd-menu" id="dd-sectors">
@@ -1022,7 +1221,19 @@
           <a href="/residential" data-nav="residential">Residential</a>
         </div>
       </div>
-      <a href="/roofing-services-peterborough" data-nav="roofing">Roofing</a>
+      <div class="nav-dd nav-dd-roof">
+        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="dd-roofing">Roofing<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="dd-menu" id="dd-roofing">
+          <a class="dd-all" href="/roofing-services-peterborough" data-nav="roofing">All roofing services</a>
+          <a href="/roof-repair-peterborough" data-nav="roof-repair-peterborough">Roof repairs</a>
+          <a href="/roof-damage-repair-peterborough" data-nav="roof-damage-repair-peterborough">Roof leak &amp; damage repair</a>
+          <a href="/emergency-roof-repair-peterborough" data-nav="emergency-roof-repair-peterborough">Emergency roof repair</a>
+          <a href="/storm-damage-roof-repair-peterborough" data-nav="storm-damage-roof-repair-peterborough">Storm &amp; wind damage</a>
+          <a href="/roof-replacement-peterborough" data-nav="roof-replacement-peterborough">New roofs &amp; replacement</a>
+          <a href="/flat-roofing-peterborough" data-nav="flat-roofing-peterborough">Flat roofing (EPDM)</a>
+          <a href="/leadwork-chimney-repair-peterborough" data-nav="leadwork-chimney-repair-peterborough">Leadwork &amp; chimneys</a>
+        </div>
+      </div>
       <a href="/projects" data-nav="projects">Projects</a>
       <a href="/news/" data-nav="news">News</a>
       <div class="nav-dd nav-dd-co">
@@ -1034,6 +1245,12 @@
         </div>
       </div>
       <a href="/contact" data-nav="contact">Contact</a>
+      <div class="nav-cta">
+        <a class="btn btn--lime" href="tel:+448001939030">Call free 0800 193 9030</a>
+        <a class="btn btn--wa" href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener">WhatsApp us</a>
+        <a class="btn btn--navy" href="/contact">Get a free quote</a>
+        <p>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</p>
+      </div>
     </nav>
     <div class="header-cta">
       <a class="phone" href="tel:+448001939030">0800 193 9030</a>
@@ -1131,8 +1348,7 @@
         <a class="btn btn--navy reveal d2" href="/projects">View all projects</a>
       </div>
       <div class="fp-grid">
-        <!-- Confirm D. Brown and South Holland District Council are happy to be named online. -->
-        <article class="fp-main reveal">
+                <article class="fp-main reveal">
           <div class="fp-img"><img src="images/council-kitchen-replacement-south-holland.jpg" alt="Kitchen replaced in an occupied council home, South Holland" width="720" height="540" loading="lazy"></div>
           <div class="fp-body">
             <span class="tagline">Social housing · Kitchens &amp; bathrooms</span>
@@ -1157,26 +1373,44 @@
   </section>
 
   <!-- ================= 4. COMPLIANCE / SUPPLY CHAIN ================= -->
-  <section class="section" id="compliance">
+  <section class="reviews-band" id="reviews" aria-labelledby="rv-h">
     <div class="wrap">
-      <div class="supply reveal" style="margin-top:0">
-        <div class="supply-intro">
-          <span class="eyebrow">Supply chain ready</span>
-          <h3>Compliance pack ready for your procurement team</h3>
-          <p>SSIP-standard policies, £5m public liability, CSCS and DBS-checked operatives. PQQ completed.</p>
-          <div class="btn-row">
-            <a class="btn btn--lime" href="/social-housing#capability">Capability statement</a>
-            <a class="btn btn--ghost" href="#contact" data-type="Social housing – main contractor / housing provider">Request compliance pack</a>
-          </div>
-          <p class="supply-sub">Subcontractor? <a href="/careers">Apply to join our supply chain →</a></p>
+      <div class="rv-head">
+        <div><span class="eyebrow reveal">Reviews</span><h2 class="reveal d1" id="rv-h">What our customers say</h2></div>
+        <div class="rv-score reveal d1">
+          <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener"><span class="st" aria-hidden="true">★★★★★</span><strong>5.0</strong>9 Google reviews</a>
+          <a href="https://www.facebook.com/upsizeproperty/reviews" target="_blank" rel="noopener"><span class="st" aria-hidden="true">★★★★★</span><strong>5/5</strong>Facebook reviews</a>
         </div>
-        <ul class="supply-docs"><li><a href="/policies#health-safety"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Health &amp; Safety<small>Policy</small></span></a></li><li><a href="/policies#quality"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Quality<small>Policy</small></span></a></li><li><a href="/policies#environmental"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Environmental<small>Policy</small></span></a></li><li><a href="/policies#safeguarding"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Safeguarding<small>Policy</small></span></a></li><li><a href="/policies#modern-slavery"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Modern Slavery<small>Policy</small></span></a></li><li><a href="/policies#equality"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Equality &amp; Diversity<small>Policy</small></span></a></li><li class="pend"><span class="pend-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></span><span>CHAS &amp; Constructionline<small>Applications in progress · Q1 2027</small></span></li></ul>
       </div>
+      <ul class="rv-quotes">
+        <li class="reveal"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Good communication, fair price, and the work was done properly.”</blockquote><cite>Google review</cite></li>
+        <li class="reveal d1"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“They upgraded my bathroom and kitchen in under a week.”</blockquote><cite>Google review</cite></li>
+        <li class="reveal d2"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“They remodel our interior, flooring and kitchen installation.”</blockquote><cite>Google review</cite></li>
+      </ul>
     </div>
   </section>
 
   <!-- NEWS:START (filled automatically by build.js from content/news) -->
   <!-- NEWS:END -->
+
+  <section class="section soft" id="compliance">
+    <div class="wrap">
+      <div class="supply reveal" style="margin-top:0">
+        <div class="supply-intro">
+          <span class="eyebrow">Supply chain ready</span>
+          <h3>Compliance pack ready for your procurement team</h3>
+          <p>NFRC member roofers. SSIP-standard policies, £5m public liability, CSCS and DBS-checked operatives. PQQ completed.</p>
+          <div class="btn-row">
+            <a class="btn btn--lime" href="/upsize-capability-statement.pdf" target="_blank" rel="noopener">Capability statement (PDF)</a>
+            <a class="btn btn--ghost" href="#contact" data-type="Social housing – main contractor / housing provider">Request compliance pack</a>
+          </div>
+          <p class="supply-sub">Subcontractor? <a href="/careers">Apply to join our supply chain →</a></p>
+        </div>
+        <ul class="supply-docs"><li><a href="/health-safety-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Health &amp; Safety<small>Policy</small></span></a></li><li><a href="/quality-management-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Quality<small>Policy</small></span></a></li><li><a href="/environmental-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Environmental<small>Policy</small></span></a></li><li><a href="/safeguarding-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Safeguarding<small>Policy</small></span></a></li><li><a href="/modern-slavery-statement"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Modern Slavery<small>Policy</small></span></a></li><li><a href="/equality-diversity-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Equality &amp; Diversity<small>Policy</small></span></a></li><li class="pend"><span class="pend-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></span><span>CHAS &amp; Constructionline<small>Applications in progress · Q1 2027</small></span></li></ul>
+      </div>
+    </div>
+  </section>
+
 
   <!-- ================= FAQ (marked up for Google and AI search) =================
        Prices are UK 2026 guide ranges: CONFIRM they match your own pricing, or edit them.
@@ -1199,11 +1433,11 @@
         <div class="faq-list" id="fp1" role="tabpanel" aria-labelledby="ft1">
           <details open>
             <summary><h3>How much does a new roof cost in Peterborough?</h3></summary>
-            <p>As a guide, a full re-roof with concrete tiles costs around £4,500–£7,500 for a terraced house, £6,500–£10,500 for a 3-bed semi and £8,000–£13,000 for a detached house, including scaffolding and waste removal. We give you a fixed, written price after a free roof check.</p>
+            <p>As a guide, a full re-roof with concrete tiles costs around £5,200–£8,600 for a terraced house, £7,500–£12,100 for a 3-bed semi and £9,200–£14,900 for a detached house, including scaffolding and waste removal. We give you a fixed, written price after a free roof check.</p>
           </details>
           <details>
             <summary><h3>How much does a roof repair cost?</h3></summary>
-            <p>Small repairs, such as replacing slipped or cracked tiles, usually cost £150–£400. Re-bedding a full ridge is typically £450–£1,200. We photograph the problem first, so you see exactly what needs fixing before you agree a price.</p>
+            <p>Small repairs, such as replacing slipped or cracked tiles, usually cost £170–£460. Re-bedding a full ridge is typically £500–£1,400. We photograph the problem first, so you see exactly what needs fixing before you agree a price.</p>
           </details>
           <details>
             <summary><h3>Should I repair or replace my roof?</h3></summary>
@@ -1219,7 +1453,7 @@
           </details>
           <details class="faq-more">
             <summary><h3>How much does an EPDM rubber flat roof cost and how long does it last?</h3></summary>
-            <p>EPDM rubber roofing typically costs £80–£120 per m² fitted, so a garage or small extension roof is usually £1,200–£2,500. A correctly installed EPDM roof can last 30–50 years, much longer than traditional felt.</p>
+            <p>EPDM rubber roofing typically costs £90–£140 per m² fitted, so a garage or small extension roof is usually £1,400–£2,900. A correctly installed EPDM roof can last 30–50 years, much longer than traditional felt.</p>
           </details>
           <details class="faq-more">
             <summary><h3>Do I need planning permission or building regulations to replace my roof?</h3></summary>
@@ -1235,7 +1469,7 @@
           </details>
           <details class="faq-more">
             <summary><h3>Do you guarantee your roofing work?</h3></summary>
-            <p>Yes. Every roofing job comes with a written guarantee. The length depends on the work and materials, and is set out clearly in your quote.</p>
+            <p>Yes. Every roofing job comes with a 10-year written guarantee. It is written up and handed to you on the spot when the job is signed off.</p>
           </details>
           <details class="faq-more">
             <summary><h3>Do you do commercial roofing?</h3></summary>
@@ -1278,7 +1512,7 @@
           </details>
           <details>
             <summary><h3>Do you work on Saturdays?</h3></summary>
-            <p>Yes. We work Monday to Friday 7:30–17:30 and Saturday 8:00–17:00.</p>
+            <p>Yes. We work Monday to Friday 7:30–19:00 and Saturday 8:00–16:00.</p>
           </details>
           <details>
             <summary><h3>How do I get a quote?</h3></summary>
@@ -1314,7 +1548,7 @@
           <li><a href="tel:+448001939030">0800 193 9030</a></li>
           <li><a href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Message us on WhatsApp</a></li>
           <li><a href="mailto:alex@upsizeproperty.com">alex@upsizeproperty.com</a></li>
-          <li>Mon–Fri 7:30–17:30 · Sat 8:00–17:00</li>
+          <li>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</li>
           <li>Peterborough · South Lincolnshire · East Midlands</li>
         </ul>
       </div>
@@ -1357,7 +1591,7 @@
           Headquarters: Peterborough, Cambridgeshire
         </address>
         <ul class="findus-meta">
-          <li><b>Hours</b>Mon–Fri 7:30–17:30 · Sat 8:00–17:00</li>
+          <li><b>Hours</b>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</li>
           <li><b>Covering</b>Peterborough, Cambridgeshire, South Lincolnshire &amp; East Midlands</li>
         </ul>
         <div class="btn-row">
@@ -1446,25 +1680,26 @@
       <a href="/news/">News &amp; press</a>
       <a href="/community">Community (SBSR)</a>
       <a href="/careers">Careers &amp; supply chain</a>
-      <a href="/social-housing#capability">Capability statement</a>
+      <a href="/upsize-capability-statement.pdf" target="_blank" rel="noopener">Capability statement (PDF)</a>
       <a href="/contact">Contact</a>
     </nav>
     <nav class="foot-col" aria-label="Policies">
       <h3>Policies</h3>
-      <a href="/policies#health-safety">Health &amp; Safety</a>
-      <a href="/policies#quality">Quality</a>
-      <a href="/policies#environmental">Environmental</a>
+      <a href="/health-safety-policy">Health &amp; Safety</a>
+      <a href="/quality-management-policy">Quality</a>
+      <a href="/environmental-policy">Environmental</a>
+      <a href="/safeguarding-policy">Safeguarding</a>
+      <a href="/modern-slavery-statement">Modern Slavery</a>
       <a href="/policies">All policies</a>
     </nav>
   </div>
   <div class="wrap foot-areas">
     <h3>Areas we cover</h3>
-    <!-- Each chip links to a local page (/areas/town). Until a town page exists, _redirects sends it to the homepage. -->
-    <ul class="area-chips"><li><a href="/areas/peterborough">Peterborough</a></li><li><a href="/areas/stamford">Stamford</a></li><li><a href="/areas/spalding">Spalding</a></li><li><a href="/areas/holbeach">Holbeach</a></li><li><a href="/areas/bourne">Bourne</a></li><li><a href="/areas/market-deeping">Market Deeping</a></li><li><a href="/areas/wisbech">Wisbech</a></li><li><a href="/areas/march">March</a></li><li><a href="/areas/huntingdon">Huntingdon</a></li><li><a href="/areas/st-neots">St Neots</a></li><li><a href="/areas/oakham">Oakham</a></li><li><a href="/areas/corby">Corby</a></li><li><a href="/areas/kettering">Kettering</a></li><li><a href="/areas/grantham">Grantham</a></li><li><a href="/areas/boston">Boston</a></li><li><a href="/areas/kings-lynn">King&#39;s Lynn</a></li><li><a href="/areas/cambridge">Cambridge</a></li></ul>
+    <ul class="area-chips"><li><a href="/areas/peterborough">Peterborough</a></li><li><a href="/areas/stamford">Stamford</a></li><li><a href="/areas/spalding">Spalding</a></li><li><a href="/areas/holbeach">Holbeach</a></li><li><a href="/areas/bourne">Bourne</a></li><li><a href="/areas/market-deeping">Market Deeping</a></li><li><a href="/areas/wisbech">Wisbech</a></li><li><a href="/areas/march">March</a></li><li><a href="/areas/huntingdon">Huntingdon</a></li><li><a href="/areas/st-neots">St Neots</a></li><li><a href="/areas/oakham">Oakham</a></li><li><a href="/areas/corby">Corby</a></li><li><a href="/areas/kettering">Kettering</a></li><li><a href="/areas/grantham">Grantham</a></li><li><a href="/areas/boston">Boston</a></li><li><a href="/areas/kings-lynn">King&#39;s Lynn</a></li><li><a href="/areas/cambridge">Cambridge</a></li><li><a href="/areas">All areas →</a></li></ul>
   </div>
   <div class="wrap legal">
     <span>© <span id="yr">2026</span> Upsize Property Renovation Ltd · Registered in England &amp; Wales · Company No. 15856524 · Registered office: 4 Blenheim Court, Suite 595, Peterborough, PE1 2DU · VAT No. GB510546327</span>
-    <nav aria-label="Legal"><a href="/privacy-policy">Privacy</a><a href="/privacy-policy#cookies">Cookies</a><a href="/terms-and-conditions">Terms</a><a href="/policies#accessibility">Accessibility</a></nav>
+    <nav aria-label="Legal"><a href="/privacy-policy">Privacy</a><a href="/privacy-policy#cookies">Cookies</a><a href="/terms-and-conditions">Terms</a><a href="/accessibility-statement">Accessibility</a></nav>
   </div>
 </footer>
 
@@ -1484,7 +1719,10 @@
 (function(){
   // Mobile menu
   var btn=document.querySelector('.menu-btn'), nav=document.getElementById('nav');
-  if(btn&&nav){btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);});}
+  function setMenu(o){nav.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Close menu':'Open menu');document.documentElement.classList.toggle('menu-open',o);}
+  if(btn&&nav){btn.addEventListener('click',function(){setMenu(!nav.classList.contains('open'));});
+    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});}
 
   // Sectors dropdown (click/tap support)
   document.querySelectorAll('.nav-dd').forEach(function(d){
