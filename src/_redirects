@@ -5,8 +5,8 @@
 /compliance-documentation                   /policies                         301
 /voids-and-maintenance                      /social-housing                   301
 /b2b-small-works-repairs                    /social-housing                   301
-/kitchen-installation-peterborough          /social-housing                   301
-/full-property-renovation                   /                                 301
+/kitchen-installation-peterborough          /kitchens-bathrooms-peterborough  301
+/full-property-renovation                   /residential                      301
 /plastering-tiling-decorating-peterborough  /                                 301
 /extensions-conversions-peterborough        /                                 301
 /services                                   /                                 301
@@ -14,6 +14,8 @@
 /website-disclaimer                         /terms-and-conditions             301
 /blog                                       /news/                            301
 /blog/*                                     /news/                            301
+/post/*                                     /news/                            301
+/blog-1                                     /news/                            301
 /case-studies                               /projects                         301
 
 # Pages not built yet: temporary (302) until each page exists. A real page file always wins over these.
