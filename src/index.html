@@ -397,8 +397,9 @@
     .nav a:hover,.nav a[aria-current="page"]{color:var(--lime-ink)}
     .header-cta{display:flex;align-items:center;gap:18px}
     .phone{font-weight:700;color:var(--navy);text-decoration:none;white-space:nowrap}
-    .nav-dd-btn{white-space:nowrap}.lbl-short{display:none}
-    @media (min-width:981px) and (max-width:1240px){.nav{gap:20px}.lbl-long{display:none}.lbl-short{display:inline}}
+    .nav-dd-btn{white-space:nowrap}
+    .dd-menu.dd-mega{flex-direction:row;gap:6px;min-width:500px}.dd-col{display:flex;flex-direction:column;flex:1;min-width:230px}.dd-h{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7590;padding:8px 12px 4px}
+    @media (max-width:980px){.dd-menu.dd-mega{flex-direction:column;min-width:0;gap:0}.dd-col{min-width:0}.dd-h{padding:12px 18px 2px}}
     .menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer}
     .menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0}
     @media (max-width:980px){
@@ -1216,35 +1217,36 @@
     <a class="logo" href="/"><img src="images/upsize-logo.svg" alt="Upsize Property Renovation Ltd – home" width="181" height="48"></a>
     <nav class="nav" id="nav" aria-label="Main">
       <a class="nav-home" href="/" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>Home</a>
+      <div class="nav-dd nav-dd-svc">
+        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="dd-services">Services<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="dd-menu dd-mega" id="dd-services">
+          <div class="dd-col">
+            <span class="dd-h">Roofing</span>
+            <a class="dd-all" href="/roofing-services-peterborough" data-nav="roofing">All roofing services</a>
+            <a href="/roof-repair-peterborough" data-nav="roof-repair-peterborough">Roof repairs</a>
+            <a href="/roof-damage-repair-peterborough" data-nav="roof-damage-repair-peterborough">Roof leak &amp; damage repair</a>
+            <a href="/emergency-roof-repair-peterborough" data-nav="emergency-roof-repair-peterborough">Emergency roof repair</a>
+            <a href="/storm-damage-roof-repair-peterborough" data-nav="storm-damage-roof-repair-peterborough">Storm &amp; wind damage</a>
+            <a href="/roof-replacement-peterborough" data-nav="roof-replacement-peterborough">New roofs &amp; replacement</a>
+            <a href="/flat-roofing-peterborough" data-nav="flat-roofing-peterborough">Flat roofing (EPDM)</a>
+            <a href="/leadwork-chimney-repair-peterborough" data-nav="leadwork-chimney-repair-peterborough">Leadwork &amp; chimneys</a>
+            <a href="/areas" data-nav="areas">Areas we cover</a>
+          </div>
+          <div class="dd-col">
+            <span class="dd-h">Kitchens &amp; bathrooms</span>
+            <a class="dd-all" href="/kitchens-bathrooms-peterborough" data-nav="kitchens">All kitchens &amp; bathrooms</a>
+            <a href="/kitchen-fitters-peterborough" data-nav="kitchen-fitters">Kitchen fitters</a>
+            <a href="/bathroom-fitters-peterborough" data-nav="bathroom-fitters">Bathroom fitters</a>
+            <a href="/wet-rooms-peterborough" data-nav="wet-rooms">Wet rooms</a>
+          </div>
+        </div>
+      </div>
       <div class="nav-dd">
         <button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="dd-sectors">Sectors<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="dd-menu" id="dd-sectors">
           <a href="/social-housing" data-nav="social-housing">Social housing</a>
           <a href="/commercial" data-nav="commercial">Commercial</a>
           <a href="/residential" data-nav="residential">Residential</a>
-        </div>
-      </div>
-      <div class="nav-dd nav-dd-roof">
-        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="dd-roofing">Roofing<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-        <div class="dd-menu" id="dd-roofing">
-          <a class="dd-all" href="/roofing-services-peterborough" data-nav="roofing">All roofing services</a>
-          <a href="/roof-repair-peterborough" data-nav="roof-repair-peterborough">Roof repairs</a>
-          <a href="/roof-damage-repair-peterborough" data-nav="roof-damage-repair-peterborough">Roof leak &amp; damage repair</a>
-          <a href="/emergency-roof-repair-peterborough" data-nav="emergency-roof-repair-peterborough">Emergency roof repair</a>
-          <a href="/storm-damage-roof-repair-peterborough" data-nav="storm-damage-roof-repair-peterborough">Storm &amp; wind damage</a>
-          <a href="/roof-replacement-peterborough" data-nav="roof-replacement-peterborough">New roofs &amp; replacement</a>
-          <a href="/flat-roofing-peterborough" data-nav="flat-roofing-peterborough">Flat roofing (EPDM)</a>
-          <a href="/leadwork-chimney-repair-peterborough" data-nav="leadwork-chimney-repair-peterborough">Leadwork &amp; chimneys</a>
-          <a href="/areas" data-nav="areas">Areas we cover (48 towns)</a>
-        </div>
-      </div>
-      <div class="nav-dd nav-dd-kb">
-        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="dd-kb"><span class="lbl-long">Kitchens &amp; Bathrooms</span><span class="lbl-short">Kitchens &amp; Baths</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-        <div class="dd-menu" id="dd-kb">
-          <a class="dd-all" href="/kitchens-bathrooms-peterborough" data-nav="kitchens">All kitchens &amp; bathrooms</a>
-          <a href="/kitchen-fitters-peterborough" data-nav="kitchen-fitters">Kitchen fitters</a>
-          <a href="/bathroom-fitters-peterborough" data-nav="bathroom-fitters">Bathroom fitters</a>
-          <a href="/wet-rooms-peterborough" data-nav="wet-rooms">Wet rooms</a>
         </div>
       </div>
       <a href="/projects" data-nav="projects">Projects</a>
