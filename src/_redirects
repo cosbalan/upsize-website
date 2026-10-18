@@ -22,6 +22,7 @@
 /gallery                                    /projects                         301
 /kitchens                                   /kitchens-bathrooms-peterborough  301
 /bathrooms                                  /kitchens-bathrooms-peterborough  301
+/modern-slavery-statment                    /modern-slavery-statement         301
 /case-studies                               /projects                         301
 
 # Pages not built yet: temporary (302) until each page exists. A real page file always wins over these.
