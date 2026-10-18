@@ -99,6 +99,7 @@ function navFor(key) {
   if (key) h = h.replace(`data-nav="${key}"`, `data-nav="${key}" aria-current="page"`);
   if (['social-housing', 'commercial', 'residential'].includes(key)) h = h.replace('<div class="nav-dd">', '<div class="nav-dd current">');
   if (key && /^roof|leadwork|flat-roofing|emergency-roof|storm-damage/.test(key)) h = h.replace('<div class="nav-dd nav-dd-roof">', '<div class="nav-dd nav-dd-roof current">');
+  if (['kitchens', 'kitchen-fitters', 'bathroom-fitters', 'wet-rooms'].includes(key)) h = h.replace('<div class="nav-dd nav-dd-kb">', '<div class="nav-dd nav-dd-kb current">');
   if (['about', 'community', 'careers'].includes(key)) h = h.replace('<div class="nav-dd nav-dd-co">', '<div class="nav-dd nav-dd-co current">');
   return h;
 }
