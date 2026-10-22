@@ -125,6 +125,7 @@ function headFor({ title, description, url, ogImage, ldExtra = [], depth = 0, og
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="alternate" type="application/rss+xml" title="Upsize news and press releases" href="${SITE}/news/feed.xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="${'../'.repeat(depth)}images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="${'../'.repeat(depth)}images/apple-touch-icon.png">
   <link rel="preload" as="font" href="${'../'.repeat(depth)}fonts/lexend-latin.woff" type="font/woff" crossorigin>
