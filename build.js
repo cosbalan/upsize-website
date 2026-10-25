@@ -92,8 +92,9 @@ let home = fs.readFileSync(path.join(SRC, 'index.html'), 'utf8');
 
 const cssText = between(home, '<style>', '</style>').replace(/^<style>/, '');
 const cssOut = cssText.replace(/url\(["']?(images\/[^"')]+?)\.jpg(?=["')])/g, (m, f) => fs.existsSync(path.join(OUT, f + '.webp')) ? m.replace('.jpg', '.webp') : m);
-const cssHash = require('crypto').createHash('md5').update(cssOut).digest('hex').slice(0, 8);
-fs.writeFileSync(path.join(OUT, `site.${cssHash}.css`), cssOut.trim() + '\n');
+const cssMin = cssOut.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{};])\s*/g, '$1').replace(/;}/g, '}').trim();
+const cssHash = require('crypto').createHash('md5').update(cssMin).digest('hex').slice(0, 8);
+fs.writeFileSync(path.join(OUT, `site.${cssHash}.css`), cssMin + '\n');
 const style = `<link rel="stylesheet" href="/site.${cssHash}.css">`;
 home = home.replace(/<style>[\s\S]*?<\/style>/, style);
 const businessLd = home.match(/<script type="application\/ld\+json">\s*\{\s*"@context": "https:\/\/schema.org",\s*"@type": \[[\s\S]*?<\/script>/)[0];
@@ -367,7 +368,15 @@ fs.writeFileSync(path.join(OUT, 'llms.txt'), llms);
       const rel = f.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
       return fs.existsSync(path.join(OUT, rel + '.webp')) ? `${pre}${f}.webp` : m;
     });
-    if (out !== h) fs.writeFileSync(p, out);
+    let out2 = out.replace(/(rel="preload" as="image" href=")([^"]+?)\.jpg"/g, (m, pre, f) => {
+      const rel = f.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
+      return fs.existsSync(path.join(OUT, rel + '.webp')) ? `${pre}${f}.webp" type="image/webp"` : m;
+    });
+    if (!/rel="preload" as="image"/.test(out2)) {
+      const m = out2.match(/class="hero-bg"[^>]*url\('([^']+)'\)/);
+      if (m) out2 = out2.replace('<link rel="preload" as="font"', `<link rel="preload" as="image" href="${m[1]}" fetchpriority="high">\n  <link rel="preload" as="font"`);
+    }
+    if (out2 !== h) fs.writeFileSync(p, out2);
   }
 })(OUT);
 

@@ -1,5 +1,6 @@
 ---
 title: "EPDM rubber flat roofs: costs, lifespan and when to choose one"
+seo_title: "EPDM Flat Roof Cost & Lifespan Guide 2026 | Upsize"
 category: "Blog"
 date: 2026-10-16
 summary: "What an EPDM rubber flat roof costs in 2026, how long it lasts compared with felt, and whether it suits your garage, extension or dormer."

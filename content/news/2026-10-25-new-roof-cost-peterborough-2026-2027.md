@@ -1,6 +1,6 @@
 ---
 title: "How much does a new roof cost in Peterborough? 2026 prices and 2027 trends"
-seo_title: "New Roof Cost Peterborough 2026–2027 | Prices & Trends | Upsize"
+seo_title: "New Roof Cost Peterborough: 2026 Prices & 2027 Trends"
 seo_description: "What a new roof, re-roof or roof repair costs in Peterborough in 2026, what to expect in 2027, and how to avoid paying too much. Free drone survey."
 category: "Blog"
 date: 2026-10-25
