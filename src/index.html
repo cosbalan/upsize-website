@@ -1372,6 +1372,91 @@
       .ct-chips li::before{left:10px}
     }
     @media (max-width:360px){.hero-promise li,.ct-chips li{font-size:.8rem}.hero-call{font-size:.82rem}}
+  
+    .steps--3{grid-template-columns:repeat(3,1fr)}@media (max-width:760px){.steps--3{grid-template-columns:1fr}}
+    .cta-band--seq{padding:28px 0}.cta-band--seq .cta-seq{margin-top:0;padding-top:0;border-top:0}
+    .post-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px;margin:28px 0;padding:18px 20px;border-radius:14px;background:var(--navy);color:#fff}
+    .post-cta p{margin:0!important;font-size:.98rem;line-height:1.45;color:#dfe6f3}.post-cta strong{color:#fff;display:block;font-family:Lexend,sans-serif;font-size:1.05rem}
+    .post-cta .btn-row{margin:0;gap:8px}.post-cta .btn{padding:.75rem 1.1rem;font-size:.9rem;min-height:0}
+    .btn--line-w{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}.btn--line-w:hover{border-color:var(--lime);color:var(--lime)}
+    .prose .post-cta a{color:inherit}.prose .post-cta .btn--lime{color:var(--navy)}
+    @media (max-width:760px){.post-cta{flex-direction:column;align-items:stretch}.post-cta .btn-row{width:100%}}
+
+    /* ===== homepage photo service cards + review carousel ===== */
+    .svc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .svc-card{position:relative;display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--navy);transition:transform .25s,box-shadow .25s,border-color .25s}
+    .svc-card:hover{transform:translateY(-3px);box-shadow:0 18px 36px -20px rgba(0,16,58,.35);border-color:var(--lime)}
+    .svc-img{display:block;aspect-ratio:16/10;overflow:hidden;background:#dfe6f3}.svc-img img{width:100%;height:100%;object-fit:cover;display:block}
+    .svc-txt{display:block;padding:14px 48px 16px 16px}.svc-txt strong{display:block;font-family:Lexend,sans-serif;font-size:1.05rem;line-height:1.25}.svc-txt small{display:block;margin-top:4px;font-size:.86rem;color:var(--muted)}
+    .svc-card .go{position:absolute;right:14px;bottom:16px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--soft);font-size:.9rem}
+    .svc-card:hover .go{background:var(--lime)}
+    .svc-sub{margin:36px 0 14px;font-size:1.15rem}
+    .svc-cards--sm .svc-img{aspect-ratio:16/9}
+    .svc-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin:22px 0 0;font-size:.92rem}.svc-links a{color:var(--navy);font-weight:600}.svc-links a:first-child{margin-right:auto}
+    @media (max-width:760px){
+      .svc-cards{grid-template-columns:1fr 1fr;gap:10px}
+      .svc-txt{padding:10px 10px 12px}.svc-txt strong{font-size:.92rem}.svc-txt small{font-size:.76rem}
+      .svc-card .go{display:none}
+      .svc-cards--sm{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:0 -20px;padding:0 20px 4px}
+      .svc-cards--sm .svc-card{flex:0 0 62%;scroll-snap-align:start}
+      .svc-links a:first-child{flex-basis:100%}
+      .svc-cards--desc{grid-template-columns:1fr}.svc-cards--desc .svc-card{flex-direction:row;align-items:stretch}.svc-cards--desc .svc-img{flex:0 0 112px;aspect-ratio:auto}.svc-cards--desc .svc-txt{padding:12px 14px}.svc-cards--desc .svc-txt small{font-size:.82rem;line-height:1.45}
+      .rv-quotes{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -20px;padding:0 20px 6px}
+      .rv-quotes li{flex:0 0 84%;scroll-snap-align:start}
+      .rv-quotes blockquote{font-size:.98rem}
+      .reviews-band{padding:44px 0}
+    }
+    .more-fields{margin:2px 0 14px;border:1px dashed var(--line);border-radius:10px;padding:10px 14px}
+    .more-fields summary{cursor:pointer;font-weight:600;font-size:.92rem;color:var(--navy);list-style:none}
+    .more-fields summary::before{content:"+ ";color:var(--lime-ink)}
+    .more-fields[open] summary::before{content:"– "}
+    .more-fields[open] summary{margin-bottom:10px}
+    .more-fields summary::-webkit-details-marker{display:none}
+    @media (max-width:760px){
+      .two.two--m{display:grid;grid-template-columns:1fr 1fr;gap:10px!important}
+      .next-steps{grid-template-columns:repeat(3,1fr);gap:6px}.next-steps li{padding:9px 8px;font-size:.74rem}.next-steps strong{display:block;font-size:.78rem}
+      #news .nf-img{display:none}
+    }
+    /* ===== tabs (content stays in the page for Google) ===== */
+    .tab-list{display:flex;gap:8px;margin:0 0 22px;overflow-x:auto;scrollbar-width:none}
+    .tab-list::-webkit-scrollbar{display:none}
+    .tab-list button{flex:none;font:inherit;font-weight:600;font-size:.92rem;padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;transition:background .2s,border-color .2s}
+    .tab-list button[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+    .tab-h{font-size:1.15rem;margin:0 0 16px}
+    .js .tabs[data-tabs] .tab-panel:not(.on){display:none}
+    .no-js .tab-list{display:none}
+    .pay-block{margin-top:40px}.pay-block h3{font-size:1.3rem;margin:0 0 14px}
+    .case-h{margin:44px 0 16px;font-size:1.3rem}
+    @media (max-width:760px){.tab-list{margin:0 -20px 18px;padding:0 20px}.tab-list button{padding:9px 14px;font-size:.86rem}}
+    .more-areas summary{list-style:none;cursor:pointer;font-family:Lexend,sans-serif;font-weight:600;font-size:1.15rem;color:var(--navy);margin:28px 0 14px}
+    .more-areas summary::-webkit-details-marker{display:none}
+    .more-areas summary::after{content:" +";color:var(--lime-ink)}.more-areas[open] summary::after{content:" –"}
+    @media (max-width:760px){
+      .steps li{padding:14px 16px;display:grid;grid-template-columns:38px 1fr;column-gap:10px}
+      .steps li::before{grid-row:span 2;font-size:1.15rem;margin:0}
+      .steps li h3{font-size:1rem;margin:0 0 2px}.steps li p{margin:0;font-size:.88rem}
+      .steps{gap:8px}
+    }
+    /* ===== sticky mini contact bar + header call (mobile) ===== */
+    .hdr-call,.mbar{display:none}
+    .ct-rating{margin:14px 0 0;font-size:.9rem;color:#cbd5e1}.ct-rating span{color:#F5B301;letter-spacing:2px}.ct-rating strong{color:#fff}.ct-rating a{color:#fff}
+    @media (max-width:980px){
+      .header-cta{gap:6px}
+      .hdr-call{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--lime);color:var(--navy)}
+      .hdr-call svg{width:18px;height:18px}
+    }
+    @media (max-width:760px){
+      .fab{display:none!important}
+      .mbar{display:grid;grid-template-columns:1.15fr 1fr 1fr;position:fixed;z-index:85;left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));height:44px;border-radius:12px;overflow:hidden;background:var(--navy);box-shadow:0 10px 26px -8px rgba(0,16,58,.55);transform:translateY(140%);transition:transform .3s ease}
+      .mbar.show{transform:none}
+      .mbar a{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.82rem;font-weight:600;text-decoration:none;color:#fff;border-left:1px solid rgba(255,255,255,.14)}
+      .mbar a:first-child{border-left:0;background:var(--lime);color:var(--navy)}
+      .mbar svg{width:15px;height:15px;flex:none}
+      .mb-wa svg{color:#25D366}
+      .site-footer{padding-bottom:64px}
+      .findus-map,.fu-maps{display:none!important}
+      .findus{padding:44px 0}
+    }
   </style>
 </head>
 
@@ -1437,6 +1522,7 @@
     <div class="header-cta">
       <a class="phone" href="tel:+448001939030">0800 193 9030</a>
       <a class="btn btn--lime" href="#contact">Get in touch</a>
+      <a class="hdr-call" href="tel:+448001939030" aria-label="Call free on 0800 193 9030"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -1467,7 +1553,7 @@
         <a class="hero-call" href="tel:+448001939030"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><span class="hc-pre">Or call </span><strong>0800&nbsp;193&nbsp;9030</strong></span></a>
         <a class="hero-call hero-wa" href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.23 9.43-9.44 9.43zm8.03-17.46A11.3 11.3 0 0 0 12.05.7C5.79.7.7 5.79.7 12.05c0 2 .52 3.95 1.52 5.67L.6 23.3l5.72-1.5a11.3 11.3 0 0 0 5.72 1.46h.01c6.26 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02z"/></svg><span><span class="hc-pre">or message us on </span><strong>WhatsApp</strong></span></a>
       </div>
-      <ul class="trust-row reveal d3"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><span><strong>5.0</strong> on Google</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m9 14-1.5 7L12 19l4.5 2L15 14"/></svg><span><strong>2-hour</strong> call-back</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="M12 8v8M9 12h6"/></svg><span><strong>£5m</strong> insured</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg><span><strong>Card, cash</strong> or BACS</span></li></ul>
+      <ul class="trust-row reveal d3"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><span><strong>5.0</strong> · 35+ reviews</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m9 14-1.5 7L12 19l4.5 2L15 14"/></svg><span><strong>2-hour</strong> call-back</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="M12 8v8M9 12h6"/></svg><span><strong>£5m</strong> insured</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg><span><strong>Card, cash</strong> or BACS</span></li></ul>
     </div>
   </section>
 
@@ -1487,6 +1573,50 @@
         <li><span class="st-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 12 4l10 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-5h6v5"/></svg></span><strong><span data-count="80">80</span><em class="pl">+</em></strong><span class="st-lbl">Roofs completed</span></li>
         <li><span class="st-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m9 14-1.5 7L12 19l4.5 2L15 14"/></svg></span><strong><span data-count="12">12</span><em class="pl">+</em><em> yrs</em></strong><span class="st-lbl">Multi-trade experience</span></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS (proof straight after the hero) ================= -->
+  <section class="reviews-band" id="reviews" aria-labelledby="rv-h">
+    <div class="wrap">
+      <div class="rv-head">
+        <div><span class="eyebrow reveal">Reviews</span><h2 class="reveal d1" id="rv-h">What our customers say</h2></div>
+        <div class="rv-score reveal d1">
+          <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener"><span class="st" aria-hidden="true">★★★★★</span><strong>5.0</strong>35+ five-star reviews</a>
+          <a href="https://www.facebook.com/upsizeproperty/reviews" target="_blank" rel="noopener"><span class="st" aria-hidden="true">★★★★★</span><strong>5/5</strong>Facebook reviews</a>
+        </div>
+      </div>
+      <ul class="rv-quotes">
+        <li class="reveal"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Alex and his team fixed our roof quickly after a leak. Good communication, fair price, and the work was done properly. Happy to recommend Upsize Property Renovation Ltd for roofing in Peterborough.”</blockquote><cite>Google review</cite></li>
+        <li class="reveal d1"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Excellent service! Upsize Property Renovation responded very quickly to an emergency roofing issue and completed the repairs efficiently and professionally. Very reliable, helpful and quick to act. Highly recommend!”</blockquote><cite>Google review</cite></li>
+        <li class="reveal d2"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Upsize fixed our flat roof in Oundle, Peterborough in just one day. I do recommend them for any roof work. They offer me an price on the spot after a short phone call.”</blockquote><cite>Google review</cite></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= WHAT WE DO (photo cards) ================= -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="sec-top">
+        <span class="eyebrow reveal">What we do</span>
+        <h2 class="reveal d1">Roofing services in Peterborough</h2>
+        <p class="reveal d2">From one slipped tile to a full new roof, with guide prices on every service.</p>
+      </div>
+      <div class="svc-cards">
+        <a class="svc-card reveal" href="/roof-repair-peterborough"><span class="svc-img"><img src="images/roof-repair-new-tiles-dry-ridge-peterborough.jpg" alt="New tiles and dry-fix ridge on a Peterborough roof repair" width="600" height="450" loading="lazy"></span><span class="svc-txt"><strong>Roof repairs</strong><small>Tiles, ridges, leaks · from £170</small></span><span class="go" aria-hidden="true">→</span></a>
+        <a class="svc-card reveal" href="/roof-replacement-peterborough"><span class="svc-img"><img src="images/re-roof-new-tiles-grantham.jpg" alt="Completed re-roof with new concrete tiles near Grantham" width="600" height="450" loading="lazy"></span><span class="svc-txt"><strong>New roofs &amp; re-roofs</strong><small>Full replacement · from £5,200</small></span><span class="go" aria-hidden="true">→</span></a>
+        <a class="svc-card reveal" href="/flat-roofing-peterborough"><span class="svc-img"><img src="images/epdm-flat-roof-peterborough.jpg" alt="New EPDM rubber flat roof in Peterborough" width="600" height="450" loading="lazy"></span><span class="svc-txt"><strong>Flat roofs (EPDM)</strong><small>Garages, extensions · from £90/m²</small></span><span class="go" aria-hidden="true">→</span></a>
+        <a class="svc-card reveal" href="/emergency-roof-repair-peterborough"><span class="svc-img"><img src="images/broken-missing-roof-tiles-peterborough.jpg" alt="Storm-damaged roof with missing tiles in Peterborough" width="600" height="450" loading="lazy"></span><span class="svc-txt"><strong>Emergency &amp; storm repairs</strong><small>Same-day visits where possible</small></span><span class="go" aria-hidden="true">→</span></a>
+        <a class="svc-card reveal" href="/leadwork-chimney-repair-peterborough"><span class="svc-img"><img src="images/pantile-roof-repair-abutment-lead-flashing-peterborough.jpg" alt="New lead flashing at a roof abutment in Peterborough" width="600" height="450" loading="lazy"></span><span class="svc-txt"><strong>Leadwork &amp; chimneys</strong><small>Flashings, valleys · from £400</small></span><span class="go" aria-hidden="true">→</span></a>
+        <a class="svc-card reveal" href="/gutters-fascias-soffits-peterborough"><span class="svc-img"><img src="images/new-roof-tiles-house-peterborough.jpg" alt="House with new roof tiles, fascias and guttering in Peterborough" width="600" height="450" loading="lazy"></span><span class="svc-txt"><strong>Gutters, fascias &amp; soffits</strong><small>Roofline renewals · from £60</small></span><span class="go" aria-hidden="true">→</span></a>
+      </div>
+      <h3 class="svc-sub reveal">Also from Upsize</h3>
+      <div class="svc-cards svc-cards--sm">
+        <a class="svc-card reveal" href="/kitchens-bathrooms-peterborough"><span class="svc-img"><img src="images/shaker-kitchen-residential-peterborough.jpg" alt="Shaker kitchen fitted in a Peterborough home" width="600" height="450" loading="lazy"></span><span class="svc-txt"><strong>Kitchens &amp; bathrooms</strong><small>Homes, landlords &amp; commercial</small></span><span class="go" aria-hidden="true">→</span></a>
+        <a class="svc-card reveal" href="/wet-rooms-peterborough"><span class="svc-img"><img src="images/accessible-wet-room-after-peterborough.jpg" alt="Accessible level-access wet room in Peterborough" width="600" height="450" loading="lazy"></span><span class="svc-txt"><strong>Wet rooms</strong><small>Level-access showers</small></span><span class="go" aria-hidden="true">→</span></a>
+        <a class="svc-card reveal" href="/social-housing"><span class="svc-img"><img src="images/social-housing-kitchen-after-peterborough.jpg" alt="Council home kitchen replacement by Upsize" width="600" height="450" loading="lazy"></span><span class="svc-txt"><strong>Social housing &amp; contractors</strong><small>Framework programmes, SOR pricing</small></span><span class="go" aria-hidden="true">→</span></a>
+      </div>
+      <p class="svc-links reveal"><a href="/roofing-services-peterborough">All roofing services, prices and guarantees →</a><a href="/residential">Residential</a><a href="/commercial">Commercial</a><a href="/social-housing">Social housing</a></p>
     </div>
   </section>
 
@@ -1538,74 +1668,9 @@
     </div>
   </section>
 
-  <!-- ================= 4. COMPLIANCE / SUPPLY CHAIN ================= -->
-  <section class="reviews-band" id="reviews" aria-labelledby="rv-h">
-    <div class="wrap">
-      <div class="rv-head">
-        <div><span class="eyebrow reveal">Reviews</span><h2 class="reveal d1" id="rv-h">What our customers say</h2></div>
-        <div class="rv-score reveal d1">
-          <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener"><span class="st" aria-hidden="true">★★★★★</span><strong>5.0</strong>35+ five-star reviews</a>
-          <a href="https://www.facebook.com/upsizeproperty/reviews" target="_blank" rel="noopener"><span class="st" aria-hidden="true">★★★★★</span><strong>5/5</strong>Facebook reviews</a>
-        </div>
-      </div>
-      <ul class="rv-quotes">
-        <li class="reveal"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Alex and his team fixed our roof quickly after a leak. Good communication, fair price, and the work was done properly. Happy to recommend Upsize Property Renovation Ltd for roofing in Peterborough.”</blockquote><cite>Google review</cite></li>
-        <li class="reveal d1"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Excellent service! Upsize Property Renovation responded very quickly to an emergency roofing issue and completed the repairs efficiently and professionally. Very reliable, helpful and quick to act. Highly recommend!”</blockquote><cite>Google review</cite></li>
-        <li class="reveal d2"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Upsize fixed our flat roof in Oundle, Peterborough in just one day. I do recommend them for any roof work. They offer me an price on the spot after a short phone call.”</blockquote><cite>Google review</cite></li>
-      </ul>
-    </div>
-  </section>
 
-  <!-- NEWS:START (filled automatically by build.js from content/news) -->
-  <!-- NEWS:END -->
 
-  <!-- ================= 2. WHAT WE DO (sectors) ================= -->
-  <section class="section" id="services">
-    <div class="wrap">
-      <div class="sec-top">
-        <span class="eyebrow reveal">Our divisions</span>
-        <h2 class="reveal d1">Roofing, kitchens, bathrooms &amp; wet rooms across three sectors</h2>
-      </div>
-      <div class="sectors3">
-        <a class="sector reveal" href="/social-housing">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span>
-          <h3>Social housing</h3>
-          <p>Turnkey kitchens, bathrooms and level-access wet rooms in void and occupied homes, 5 days per property.</p>
-          <span class="go">Find out more →</span>
-        </a>
-        <a class="sector reveal d1" href="/commercial">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M7 8V4h10v4M7 12h2M11 12h2M15 12h2M7 16h2M11 16h2M15 16h2"/></svg></span>
-          <h3>Commercial sector</h3>
-          <p>Kitchens, bathrooms and wet rooms, plus flat and pitched roofing, for commercial property.</p>
-          <span class="go">Find out more →</span>
-        </a>
-        <a class="sector reveal d2" href="/residential">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 12 3l10 9"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span>
-          <h3>Residential sector</h3>
-          <p>Kitchens, bathrooms, wet rooms and roofing for homeowners, from repairs to full re-roofs.</p>
-          <span class="go">Find out more →</span>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <section class="section soft" id="compliance">
-    <div class="wrap">
-      <div class="supply reveal" style="margin-top:0">
-        <div class="supply-intro">
-          <span class="eyebrow">Supply chain ready</span>
-          <h3>Compliance pack ready for your procurement team</h3>
-          <p>NFRC membership in progress (Q1 2027). SSIP-standard policies, £5m public liability, CSCS and DBS-checked operatives. PQQ completed.</p>
-          <div class="btn-row">
-            <a class="btn btn--lime" href="/upsize-capability-statement.pdf" target="_blank" rel="noopener">Capability statement (PDF)</a>
-            <a class="btn btn--ghost" href="#contact" data-type="Social housing – main contractor / housing provider">Request compliance pack</a>
-          </div>
-          <p class="supply-sub">Subcontractor? <a href="/careers">Apply to join our supply chain →</a></p>
-        </div>
-        <ul class="supply-docs"><li><a href="/health-safety-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Health &amp; Safety<small>Policy</small></span></a></li><li><a href="/quality-management-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Quality<small>Policy</small></span></a></li><li><a href="/environmental-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Environmental<small>Policy</small></span></a></li><li><a href="/safeguarding-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Safeguarding<small>Policy</small></span></a></li><li><a href="/modern-slavery-statement"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Modern Slavery<small>Policy</small></span></a></li><li><a href="/equality-diversity-policy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg><span>Equality &amp; Diversity<small>Policy</small></span></a></li><li class="pend"><span class="pend-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></span><span>CHAS, Constructionline &amp; NFRC<small>Applications in progress · Q1 2027</small></span></li></ul>
-      </div>
-    </div>
-  </section>
 
 
   <!-- ================= FAQ (marked up for Google and AI search) =================
@@ -1719,19 +1784,9 @@
     </div>
   </section>
 
-  <!-- ================= 6. ABOUT (short; detail lives on /about-us) ================= -->
-  <section class="about-band" id="about">
-    <div class="wrap">
-      <div class="about-slim reveal">
-        <div>
-          <span class="eyebrow">About Upsize</span>
-          <h2>Roofing, kitchen &amp; bathroom contractor in Peterborough</h2>
-          <p>We're delighted to renew homes for better living, with one trained team for every trade.</p>
-        </div>
-        <div class="btn-row"><a class="btn btn--navy" href="/about-us">More about us</a><a class="btn btn--line" href="/community">Our community work</a></div>
-      </div>
-    </div>
-  </section>
+
+  <!-- NEWS:START (filled automatically by build.js from content/news) -->
+  <!-- NEWS:END -->
 
   <!-- ================= 7. CONTACT ================= -->
   <section class="section cta" id="contact">
@@ -1740,6 +1795,7 @@
         <span class="eyebrow reveal">Free quote · no obligation</span>
         <h2 class="reveal d1">Talk directly to Alex or Lari</h2>
         <p class="lead reveal d2">Speak to the directors who price and manage your job. We call you back within 2 working hours.</p>
+        <p class="ct-rating reveal d2"><span aria-hidden="true">★★★★★</span> <strong>5.0</strong> from 35+ five-star reviews on <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">Google</a></p>
         <div class="ct-actions reveal d2"><a class="btn btn--lime" href="tel:+448001939030"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call 0800 193 9030</a><a class="btn btn--wa" href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div>
         <ul class="ct-chips reveal d2">
           <li>Free £250 drone survey</li>
@@ -1754,26 +1810,29 @@
       <form class="reveal d1" name="enquiry" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company_website"><input type="hidden" name="lead_source" value=""><input type="hidden" name="landing_page" value="">
         <input type="hidden" name="form-name" value="enquiry">
         <p class="hp"><label>Leave this empty <input name="company_website"></label></p>
-        <div class="two">
+        <div class="two two--m">
           <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
           <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" autocomplete="tel" required></div>
         </div>
-        <div class="two">
-          <div class="field"><label for="f-email">Email <small>(optional)</small></label><input id="f-email" type="email" name="email" autocomplete="email"></div>
+        <div class="two two--m">
+          <div class="field"><label for="f-pc">Postcode</label><input id="f-pc" name="postcode" autocomplete="postal-code" placeholder="e.g. PE1 2DU"></div>
           <div class="field">
-            <label for="f-type">I'm enquiring about</label>
+            <label for="f-type">Enquiry</label>
             <select id="f-type" name="enquiry_type" required>
-              <option value="">Please choose</option>
-              <option>Social housing – main contractor / housing provider</option>
-              <option>Developer – kitchens, bathrooms or roofing</option>
-              <option>Homeowner – kitchens, bathrooms or roofing</option>
-              <option>Commercial – kitchens, bathrooms or roofing</option>
-              <option>Something else</option>
+              <option value="">Choose…</option>
+              <option value="Social housing – main contractor / housing provider">Social housing / contractor</option>
+              <option value="Developer – kitchens, bathrooms or roofing">Developer</option>
+              <option value="Homeowner – kitchens, bathrooms or roofing">Homeowner or landlord</option>
+              <option value="Commercial – kitchens, bathrooms or roofing">Commercial</option>
+              <option value="Something else">Something else</option>
             </select>
           </div>
         </div>
-        <div class="field"><label for="f-pc">Postcode</label><input id="f-pc" name="postcode" autocomplete="postal-code" placeholder="e.g. PE1 2DU"></div>
-        <div class="field"><label for="f-msg">Tell us about the job</label><textarea id="f-msg" name="message" placeholder="e.g. leak above the back bedroom, slipped tiles after the storm" required></textarea></div>
+        <details class="more-fields">
+          <summary>Add email or job details <small>(optional)</small></summary>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" autocomplete="email"></div>
+          <div class="field"><label for="f-msg">Tell us about the job</label><textarea id="f-msg" name="message" placeholder="e.g. leak above the back bedroom, slipped tiles after the storm"></textarea></div>
+        </details>
         <button class="btn btn--lime btn--block" type="submit">Send my enquiry</button>
         <ol class="next-steps">
           <li><strong>We call you back</strong><span>within 2 working hours</span></li>
@@ -1801,7 +1860,7 @@
         </ul>
         <div class="btn-row">
           <a class="btn btn--lime" href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener"><svg class="g" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 17.3 18.2 21l-1.6-7 5.4-4.7-7.2-.6L12 2 9.2 8.7 2 9.3l5.4 4.7-1.6 7z"/></svg>Read our Google reviews</a>
-          <a class="btn btn--line" href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">View us on Google Maps</a>
+          <a class="btn btn--line fu-maps" href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">View us on Google Maps</a>
         </div>
       </div>
       <div class="findus-map reveal d1">
@@ -1908,6 +1967,11 @@
   </div>
 </footer>
 
+<nav class="mbar" id="mbar" aria-label="Quick contact">
+  <a class="mb-call" href="tel:+448001939030"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>Call free</span></a>
+  <a class="mb-wa" href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.05 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.4A9.9 9.9 0 1 0 12.05 2zm5.8 14c-.25.7-1.45 1.33-2 1.4-.5.07-1.15.1-1.85-.12-.43-.13-.98-.31-1.68-.62-2.95-1.27-4.88-4.25-5.03-4.45-.15-.2-1.2-1.6-1.2-3.05s.76-2.17 1.03-2.46c.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.84 2.06.92 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5l-.44.52c-.15.15-.3.3-.13.6.17.3.77 1.27 1.66 2.06 1.14 1.02 2.1 1.33 2.4 1.48.3.15.47.13.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.08.12.08.71-.17 1.41z"/></svg><span>WhatsApp</span></a>
+  <a class="mb-quote" href="#contact"><span>Free quote</span></a>
+</nav>
 <div class="fab" id="fab">
   <ul class="fab-menu" id="fab-menu">
     <li><a class="fab-quote" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg>Get a free quote</a></li>
@@ -1940,6 +2004,13 @@
   var hdr=document.querySelector('.site-header');
   var hs=null;window.addEventListener('scroll',function(){var v=window.scrollY>10;if(v!==hs){hs=v;hdr.classList.toggle('scrolled',v);}},{passive:true});
 
+
+  // Mini contact bar: show after the hero, hide while the contact form is on screen
+  (function(){var bar=document.getElementById('mbar');if(!bar)return;var q=bar.querySelector('.mb-quote');if(!document.getElementById('contact'))q.setAttribute('href','/contact');
+    var hero=document.querySelector('main > section'),ct=document.getElementById('contact'),ctIn=false;
+    if(ct&&'IntersectionObserver' in window){new IntersectionObserver(function(e){ctIn=e[0].isIntersecting;upd();},{threshold:.15}).observe(ct);}
+    function upd(){var lim=hero?hero.offsetTop+hero.offsetHeight-60:400;bar.classList.toggle('show',window.scrollY>lim&&!ctIn);}
+    window.addEventListener('scroll',upd,{passive:true});upd();})();
   // Count-up stats (final numbers are already in the HTML for Google and no-JS)
   var nums=document.querySelectorAll('.stats [data-count]');
   if(nums.length&&'IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
@@ -2001,6 +2072,14 @@
     });
   });
 
+
+  // Tabs
+  document.querySelectorAll('[data-tabs]').forEach(function(w){var bs=w.querySelectorAll('[role=tab]');
+    function sel(b){bs.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);var pn=document.getElementById(x.getAttribute('aria-controls'));if(pn)pn.classList.toggle('on',on);});}
+    bs.forEach(function(b){b.addEventListener('click',function(){sel(b);});});sel(bs[0]);});
+
+  // Long area lists start closed on phones (still in the page for Google)
+  if(window.matchMedia('(max-width:760px)').matches){document.querySelectorAll('details.more-areas[open]').forEach(function(d){d.removeAttribute('open');});}
   // FAQ: show more / fewer
   document.querySelectorAll('.faq-toggle').forEach(function(b){
     var list=b.closest('.faq-list'), n=list.querySelectorAll('.faq-more').length;

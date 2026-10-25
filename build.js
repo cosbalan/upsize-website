@@ -153,6 +153,7 @@ function ctaBand(meta, withContact) {
   const quote = withContact ? '#contact' : '/contact';
   const seq = (meta.prev || meta.next) ? `
       <nav class="cta-seq" aria-label="${meta.seqLabel || 'Related pages'}">${meta.prev ? `<a class="seq-prev" href="${meta.prev[0]}"><small>Previous</small>${meta.prev[1]}</a>` : '<span></span>'}${meta.next ? `<a class="seq-next" href="${meta.next[0]}"><small>Next</small>${meta.next[1]}</a>` : ''}</nav>` : '';
+  if (withContact) return seq ? `  <section class="cta-band cta-band--seq" aria-label="More areas">\n    <div class="wrap">${seq}\n    </div>\n  </section>\n` : '';
   return `  <section class="cta-band" aria-label="Contact options">
     <div class="wrap">
       <div class="cta-main">
@@ -170,6 +171,17 @@ function page({ meta, mainHtml, depth = 0, withContact = true }) {
 const crumbsLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([n, u], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: SITE + u })) });
 const faqLd = qs => ({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: qs });
 
+
+/* call-to-action boxes inside blog posts: after the intro and half way down */
+function withPostCtas(html, p) {
+  const kb = /wet ?room|bathroom|kitchen|shower/i.test(p.title + ' ' + (p.summary || ''));
+  const box = (lead) => `<div class="post-cta"><p><strong>${lead}</strong>${kb ? 'Free home visit and a fixed written quote.' : 'Free drone roof survey (worth £250) and a fixed price the same day.'}</p><div class="btn-row"><a class="btn btn--lime" href="tel:+448001939030">Call free</a><a class="btn btn--line-w" href="#contact">${kb ? 'Get my free quote' : 'Get my free roofing quote'}</a></div></div>`;
+  if (/^press/i.test(p.category || '')) return html;
+  let out = html.replace('</p>', '</p>\n' + box(kb ? 'Planning a kitchen, bathroom or wet room?' : 'Need a roofer in Peterborough?'));
+  const h2s = [...out.matchAll(/<h2>/g)].map(m => m.index);
+  if (h2s.length >= 4) { const at = h2s[Math.floor(h2s.length / 2)]; out = out.slice(0, at) + box('Want a price for your home?') + '\n' + out.slice(at); }
+  return out;
+}
 /* ---------- news posts ---------- */
 const posts = (fs.existsSync(NEWS) ? fs.readdirSync(NEWS) : []).filter(f => f.endsWith('.md')).map(f => {
   const { data, body } = frontMatter(fs.readFileSync(path.join(NEWS, f), 'utf8'));
@@ -212,7 +224,7 @@ for (const p of posts) {
       ${p.image ? `<figure class="article-hero-img"><img src="${esc(p.image)}" alt="${esc(p.image_alt || p.title)}" width="1200" height="750"></figure>` : ''}
       ${p.summary ? `<p class="lead">${esc(p.summary)}</p>` : ''}
       <div class="prose">
-${markdown(p.body)}
+${withPostCtas(markdown(p.body), p)}
       </div>
       ${isPress ? `<div class="press-contact"><strong>Media enquiries:</strong> <a href="mailto:alex@upsizeproperty.com">alex@upsizeproperty.com</a> · 0800 193 9030<br>Upsize Property Renovation Ltd is a kitchen, bathroom, wet room and roofing contractor based in Peterborough, working with social housing, commercial and residential clients across Cambridgeshire, Lincolnshire and the East Midlands.</div>` : ''}
       <div class="article-cta"><div><strong>Need a hand with your project?</strong>Free quotes, reply within one working day.</div><a class="btn btn--lime" href="#contact">Request a free quote</a></div>
