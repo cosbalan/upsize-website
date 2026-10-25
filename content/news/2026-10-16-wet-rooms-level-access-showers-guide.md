@@ -2,7 +2,7 @@
 title: "Wet rooms and level-access showers: what's involved"
 category: "Blog"
 date: 2026-10-16
-summary: "How a bathroom is converted into a wet room or level-access shower, who it suits, and what to expect in social housing, commercial and private homes."
+summary: "How a bathroom is converted into a wet room or level-access shower, who it suits, and what to expect in social housing and commercial properties."
 image: images/accessible-wet-room-after-peterborough.jpg
 image_alt: "Accessible wet room with level-access floor, shower seat and grab rails"
 draft: false
