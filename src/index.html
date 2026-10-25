@@ -6,7 +6,7 @@
   <script>document.documentElement.className+=' js'</script>
 
   <title>Roofing Contractor Peterborough, Kitchens &amp; Bathrooms | Upsize</title>
-  <meta name="description" content="Peterborough roofers: free drone roof check, fixed written prices, 10-year workmanship guarantee. Kitchen and bathroom fitters too. Call 0800 193 9030.">
+  <meta name="description" content="Peterborough roofers: free drone roof check, fixed written prices, 10-year workmanship guarantee. Kitchens and bathrooms for housing providers. Call 0800 193 9030.">
   <link rel="canonical" href="https://www.upsizeproperty.com/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#00103A">
@@ -43,7 +43,7 @@
     "name": "Upsize Property Renovation Ltd",
     "url": "https://www.upsizeproperty.com/",
     "logo": "https://www.upsizeproperty.com/images/upsize-logo-square-1500.png",
-    "description": "Peterborough roofing contractor and multi-trade firm. Roof repairs, re-roofs, EPDM flat roofs, leadwork, gutters, fascias and soffits for homeowners, landlords and commercial clients, with a free drone roof survey, same-day fixed prices, a 10-year workmanship guarantee and an insurance-backed option. Also kitchens, bathrooms and wet rooms for social housing, commercial and residential clients.",
+    "description": "Peterborough roofing contractor and multi-trade firm. Roof repairs, re-roofs, EPDM flat roofs, leadwork, gutters, fascias and soffits for homeowners, landlords and commercial clients, with a free drone roof survey, same-day fixed prices, a 10-year workmanship guarantee and an insurance-backed option. Also kitchens, bathrooms and wet rooms for social housing providers, main contractors and commercial clients (not private homes).",
     "slogan": "Roofs built to last.",
     "paymentAccepted": "Cash, Credit Card, Debit Card, Contactless, Bank Transfer (BACS)",
     "priceRange": "££",
@@ -275,15 +275,15 @@
    "name": "Do you install wet rooms and level-access showers?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Yes. We install wet rooms and level-access showers for social housing adaptations, commercial property and private homes, including non-slip flooring, shower seats and grab rails."
+    "text": "Yes. We install wet rooms and level-access showers for social housing adaptations and commercial property, including non-slip flooring, shower seats and grab rails."
    }
   },
   {
    "@type": "Question",
-   "name": "Do you fit kitchens and bathrooms for homeowners and businesses?",
+   "name": "Do you fit kitchens and bathrooms for homeowners?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Yes. We supply and fit kitchens, bathrooms and wet rooms for homeowners, landlords and commercial clients, with experience installing Howdens and Symphony kitchens."
+    "text": "No. Our kitchen, bathroom and wet room teams work for social housing providers, main contractors and commercial clients, with experience installing Howdens and Symphony kitchens. For homeowners and landlords we offer roofing only."
    }
   },
   {
@@ -1459,7 +1459,7 @@
     @media (prefers-reduced-motion:reduce){.js .hx{animation:none}}
     @media (max-width:760px){
       .hero .purpose{font-size:9.6vw!important;margin-bottom:14px}
-      .hero h1{font-size:.95rem;line-height:1.45;margin-bottom:14px}
+      .hero:not(.page-hero) h1{font-size:.95rem;line-height:1.45;margin-bottom:14px}
       .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
       .hero-main{grid-column:1/-1;justify-content:space-between;padding:.95rem 1.1rem}
       .hero-ghost{justify-content:center;padding:.8rem .6rem;font-size:.9rem}
@@ -1467,7 +1467,9 @@
       .hero .trust-row{margin-top:16px;padding-top:14px}
     }
     .g-logo{width:20px;height:20px;display:block}
-    .g-cite{display:flex;align-items:center}
+    .g-cite{display:flex;align-items:center;position:relative}
+    .rv-quotes{position:relative}
+    html,body{overflow-x:clip}
     .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
     .rv-g{display:flex;align-items:center;gap:8px}
     .rv-quotes li{display:flex;flex-direction:column}.rv-quotes blockquote{flex:1}
@@ -1516,6 +1518,54 @@
       #why-upsize .usp{padding:14px 14px}
       #why-upsize .usp p{font-size:.88rem}
     }
+    /* ===== hero rotating promise ===== */
+    .purpose-sub{font-family:Lexend,sans-serif;font-weight:600;font-size:clamp(1.25rem,2.1vw,1.7rem);color:#dfe6f3;margin:-8px 0 18px;letter-spacing:-.01em}
+    .hero-rot{margin:4px 0 26px}
+    .rot{position:relative;list-style:none;margin:0;padding:0;height:52px;max-width:640px}
+    .rot li{position:absolute;inset:0;display:flex;align-items:center;gap:12px;padding:0 18px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-left:3px solid var(--lime);color:#dfe6f3;font-size:1rem;opacity:0;transform:translateY(10px);transition:opacity .45s ease,transform .45s ease;pointer-events:none}
+    .rot li.on{opacity:1;transform:none;pointer-events:auto}
+    .no-rot .rot{height:auto;display:grid;gap:8px}.no-rot .rot li{position:static;opacity:1;transform:none;padding:12px 18px}
+    .rot svg{width:20px;height:20px;flex:none;stroke:var(--lime)}
+    .rot strong{color:#fff;font-weight:600}
+    @media (max-width:760px){
+      .purpose-sub{font-size:5.4vw;margin:-6px 0 14px}
+      .rot{height:46px}.rot li{font-size:.95rem;padding:0 14px}
+      .rot .hp-d{display:none}
+      .hero-rot{margin:0 0 18px}
+    }
+    .svc-tag{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--lime-ink);background:#f1f7dc;border-radius:999px;padding:4px 10px;white-space:nowrap}
+    @media (max-width:760px){#services .svc-sub{flex-wrap:wrap}#services .svc-sub::after{display:none}.svc-tag{font-size:.64rem}}
+    .kb-note{margin:22px 0 0;padding:14px 18px;border-radius:12px;background:var(--soft);border-left:4px solid var(--lime);font-size:.95rem}
+    /* ===== roof price checker ===== */
+    .est-sec{background:linear-gradient(180deg,#fff 0%,var(--soft) 100%)}
+    .est-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+    .est-ticks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px}
+    .est-ticks li{position:relative;padding-left:26px;font-weight:600;color:var(--navy)}
+    .est-ticks li::before{content:"✓";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--lime);color:var(--navy);font-size:.72rem;display:grid;place-items:center}
+    .est{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 24px 50px -36px rgba(0,16,58,.45)}
+    .est fieldset{border:0;margin:0 0 18px;padding:0}
+    .est legend{display:flex;align-items:center;gap:10px;font-family:Lexend,sans-serif;font-weight:600;color:var(--navy);margin-bottom:10px;font-size:1.02rem}
+    .est legend span{width:24px;height:24px;border-radius:50%;background:var(--navy);color:var(--lime);display:grid;place-items:center;font-size:.8rem}
+    .est-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .est-opts--sm{grid-template-columns:repeat(5,1fr)}
+    .est-opts label{position:relative;cursor:pointer}
+    .est-opts input{position:absolute;opacity:0;pointer-events:none}
+    .est-opts span{display:flex;flex-direction:column;justify-content:center;min-height:58px;height:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;font-weight:600;font-size:.9rem;line-height:1.25;color:var(--navy);transition:border-color .2s,background .2s}
+    .est-opts--sm span{min-height:46px;text-align:center;align-items:center;font-size:.84rem}
+    .est-opts small{font-weight:400;font-size:.76rem;color:var(--muted);margin-top:2px}
+    .est-opts input:checked+span{border-color:var(--navy);background:#f1f7dc;box-shadow:inset 0 0 0 1px var(--navy)}
+    .est-opts input:focus-visible+span{outline:2px solid var(--lime-ink);outline-offset:2px}
+    .est-result{margin:0 0 18px;padding:16px 18px;border-radius:14px;background:var(--navy);color:#fff}
+    .est-result small{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);font-weight:600}
+    .est-price{display:block;font-family:Lexend,sans-serif;font-size:1.7rem;margin:4px 0}
+    .est-note{display:block;font-size:.88rem;color:#c9d3e6}
+    .est-fields{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px}
+    .est-fields input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font:inherit}
+    .est-fine{font-size:.78rem;color:var(--muted);margin:10px 0 0}
+    .js .est-step[data-step="2"],.js .est-contact{display:none}
+    .js .est.s2 .est-step[data-step="2"],.js .est.s3 .est-contact{display:block}
+    @media (max-width:860px){.est-wrap{grid-template-columns:1fr;gap:22px}}
+    @media (max-width:560px){.est{padding:16px;border-radius:16px}.est-opts{grid-template-columns:1fr 1fr}.est-opts--sm{grid-template-columns:1fr 1fr}.est-opts--sm label:last-child{grid-column:1/-1}.est-fields{grid-template-columns:1fr 1fr}.est-fields input:last-child{grid-column:1/-1}.est-price{font-size:1.45rem}}
     /* ===== sticky mini contact bar + header call (mobile) ===== */
     .hdr-call,.mbar{display:none}
     .ct-rating{margin:14px 0 0;font-size:.9rem;color:#cbd5e1}.ct-rating span{color:#F5B301;letter-spacing:2px}.ct-rating strong{color:#fff}.ct-rating a{color:#fff}
@@ -1533,7 +1583,8 @@
       .mbar svg{width:15px;height:15px;flex:none}
       .mb-wa svg{color:#25D366}
       .site-footer{padding-bottom:64px}
-      .findus-map,.fu-maps{display:none!important}
+      .fu-maps{display:none!important}
+      .findus-map{margin-top:20px}
       .findus{padding:44px 0}
     }
   </style>
@@ -1616,10 +1667,11 @@
     <div class="wrap">
       <span class="eyebrow hx hx1">Upsize Roofing · Peterborough</span>
       <p class="purpose hx hx2">Roofs built <em>to last.</em></p>
+      <p class="purpose-sub hx hx2">Quoted the same day.</p>
       <h1 class="hx hx3">Roofing division of a Peterborough multi-trade contractor trusted on council frameworks</h1>
-      <ul class="hero-promise hx hx4"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Free drone survey</strong><span class="hp-d"> worth £250, with a fixed price the same day</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>We turn up when we say</strong><span class="hp-d">, with a call-back within 2 working hours</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>RICS inspection</strong><span class="hp-d"> of your roof when finished, on request</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Guarantees up to 25 years</strong><span class="hp-d">, with an insurance-backed option</span></span></li></ul>
+      <div class="hero-rot hx hx4"><ul class="rot" aria-label="What you get with Upsize"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Free drone survey</strong><span class="hp-d"> worth £250, with a fixed price the same day</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>We turn up when we say</strong><span class="hp-d">, with a call-back within 2 working hours</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>RICS inspection</strong><span class="hp-d"> of your roof when finished, on request</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Guarantees up to 25 years</strong><span class="hp-d">, with an insurance-backed option</span></span></li></ul></div>
       <div class="hero-actions hx hx5">
-        <a class="btn btn--lime hero-main" href="#contact" data-type="Homeowner – kitchens, bathrooms or roofing">Get my free roofing quote<span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn--lime hero-main" href="#contact" data-type="Homeowner – roofing">Get my free roofing quote<span class="arr" aria-hidden="true">→</span></a>
         <a class="btn hero-ghost" href="tel:+448001939030"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>0800 193 9030</span></a>
         <a class="btn hero-ghost hero-wa" href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.23 9.43-9.44 9.43zm8.03-17.46A11.3 11.3 0 0 0 12.05.7C5.79.7.7 5.79.7 12.05c0 2 .52 3.95 1.52 5.67L.6 23.3l5.72-1.5a11.3 11.3 0 0 0 5.72 1.46h.01c6.26 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02z"/></svg><span>WhatsApp</span></a>
       </div>
@@ -1665,15 +1717,67 @@
     </div>
   </section>
 
+  <!-- ================= ROOF PRICE ESTIMATOR (lead magnet) ================= -->
+  <section class="section est-sec" id="estimate">
+    <div class="wrap est-wrap">
+      <div class="est-intro">
+        <span class="eyebrow reveal">Roof price checker</span>
+        <h2 class="reveal d1">See a typical price in 30 seconds</h2>
+        <p class="reveal d2">Pick your job and your home to see a guide price based on our 2026 Peterborough prices. Then book a free drone survey for your exact, fixed price.</p>
+        <ul class="est-ticks reveal d2"><li>No email needed</li><li>Free drone survey (worth £250)</li><li>Fixed written price, usually the same day</li></ul>
+      </div>
+      <form class="est reveal d1" name="roof-estimate" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company_website"><input type="hidden" name="lead_source" value=""><input type="hidden" name="landing_page" value="">
+        <input type="hidden" name="form-name" value="roof-estimate"><p class="hp"><label>Leave this empty <input name="company_website"></label></p>
+        <input type="hidden" name="estimate" value="">
+        <fieldset class="est-step" data-step="1">
+          <legend><span>1</span> What do you need?</legend>
+          <div class="est-opts">
+            <label><input type="radio" name="job" value="Roof repair" required><span>Roof repair<small>Slipped tiles, ridge</small></span></label>
+            <label><input type="radio" name="job" value="Leak or storm damage"><span>Leak or storm damage<small>Fast response</small></span></label>
+            <label><input type="radio" name="job" value="New roof"><span>New roof<small>Full re-roof</small></span></label>
+            <label><input type="radio" name="job" value="Flat roof"><span>Flat roof<small>EPDM rubber</small></span></label>
+            <label><input type="radio" name="job" value="Gutters and fascias"><span>Gutters &amp; fascias<small>Roofline</small></span></label>
+            <label><input type="radio" name="job" value="Chimney and leadwork"><span>Chimney &amp; lead<small>Flashings, pots</small></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="est-step" data-step="2">
+          <legend><span>2</span> Your property</legend>
+          <div class="est-opts est-opts--sm">
+            <label><input type="radio" name="property" value="Terraced"><span>Terraced</span></label>
+            <label><input type="radio" name="property" value="Semi-detached"><span>Semi-detached</span></label>
+            <label><input type="radio" name="property" value="Detached"><span>Detached</span></label>
+            <label><input type="radio" name="property" value="Bungalow"><span>Bungalow</span></label>
+            <label><input type="radio" name="property" value="Garage or extension"><span>Garage or extension</span></label>
+          </div>
+        </fieldset>
+        <div class="est-result" aria-live="polite" hidden>
+          <small>Typical Upsize guide price</small>
+          <strong class="est-price"></strong>
+          <span class="est-note"></span>
+        </div>
+        <fieldset class="est-step est-contact" data-step="3">
+          <legend><span>3</span> Get your exact fixed price, free</legend>
+          <div class="est-fields">
+            <input name="name" placeholder="Your name" autocomplete="name" aria-label="Your name" required>
+            <input name="phone" type="tel" placeholder="Phone number" autocomplete="tel" aria-label="Phone number" required>
+            <input name="postcode" placeholder="Postcode" autocomplete="postal-code" aria-label="Postcode" required>
+          </div>
+          <button class="btn btn--lime btn--block" type="submit">Book my free drone survey</button>
+          <p class="est-fine">Guide prices include VAT, scaffolding and waste where needed. Your fixed price is confirmed after the free survey. We call back within 2 working hours.</p>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
   <!-- ================= WHAT WE DO ================= -->
   <section class="section" id="services">
     <div class="wrap">
       <div class="sec-top">
         <span class="eyebrow reveal">What we do</span>
         <h2 class="reveal d1">Roofing, kitchens &amp; bathrooms, delivered by one team</h2>
-        <p class="lead reveal d2">A roofing, kitchen and bathroom contractor for homeowners, commercial clients and housing frameworks. Each trade on its own, or all three as one package.</p>
+        <p class="lead reveal d2">Roofing for homeowners and landlords. Kitchens, bathrooms and roofing for housing providers, main contractors and commercial clients, as single trades or one framework package.</p>
       </div>
-      <h3 class="svc-sub reveal">Roofing</h3>
+      <h3 class="svc-sub reveal">Roofing <span class="svc-tag">For homeowners, landlords &amp; business</span></h3>
       <div class="tiles">
           <a class="tile reveal" href="/roof-repair-peterborough"><img src="images/roof-repair-new-tiles-dry-ridge-peterborough.jpg" alt="New tiles and dry-fix ridge on a Peterborough roof repair" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Tiles, ridges &amp; leaks</small><strong>Roof repairs</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
           <a class="tile reveal" href="/roof-replacement-peterborough"><img src="images/re-roof-new-tiles-grantham.jpg" alt="Completed re-roof with new concrete tiles near Grantham" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Full replacement</small><strong>New roofs &amp; re-roofs</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
@@ -1682,7 +1786,7 @@
           <a class="tile reveal" href="/leadwork-chimney-repair-peterborough"><img src="images/pantile-roof-repair-abutment-lead-flashing-peterborough.jpg" alt="New lead flashing at a roof abutment in Peterborough" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Flashings &amp; valleys</small><strong>Leadwork &amp; chimneys</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
           <a class="tile reveal" href="/gutters-fascias-soffits-peterborough"><img src="images/new-roof-tiles-house-peterborough.jpg" alt="House with new roof tiles, fascias and guttering in Peterborough" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Roofline renewals</small><strong>Gutters, fascias &amp; soffits</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
       </div>
-      <h3 class="svc-sub reveal">Kitchens, bathrooms &amp; wet rooms</h3>
+      <h3 class="svc-sub reveal">Kitchens, bathrooms &amp; wet rooms <span class="svc-tag">For housing providers, contractors &amp; commercial</span></h3>
       <div class="tiles tiles--3">
           <a class="tile reveal" href="/kitchen-fitters-peterborough"><img src="images/shaker-kitchen-residential-peterborough.jpg" alt="Shaker kitchen fitted in a Peterborough home" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Fitted by one team</small><strong>Kitchens</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
           <a class="tile reveal" href="/bathroom-fitters-peterborough"><img src="images/walk-in-shower-bathroom-peterborough.jpg" alt="Walk-in shower bathroom fitted in Peterborough" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Showers, suites &amp; tiling</small><strong>Bathrooms</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
@@ -1705,7 +1809,7 @@
         <a class="sector reveal d2" href="/residential">
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 12 3l10 9"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span>
           <h3>Residential</h3>
-          <p>Kitchens, bathrooms, wet rooms and roofing for homeowners, from repairs to full re-roofs.</p>
+          <p>Roofing for homeowners and landlords, from one slipped tile to a full re-roof.</p>
           <span class="go">Find out more →</span>
         </a>
       </div>
@@ -1746,7 +1850,7 @@
           <ul class="also-list reveal"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Building Regulations sign-off arranged</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Own scaffolding, no waiting</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Council framework standards on every roof</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Waste removed responsibly</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>£5m insured, CSCS &amp; DBS-checked team</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>12+ years’ roofing experience</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Pay by card, cash or BACS</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Finance on larger jobs</span></li></ul>
         </div>
       </div>
-      <div class="cta-strip cta-v2 reveal"><div class="cta-v2-txt"><strong>Ready for a fixed, written price?</strong><span>Free drone survey · call-back within 2 working hours · no obligation</span></div><div class="btn-row"><a class="btn btn--lime" href="#contact" data-type="Homeowner – kitchens, bathrooms or roofing">Get my free quote</a><a class="btn btn--line" href="tel:+448001939030">Call<span class="d-only">&nbsp;0800 193 9030</span><span class="m-only">&nbsp;free</span></a></div></div>
+      <div class="cta-strip cta-v2 reveal"><div class="cta-v2-txt"><strong>Ready for a fixed, written price?</strong><span>Free drone survey · call-back within 2 working hours · no obligation</span></div><div class="btn-row"><a class="btn btn--lime" href="#contact" data-type="Homeowner – roofing">Get my free quote</a><a class="btn btn--line" href="tel:+448001939030">Call<span class="d-only">&nbsp;0800 193 9030</span><span class="m-only">&nbsp;free</span></a></div></div>
     </div>
   </section>
 
@@ -1800,7 +1904,7 @@
         <span class="eyebrow reveal">FAQs</span>
         <h2 class="reveal d1">Roofing, kitchen &amp; bathroom questions in Peterborough</h2>
         <p class="reveal d2">Straight answers to the questions we're asked most. Can't see yours? Call <a href="tel:+448001939030">0800 193 9030</a> or <a href="#contact">send us a message</a>.</p>
-        <a class="btn btn--navy reveal d3" href="#contact" data-type="Homeowner – kitchens, bathrooms or roofing">Get my free roofing quote</a>
+        <a class="btn btn--navy reveal d3" href="#contact" data-type="Homeowner – roofing">Get my free roofing quote</a>
       </div>
       <div class="faq-main reveal d1">
       <div class="ctabs faq-tabs" role="tablist" aria-label="FAQ topics">
@@ -1859,11 +1963,11 @@
         <div class="faq-list" id="fp2" role="tabpanel" aria-labelledby="ft2" hidden>
           <details>
             <summary><h3>Do you install wet rooms and level-access showers?</h3></summary>
-            <p>Yes. We install wet rooms and level-access showers for social housing adaptations, commercial property and private homes, including non-slip flooring, shower seats and grab rails.</p>
+            <p>Yes. We install wet rooms and level-access showers for social housing adaptations and commercial property, including non-slip flooring, shower seats and grab rails.</p>
           </details>
           <details>
-            <summary><h3>Do you fit kitchens and bathrooms for homeowners and businesses?</h3></summary>
-            <p>Yes. We supply and fit kitchens, bathrooms and wet rooms for homeowners, landlords and commercial clients, with experience installing Howdens and Symphony kitchens.</p>
+            <summary><h3>Do you fit kitchens and bathrooms for homeowners?</h3></summary>
+            <p>No. Our kitchen, bathroom and wet room teams work for social housing providers, main contractors and commercial clients, with experience installing Howdens and Symphony kitchens. For homeowners and landlords we offer roofing only.</p>
           </details>
           <details>
             <summary><h3>How long does a kitchen or bathroom installation take?</h3></summary>
@@ -1937,7 +2041,7 @@
               <option value="">Choose…</option>
               <option value="Social housing – main contractor / housing provider">Social housing / contractor</option>
               <option value="Developer – kitchens, bathrooms or roofing">Developer</option>
-              <option value="Homeowner – kitchens, bathrooms or roofing">Homeowner or landlord</option>
+              <option value="Homeowner – roofing">Homeowner or landlord (roofing)</option>
               <option value="Commercial – kitchens, bathrooms or roofing">Commercial</option>
               <option value="Something else">Something else</option>
             </select>
@@ -2025,7 +2129,7 @@
   <div class="wrap foot-main">
     <div class="foot-brand">
       <img src="images/upsize-logo-horizontal-white.svg" alt="Upsize Property Renovation Ltd" width="227" height="60" loading="lazy">
-      <p>Kitchen, bathroom, wet room and roofing contractor for the social housing, commercial and residential sectors across Peterborough and the East Midlands.</p>
+      <p>Roofing for homeowners and landlords. Kitchens, bathrooms, wet rooms and roofing for housing providers, main contractors and commercial clients across Peterborough and the East Midlands.</p>
       <ul class="foot-contact">
         <li><a href="tel:+448001939030">0800 193 9030</a></li>
         <li><a href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Message us on WhatsApp</a></li>
@@ -2122,14 +2226,18 @@
 
   // Mini contact bar: show after the hero, hide while the contact form is on screen
   (function(){var bar=document.getElementById('mbar');if(!bar)return;var q=bar.querySelector('.mb-quote');if(!document.getElementById('contact'))q.setAttribute('href','/contact');
-    var hero=document.querySelector('main > section'),ct=document.getElementById('contact'),ctIn=false;
-    if(ct&&'IntersectionObserver' in window){new IntersectionObserver(function(e){ctIn=e[0].isIntersecting;upd();},{threshold:.15}).observe(ct);}
+    var hero=document.querySelector('main > section'),ctIn=false,vis=new Set();
+    if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)vis.add(e.target);else vis.delete(e.target);});ctIn=vis.size>0;upd();},{threshold:.15});document.querySelectorAll('#contact,form.est,form.quick-form').forEach(function(el){io2.observe(el);});}
     function upd(){var lim=hero?hero.offsetTop+hero.offsetHeight-60:400;bar.classList.toggle('show',window.scrollY>lim&&!ctIn);}
     window.addEventListener('scroll',upd,{passive:true});upd();})();
 
   // Hero parallax (subtle)
   (function(){var bg=document.querySelector('.hero .hero-bg');if(!bg||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var tk=false;
     window.addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){var y=window.scrollY;if(y<1200)bg.style.transform='translate3d(0,'+(y*0.22)+'px,0) scale(1.06)';tk=false;});},{passive:true});})();
+
+  // Hero promise: rotate one line at a time (all items stay in the page for Google)
+  document.querySelectorAll('.rot').forEach(function(r){var li=r.querySelectorAll('li');if(!li.length)return;var k=0;li[0].classList.add('on');
+    if(li.length<2)return;setInterval(function(){li[k].classList.remove('on');k=(k+1)%li.length;li[k].classList.add('on');},2800);});
   // Count-up stats (final numbers are already in the HTML for Google and no-JS)
   var nums=document.querySelectorAll('.stats [data-count]');
   if(nums.length&&'IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
@@ -2199,6 +2307,27 @@
 
   // Long area lists start closed on phones (still in the page for Google)
   if(window.matchMedia('(max-width:760px)').matches){document.querySelectorAll('details.more-areas[open]').forEach(function(d){d.removeAttribute('open');});}
+
+  // Roof price checker (guide prices from the roofing price table)
+  document.querySelectorAll('form.est').forEach(function(f){
+    var res=f.querySelector('.est-result'),pr=f.querySelector('.est-price'),nt=f.querySelector('.est-note'),hid=f.querySelector('[name=estimate]');
+    var P={'Roof repair':['£170 – £460','Slipped or cracked tiles. Re-bedding a full ridge is typically £500 – £1,400.'],
+      'Leak or storm damage':['£170 – £1,400','Depends on the damage. We make the roof watertight first, then price the permanent repair.'],
+      'Gutters and fascias':['£400 – £3,500','New gutters £400 – £900; full fascias, soffits and gutters £1,800 – £3,500 (3-bed semi).'],
+      'Chimney and leadwork':['£400 – £1,050','Replacing chimney lead flashings. Repointing a stack is typically £340 – £900.']};
+    var R={'Terraced':'£5,200 – £8,600','Semi-detached':'£7,500 – £12,100','Detached':'£9,200 – £14,900'};
+    function job(){var j=f.querySelector('[name=job]:checked');return j&&j.value}
+    function prop(){var p=f.querySelector('[name=property]:checked');return p&&p.value}
+    function upd(){var j=job(),p=prop(),price='',note='';if(!j)return;
+      var needP=(j==='New roof'||j==='Flat roof');f.classList.toggle('s2',needP);
+      if(!needP){price=P[j][0];note=P[j][1];}
+      else if(p){ if(j==='Flat roof'){price=(p==='Garage or extension')?'£1,400 – £2,900':'£90 – £140 per m²';note=(p==='Garage or extension')?'EPDM rubber flat roof on a garage or small extension.':'EPDM rubber, priced by area. Typical dormer or extension roofs are 15 – 40 m².';}
+        else {price=R[p]||'Priced after survey';note=R[p]?'Full re-roof with concrete tiles, including scaffolding and waste.':'Roof sizes vary too much to guess. The free drone survey gives you an exact price.';}}
+      if(price){pr.textContent=price;nt.textContent=note;res.hidden=false;f.classList.add('s3');hid.value=j+(p?' / '+p:'')+': '+price;
+        if(!f.dataset.seen){f.dataset.seen=1;if(window.gtag)try{gtag('event','estimate_view',{job:j});}catch(e){}}}
+    }
+    f.addEventListener('change',upd);
+  });
   // FAQ: show more / fewer
   document.querySelectorAll('.faq-toggle').forEach(function(b){
     var list=b.closest('.faq-list'), n=list.querySelectorAll('.faq-more').length;
