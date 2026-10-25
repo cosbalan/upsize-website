@@ -61,13 +61,21 @@ function markdown(md) {
   const lines = md.replace(/\r/g, '').split('\n');
   const out = []; let para = [], list = null;
   const flushP = () => { if (para.length) { out.push(`<p>${inline(para.join(' '))}</p>`); para = []; } };
-  const flushL = () => { if (list) { out.push(`<${list.t}>${list.items.map(i => `<li>${inline(i)}</li>`).join('')}</${list.t}>`); list = null; } };
+  const openT = () => out.length && out[out.length - 1].startsWith('<div class="tbl-wrap">') && !out[out.length - 1].endsWith('</table></div>');
+  const closeT = () => { if (openT()) out[out.length - 1] += '</tbody></table></div>'; };
+  const flushL = () => { closeT(); if (list) { out.push(`<${list.t}>${list.items.map(i => `<li>${inline(i)}</li>`).join('')}</${list.t}>`); list = null; } };
   for (const raw of lines) {
     const l = raw.trimEnd();
     let m;
     if (!l.trim()) { flushP(); flushL(); continue; }
     if ((m = l.match(/^(#{2,4})\s+(.*)$/))) { flushP(); flushL(); const n = Math.max(2, m[1].length); out.push(`<h${n}>${inline(m[2])}</h${n}>`); continue; }
     if ((m = l.match(/^#\s+(.*)$/))) { flushP(); flushL(); out.push(`<h2>${inline(m[1])}</h2>`); continue; }
+    if (/^\s*\|.*\|\s*$/.test(l)) { flushP(); if (list) { out.push(`<${list.t}>${list.items.map(i => `<li>${inline(i)}</li>`).join('')}</${list.t}>`); list = null; } const cells = l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+      if (cells.every(c => /^:?-{2,}:?$/.test(c))) continue;
+      if (openT()) { out[out.length - 1] += `<tr>${cells.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`; }
+      else out.push(`<div class="tbl-wrap"><table class="price-table"><thead><tr>${cells.map(c => `<th scope="col">${inline(c)}</th>`).join('')}</tr></thead><tbody>`);
+      continue; }
+    closeT();
     if ((m = l.match(/^>\s?(.*)$/))) { flushP(); flushL(); out.push(`<blockquote><p>${inline(m[1])}</p></blockquote>`); continue; }
     if ((m = l.match(/^\s*[-*]\s+(.*)$/))) { flushP(); if (!list || list.t !== 'ul') { flushL(); list = { t: 'ul', items: [] }; } list.items.push(m[1]); continue; }
     if ((m = l.match(/^\s*\d+[.)]\s+(.*)$/))) { flushP(); if (!list || list.t !== 'ol') { flushL(); list = { t: 'ol', items: [] }; } list.items.push(m[1]); continue; }
@@ -211,10 +219,12 @@ ${markdown(p.body)}
     </article>
   </section>
 `;
+  const faqSec = (p.body.split(/^##\s+Frequently asked questions\s*$/mi)[1] || '').split(/^##\s/m)[0];
+  const faqQs = [...faqSec.matchAll(/^###\s+(.+)\n+([\s\S]*?)(?=^###\s|$(?![\s\S]))/gm)].map(m => ({ '@type': 'Question', name: m[1].trim(), acceptedAnswer: { '@type': 'Answer', text: m[2].replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*/g, '').replace(/\s+/g, ' ').trim() } }));
   write(`news/${p.slug}.html`, page({
     depth: 1, mainHtml: main,
     meta: { title: p.seo_title || (p.title.length > 52 ? p.title : `${p.title} | Upsize`), description: p.seo_description || p.summary || p.title, url: p.url, ogImage: p.image, ogType: 'article', nav: 'news',
-      ldExtra: [articleLd, crumbsLd([['Home', '/'], ['News', '/news/'], [p.title, p.url]])] }
+      ldExtra: [articleLd, crumbsLd([['Home', '/'], ['News', '/news/'], [p.title, p.url]]), ...(faqQs.length ? [faqLd(faqQs)] : [])] }
   }));
 }
 
