@@ -156,7 +156,7 @@ function ctaBand(meta, withContact) {
   return `  <section class="cta-band" aria-label="Contact options">
     <div class="wrap">
       <div class="cta-main">
-        <div><strong>${meta.ctaTitle || 'Talk to us today: free advice, no obligation'}</strong><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00 · Peterborough and 40 miles around</span><span class="cta-reviews">★ 5.0 from 7 Google reviews · read them on <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">Google</a> and <a href="https://www.facebook.com/upsizeproperty/reviews" target="_blank" rel="noopener">Facebook</a></span></div>
+        <div><strong>${meta.ctaTitle || 'Talk to us today: free advice, no obligation'}</strong><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00 · Peterborough and 40 miles around</span><span class="cta-reviews">★ 5.0 from 35+ five-star reviews · read them on <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">Google</a> and <a href="https://www.facebook.com/upsizeproperty/reviews" target="_blank" rel="noopener">Facebook</a></span></div>
         <div class="cta-btns"><a class="btn btn--lime" href="tel:+448001939030">Call free 0800 193 9030</a><a class="btn btn--wa" href="${WA}" target="_blank" rel="noopener">WhatsApp us</a><a class="btn btn--ghost" href="${quote}">Get a free quote</a></div>
       </div>${seq}
     </div>
