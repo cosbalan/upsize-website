@@ -44,7 +44,7 @@
     "url": "https://www.upsizeproperty.com/",
     "logo": "https://www.upsizeproperty.com/images/upsize-logo-square-1500.png",
     "description": "Peterborough roofing contractor and multi-trade firm. Roof repairs, re-roofs, EPDM flat roofs, leadwork, gutters, fascias and soffits for homeowners, landlords and commercial clients, with a free drone roof survey, same-day fixed prices, a 10-year workmanship guarantee and an insurance-backed option. Also kitchens, bathrooms and wet rooms for social housing providers, main contractors and commercial clients (not private homes).",
-    "slogan": "Roofs built to last.",
+    "slogan": "Roofs done right. Quoted the same day.",
     "paymentAccepted": "Cash, Credit Card, Debit Card, Contactless, Bank Transfer (BACS)",
     "priceRange": "££",
     "currenciesAccepted": "GBP",
@@ -1566,6 +1566,98 @@
     .js .est.s2 .est-step[data-step="2"],.js .est.s3 .est-contact{display:block}
     @media (max-width:860px){.est-wrap{grid-template-columns:1fr;gap:22px}}
     @media (max-width:560px){.est{padding:16px;border-radius:16px}.est-opts{grid-template-columns:1fr 1fr}.est-opts--sm{grid-template-columns:1fr 1fr}.est-opts--sm label:last-child{grid-column:1/-1}.est-fields{grid-template-columns:1fr 1fr}.est-fields input:last-child{grid-column:1/-1}.est-price{font-size:1.45rem}}
+    /* ===== hero v4: copy + glass card ===== */
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr);gap:56px;align-items:center}
+    .hero-copy h1{max-width:560px}
+    .hero-copy .hero-actions{margin-top:22px}
+    .hero-card{padding:22px;border-radius:18px;background:rgba(0,16,58,.55);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+    .hc-label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:10px}
+    .hero-card .hero-rot{margin:0}
+    .hero-card .rot{max-width:none}
+    .hero-card .rot li{background:rgba(255,255,255,.06)}
+    .hero-card .rot .hp-d{display:none}
+    .hero .hero-card .trust-row{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin:16px 0 0;padding:16px 0 0;border-top:1px solid rgba(255,255,255,.12);max-width:none;font-size:.88rem}
+    .hero-card .hero-trade{display:block;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);border-bottom:0;font-size:.85rem;line-height:1.45}
+    @media (max-width:980px){.hero-grid{grid-template-columns:1fr;gap:22px}.hero-card{max-width:620px}}
+    @media (max-width:760px){
+      .hero-grid{gap:16px}
+      .hero-card{padding:14px;border-radius:14px}
+      .hc-label{font-size:.64rem;margin-bottom:8px}
+      .hero .hero-card .trust-row{font-size:.8rem;gap:8px 10px;margin-top:12px;padding-top:12px}
+      .hero-card .hero-trade{font-size:.78rem;margin-top:12px;padding-top:10px}
+      .hero .wrap.hero-grid{padding-top:36px;padding-bottom:34px}
+    }
+    /* ===== bento service grid ===== */
+    .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
+    .bt{position:relative;display:block;overflow:hidden;border-radius:16px;background:var(--navy);color:#fff;text-decoration:none;isolation:isolate;box-shadow:0 14px 30px -24px rgba(0,16,58,.7)}
+    .bt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+    .bt::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,16,58,.05) 20%,rgba(0,16,58,.9) 100%)}
+    .bt::before{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;z-index:3;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+    .bt:hover img{transform:scale(1.06)}.bt:hover::before{transform:scaleX(1)}
+    .bt-body{position:absolute;left:18px;right:58px;bottom:16px;z-index:2}
+    .bt-body small{display:block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin-bottom:4px}
+    .bt-body strong{display:block;font-family:Lexend,sans-serif;font-size:1.12rem;line-height:1.2}
+    .bt-g{display:block;margin-top:6px;font-size:.86rem;line-height:1.45;color:#dfe6f3;max-height:0;opacity:0;overflow:hidden;transition:max-height .35s,opacity .35s}
+    .bt:hover .bt-g,.bt:focus-visible .bt-g,.bt--xl .bt-g,.bt--tall .bt-g,.bt--cta .bt-g{max-height:120px;opacity:1}
+    .bt-go{position:absolute;right:16px;bottom:16px;z-index:2;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:var(--navy);transition:transform .25s}
+    .bt:hover .bt-go{transform:translateX(3px)}
+    .bt--xl{grid-column:span 2;grid-row:span 2}.bt--xl strong{font-size:1.6rem}.bt--xl .bt-g{font-size:.95rem;max-width:420px}
+    .bt--wide{grid-column:span 2}
+    .bt--tall{grid-row:span 2;grid-column:span 2}
+    .bt--cta,.bt--navy{background:linear-gradient(135deg,#0b2156 0%,var(--navy) 60%)}
+    .bt--cta::after{background:radial-gradient(circle at 85% 15%,rgba(186,218,85,.22),transparent 55%)}
+    .bt--navy::after{background:linear-gradient(180deg,rgba(0,16,58,.92) 0%,rgba(0,16,58,.55) 55%,rgba(0,16,58,.85) 100%)}
+    .bt--navy .bt-body{top:22px;bottom:auto}.bt--navy strong{font-size:1.5rem}.bt--navy .bt-g{font-size:.95rem;max-width:440px}
+    @media (max-width:900px){.bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}.bt--xl{grid-row:span 2}.bt--tall{grid-row:span 1}}
+    @media (max-width:560px){
+      .bento{gap:10px;grid-auto-rows:auto}.bt{min-height:150px}
+      .bt{border-radius:12px}
+      .bt-body{left:12px;right:12px;bottom:12px}
+      .bt-body small{font-size:.58rem;letter-spacing:.08em}
+      .bt-body strong{font-size:.95rem}
+      .bt-go{display:none}
+      .bt--xl{grid-row:span 1;grid-auto-rows:200px}.bt--xl strong{font-size:1.2rem}.bt--xl .bt-g{font-size:.8rem}
+      .bt--xl,.bt--cta,.bt--tall{min-height:190px}
+      .bt--cta .bt-g,.bt--navy .bt-g{font-size:.8rem}
+      .bt--navy .bt-body{top:auto;bottom:12px}.bt--navy strong{font-size:1.15rem}
+    }
+    /* ===== standards + about ===== */
+    .std-sec{background:var(--navy);color:#fff}
+    .std-sec h2{color:#fff}.std-sec .lead{color:#c9d3e6}
+    .std-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+    .std-head .sec-top{margin:0;max-width:680px}
+    .std-sec .btn--line{border-color:rgba(255,255,255,.5);color:#fff}
+    .std-sec .btn--navy{background:var(--lime);color:var(--navy);border-color:var(--lime)}
+    .std-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .std-grid li{display:grid;grid-template-columns:40px 1fr;column-gap:14px;padding:18px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+    .std-grid svg{grid-row:span 2;width:40px;height:40px;padding:9px;border-radius:10px;background:rgba(186,218,85,.14);stroke:var(--lime)}
+    .std-grid strong{font-family:Lexend,sans-serif;font-weight:600;font-size:1rem}
+    .std-grid span{font-size:.88rem;line-height:1.5;color:#c9d3e6}
+    .about-v2{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+    .ab-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .ab-photos figure{margin:0;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+    .ab-photos img{width:100%;height:auto!important;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;display:block}
+    .ab-photos figcaption{padding:10px 12px;font-size:.82rem;color:var(--muted)}.ab-photos figcaption strong{display:block;color:var(--navy);font-size:.95rem}
+    .ab-photos figure:nth-child(2){margin-top:34px}
+    .ab-facts{list-style:none;margin:18px 0 22px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .ab-facts li{padding:12px;border-radius:12px;background:#fff;border:1px solid var(--line);font-size:.82rem;line-height:1.35;color:var(--muted)}
+    .ab-facts strong{display:block;font-family:Lexend,sans-serif;font-size:1.2rem;color:var(--navy)}
+    @media (max-width:900px){.std-grid{grid-template-columns:1fr 1fr}.about-v2{grid-template-columns:1fr;gap:28px}}
+    @media (max-width:560px){.std-grid{grid-template-columns:1fr;gap:8px}.std-grid li{padding:14px}.std-head{margin-bottom:18px}
+      .ab-photos{gap:10px}.ab-photos figure:nth-child(2){margin-top:20px}.ab-facts{grid-template-columns:1fr 1fr 1fr;gap:6px}.ab-facts li{padding:10px 8px;font-size:.72rem}.ab-facts strong{font-size:1rem}}
+    .js .area-chips:not(.open) li.more{display:none}
+    .area-more{margin-top:12px;font:inherit;font-weight:600;font-size:.88rem;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 16px;cursor:pointer}.area-more:hover{border-color:var(--lime);color:var(--lime)}
+    .no-js-hide{}
+    @media (max-width:560px){
+      #why-upsize .usp{display:flex;align-items:center;gap:12px;padding:12px 14px}
+      #why-upsize .usp .ico{flex:none;width:36px;height:36px;margin:0}
+      #why-upsize .usp h3{margin:0;font-size:.98rem}
+      #why-upsize .usp p{display:none}
+      #why-upsize .usp-grid{gap:8px}
+      .stats .stats-panel{padding:16px 6px}
+      .stats .st-ico{display:none}
+      .stats .stats-panel li{padding:12px 8px}
+    }
     /* ===== sticky mini contact bar + header call (mobile) ===== */
     .hdr-call,.mbar{display:none}
     .ct-rating{margin:14px 0 0;font-size:.9rem;color:#cbd5e1}.ct-rating span{color:#F5B301;letter-spacing:2px}.ct-rating strong{color:#fff}.ct-rating a{color:#fff}
@@ -1664,19 +1756,24 @@
   <!-- Background: new-build roof, Upsize job. Swap for a landscape photo of a finished kitchen or roof (1600×900) if you get a better one. -->
   <section class="hero">
     <div class="hero-bg" aria-hidden="true"></div>
-    <div class="wrap">
-      <span class="eyebrow hx hx1">Upsize Roofing · Peterborough</span>
-      <p class="purpose hx hx2">Roofs built <em>to last.</em></p>
-      <p class="purpose-sub hx hx2">Quoted the same day.</p>
-      <h1 class="hx hx3">Roofing division of a Peterborough multi-trade contractor trusted on council frameworks</h1>
-      <div class="hero-rot hx hx4"><ul class="rot" aria-label="What you get with Upsize"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Free drone survey</strong><span class="hp-d"> worth £250, with a fixed price the same day</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>We turn up when we say</strong><span class="hp-d">, with a call-back within 2 working hours</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>RICS inspection</strong><span class="hp-d"> of your roof when finished, on request</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Guarantees up to 25 years</strong><span class="hp-d">, with an insurance-backed option</span></span></li></ul></div>
-      <div class="hero-actions hx hx5">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow hx hx1">Upsize Roofing · Peterborough</span>
+        <p class="purpose hx hx2">Roofs done <em>right.</em></p>
+        <p class="purpose-sub hx hx2">Quoted the same day.</p>
+        <h1 class="hx hx3">Roofing division of a Peterborough multi-trade contractor trusted on council frameworks</h1>
+  <div class="hero-actions hx hx5">
         <a class="btn btn--lime hero-main" href="#contact" data-type="Homeowner – roofing">Get my free roofing quote<span class="arr" aria-hidden="true">→</span></a>
         <a class="btn hero-ghost" href="tel:+448001939030"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>0800 193 9030</span></a>
         <a class="btn hero-ghost hero-wa" href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.23 9.43-9.44 9.43zm8.03-17.46A11.3 11.3 0 0 0 12.05.7C5.79.7.7 5.79.7 12.05c0 2 .52 3.95 1.52 5.67L.6 23.3l5.72-1.5a11.3 11.3 0 0 0 5.72 1.46h.01c6.26 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02z"/></svg><span>WhatsApp</span></a>
       </div>
-      <a class="hero-trade hx hx6" href="/social-housing"><strong>Main contractor or housing provider?</strong> Kitchen, bathroom &amp; roofing packages for frameworks →</a>
-      <ul class="trust-row hx hx6"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><span><strong>5.0</strong> · 35+ reviews</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m9 14-1.5 7L12 19l4.5 2L15 14"/></svg><span><strong>2-hour</strong> call-back</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="M12 8v8M9 12h6"/></svg><span><strong>£5m</strong> insured</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg><span><strong>Card, cash</strong> or BACS</span></li></ul>
+      </div>
+      <aside class="hero-card hx hx5" aria-label="What every Upsize roof includes">
+        <span class="hc-label">Every Upsize roof includes</span>
+        <div class="hero-rot"><ul class="rot" aria-label="What you get with Upsize"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Free drone survey</strong><span class="hp-d"> worth £250, with a fixed price the same day</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>We turn up when we say</strong><span class="hp-d">, with a call-back within 2 working hours</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>RICS inspection</strong><span class="hp-d"> of your roof when finished, on request</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Guarantees up to 25 years</strong><span class="hp-d">, with an insurance-backed option</span></span></li></ul></div>
+        <ul class="trust-row"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><span><strong>5.0</strong> · 35+ reviews</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m9 14-1.5 7L12 19l4.5 2L15 14"/></svg><span><strong>2-hour</strong> call-back</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="M12 8v8M9 12h6"/></svg><span><strong>£5m</strong> insured</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg><span><strong>Card, cash</strong> or BACS</span></li></ul>
+        <a class="hero-trade" href="/social-housing"><strong>Main contractor or housing provider?</strong> Kitchen, bathroom &amp; roofing packages for frameworks →</a>
+      </aside>
     </div>
   </section>
 
@@ -1692,7 +1789,7 @@
     <div class="wrap">
       <ul class="stats-panel reveal">
         <li><span class="st-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v3h6V3M9 13l2 2 4-4"/></svg></span><strong><span data-count="240">240</span><em class="pl">+</em></strong><span class="st-lbl">Projects completed</span></li>
-        <li><span class="st-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 15h3"/></svg></span><strong><span data-count="5">5</span><em> days</em></strong><span class="st-lbl">Per kitchen or bathroom</span></li>
+        <li><span class="st-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 15h3"/></svg></span><strong><span data-count="5">5</span><em> days</em></strong><span class="st-lbl">Per framework kitchen or bathroom</span></li>
         <li><span class="st-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 12 4l10 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-5h6v5"/></svg></span><strong><span data-count="80">80</span><em class="pl">+</em></strong><span class="st-lbl">Roofs completed</span></li>
         <li><span class="st-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m9 14-1.5 7L12 19l4.5 2L15 14"/></svg></span><strong><span data-count="12">12</span><em class="pl">+</em><em> yrs</em></strong><span class="st-lbl">Multi-trade experience</span></li>
       </ul>
@@ -1714,6 +1811,73 @@
         <li class="reveal d1"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Excellent service! Upsize Property Renovation responded very quickly to an emergency roofing issue and completed the repairs efficiently and professionally. Very reliable, helpful and quick to act. Highly recommend!”</blockquote><cite class="g-cite"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span class="sr">Google review</span></cite></li>
         <li class="reveal d2"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Upsize fixed our flat roof in Oundle, Peterborough in just one day. I do recommend them for any roof work. They offer me an price on the spot after a short phone call.”</blockquote><cite class="g-cite"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span class="sr">Google review</span></cite></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ================= WHAT WE DO (bento) ================= -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="sec-top">
+        <span class="eyebrow reveal">What we do</span>
+        <h2 class="reveal d1">Roofing for homes. Full packages for frameworks.</h2>
+        <p class="lead reveal d2">Homeowners and landlords: roofing, from one slipped tile to a new roof. Housing providers, main contractors and commercial clients: kitchens, bathrooms, wet rooms and roofing, as single trades or one package.</p>
+      </div>
+      <h3 class="svc-sub reveal">Roofing <span class="svc-tag">Homeowners, landlords &amp; business</span></h3>
+      <div class="bento">
+        <a class="bt bt--xl reveal" href="/roof-repair-peterborough"><img src="images/roof-repair-new-tiles-dry-ridge-peterborough.jpg" alt="New tiles and dry-fix ridge on a Peterborough roof repair" width="800" height="600" loading="lazy"><span class="bt-body"><small>Most requested</small><strong>Roof repairs</strong><span class="bt-g">Slipped tiles, ridges, valleys and leaks fixed first time. We photograph the fault before we quote.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+        <a class="bt bt--wide reveal" href="/roof-replacement-peterborough"><img src="images/re-roof-new-tiles-grantham.jpg" alt="Completed re-roof with new concrete tiles near Grantham" width="800" height="600" loading="lazy"><span class="bt-body"><small>Full replacement</small><strong>New roofs &amp; re-roofs</strong><span class="bt-g">Stripped to the rafters, new membrane, battens and tiles, watertight every night.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+        <a class="bt  reveal" href="/flat-roofing-peterborough"><img src="images/epdm-flat-roof-peterborough.jpg" alt="New EPDM rubber flat roof in Peterborough" width="800" height="600" loading="lazy"><span class="bt-body"><small>Garages &amp; extensions</small><strong>Flat roofs (EPDM)</strong><span class="bt-g">EPDM rubber that lasts 30+ years.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+        <a class="bt  reveal" href="/emergency-roof-repair-peterborough"><img src="images/broken-missing-roof-tiles-peterborough.jpg" alt="Storm-damaged roof with missing tiles in Peterborough" width="800" height="600" loading="lazy"><span class="bt-body"><small>Fast response</small><strong>Emergency &amp; storm</strong><span class="bt-g">Made watertight first, fixed properly after.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+        <a class="bt  reveal" href="/leadwork-chimney-repair-peterborough"><img src="images/pantile-roof-repair-abutment-lead-flashing-peterborough.jpg" alt="New lead flashing at a roof abutment in Peterborough" width="800" height="600" loading="lazy"><span class="bt-body"><small>Flashings &amp; valleys</small><strong>Leadwork &amp; chimneys</strong><span class="bt-g">Lead, flashings, pots and stacks.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+        <a class="bt  reveal" href="/gutters-fascias-soffits-peterborough"><img src="images/new-roof-tiles-house-peterborough.jpg" alt="House with new roof tiles, fascias and guttering in Peterborough" width="800" height="600" loading="lazy"><span class="bt-body"><small>Roofline</small><strong>Gutters &amp; fascias</strong><span class="bt-g">Gutters, fascias and soffits, one scaffold.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+        <a class="bt bt--wide bt--cta reveal" href="/roofing-services-peterborough"><span class="bt-body"><small>All roofing services</small><strong>Prices, guarantees &amp; how it works</strong><span class="bt-g">Guide prices for every job, 4 layers of protection, before-and-after projects and 17 roofing FAQs.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+      </div>
+      <h3 class="svc-sub reveal">Kitchens, bathrooms &amp; wet rooms <span class="svc-tag">Housing, contractors &amp; commercial</span></h3>
+      <div class="bento bento--b2b">
+        <a class="bt bt--tall bt--navy reveal" href="/social-housing"><img src="images/council-kitchen-replacement-south-holland.jpg" alt="Council kitchen replacement by Upsize in South Holland" width="800" height="600" loading="lazy"><span class="bt-body"><small>Main contractors &amp; housing providers</small><strong>Social housing &amp; frameworks</strong><span class="bt-g">Kitchen, bathroom, wet room and roofing packages priced to your SOR. Void and occupied homes, 5 days per property, RAMS and photo records on every job.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+        <a class="bt bt--wide reveal" href="/kitchen-fitters-peterborough"><img src="images/social-housing-kitchen-after-peterborough.jpg" alt="New social housing kitchen fitted by Upsize" width="800" height="600" loading="lazy"><span class="bt-body"><small>Framework &amp; commercial</small><strong>Kitchens</strong><span class="bt-g">Full replacements by one team, strip-out to final clean.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+        <a class="bt  reveal" href="/bathroom-fitters-peterborough"><img src="images/walk-in-shower-bathroom-peterborough.jpg" alt="Walk-in shower bathroom fitted by Upsize" width="800" height="600" loading="lazy"><span class="bt-body"><small>Framework &amp; commercial</small><strong>Bathrooms</strong><span class="bt-g">Refits and walk-in showers.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+        <a class="bt  reveal" href="/wet-rooms-peterborough"><img src="images/accessible-wet-room-after-peterborough.jpg" alt="Accessible level-access wet room by Upsize" width="800" height="600" loading="lazy"><span class="bt-body"><small>Adaptations</small><strong>Wet rooms</strong><span class="bt-g">Level-access, fully waterproofed.</span></span><span class="bt-go" aria-hidden="true">→</span></a>
+      </div>
+      <p class="svc-links reveal"><a href="/commercial">Commercial property →</a><a href="/residential">Roofing for homeowners →</a><a href="/areas">Areas we cover →</a></p>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US FOR YOUR ROOF (conversion) ================= -->
+  <section class="section soft" id="why-upsize">
+    <div class="wrap">
+      <div class="sec-top">
+        <span class="eyebrow reveal">Why choose us</span>
+        <h2 class="reveal d1">Why homeowners and contractors choose Upsize</h2>
+        <p class="lead reveal d2">The roofer who turns up, prices the same day and stands behind the work. Compare us with a typical local roofer.</p>
+      </div>
+      <div class="tabs reveal" data-tabs>
+        <div class="tab-list" role="tablist" aria-label="Why Upsize">
+          <button type="button" role="tab" aria-selected="true" aria-controls="htp-why" id="htb-why">6 reasons</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="htp-vs" id="htb-vs">Compare</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="htp-g" id="htb-g">Guarantees</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="htp-inc" id="htb-inc">Included</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="htp-why" aria-labelledby="htb-why">
+          <h3 class="tab-h">6 reasons homeowners choose us</h3>
+          <div class="usp-grid usp-grid--3"><article class="usp reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="10" width="6" height="4" rx="1"/><path d="M9 11 5 8M15 11l4-3M9 13l-4 3M15 13l4 3"/><circle cx="4" cy="7" r="2"/><circle cx="20" cy="7" r="2"/><circle cx="4" cy="17" r="2"/><circle cx="20" cy="17" r="2"/></svg></span><h3>Free drone survey, worth £250</h3><p>A drone roof survey usually costs around £250. Ours is free: we fly it on the spot and show you every close-up.</p></article><article class="usp reveal d1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><h3>Same-day fixed price</h3><p>Latest survey technology means a written, fixed price on the spot or the same day. No pressure and no extras added later.</p></article><article class="usp reveal d2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M8.5 11l2 2 3.5-3.5"/></svg></span><h3>Competent RICS inspection</h3><p>On request, an independent, competent RICS surveyor inspects your finished roof, so you get an expert second opinion.</p></article><article class="usp reveal d3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>10-year guarantee</h3><p>Our written workmanship guarantee, handed over at completion, plus manufacturer guarantees of up to 20–25 years on the products.</p></article><article class="usp reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v7a2 2 0 0 0 4 0"/></svg></span><h3>Insurance-backed option</h3><p>Few local roofers offer it. Your guarantee is protected for its full term through a leading UK provider. T&amp;Cs apply.</p></article><article class="usp reveal d1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><h3>Clear, safe payments</h3><p>A deposit secures your date, larger jobs are paid in stages, and everything is in a written contract you sign first.</p></article></div>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="htp-vs" aria-labelledby="htb-vs">
+          <h3 class="tab-h">Upsize compared with a typical local roofer</h3>
+          <div class="tbl-wrap reveal d1"><table class="vs"><thead><tr><th scope="col">What you get</th><th scope="col">With Upsize</th><th scope="col">Typical local competitor</th></tr></thead><tbody><tr><th scope="row">Roof survey</th><td class="y">Free drone survey (worth £250), you see the close-ups</td><td class="n">Ladder or ground check, few photos</td></tr><tr><th scope="row">Quote</th><td class="y">Fixed and written, on the spot or the same day</td><td class="n">Quote sent days later</td></tr><tr><th scope="row">Published prices</th><td class="y">Guide prices on our website, up to 25% below typical*</td><td class="n">Rarely published</td></tr><tr><th scope="row">Call-back</th><td class="y">Within 2 working hours</td><td class="n">Often days</td></tr><tr><th scope="row">Workmanship guarantee</th><td class="y">10 years in writing, handed over at completion</td><td class="n">Often not stated</td></tr><tr><th scope="row">Insurance-backed guarantee</th><td class="y">Available on request (T&amp;Cs apply)</td><td class="n">Rarely offered</td></tr><tr><th scope="row">Independent inspection</th><td class="y">Competent RICS roof inspection, on request</td><td class="n">Rarely offered</td></tr><tr><th scope="row">Paying</th><td class="y">Deposit secures your date, stages on larger jobs, signed contract</td><td class="n">Often not stated</td></tr><tr><th scope="row">Standards</th><td class="y">Council framework standards on every roof</td><td class="n">Varies</td></tr></tbody></table></div>
+          <p class="fine">Typical local competitor: based on our review of Peterborough roofers’ websites and directory listings, October 2026. *Illustrative comparison; see our guide prices below.</p>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="htp-g" aria-labelledby="htb-g">
+          <h3 class="tab-h">Four layers of protection on your new roof</h3>
+          <div class="g-stack reveal"><div><strong>10 yrs</strong><h3>Workmanship guarantee</h3><p>Our own written guarantee on the work, handed to you at completion.</p></div><div><strong>20–25 yrs</strong><h3>Manufacturer guarantees</h3><p>On membranes, EPDM and tiles, depending on the products we use.</p></div><div><strong>IBG</strong><h3>Insurance-backed option</h3><p>Protects your guarantee for its full term with a UK provider. T&amp;Cs apply.</p></div><div><strong>RICS</strong><h3>Independent inspection</h3><p>A competent, independent RICS surveyor can inspect your finished roof, on request.</p></div></div>
+          <p class="fine">Insurance-backed guarantees are optional and provided by third-party insurers; T&amp;Cs apply. Manufacturer guarantee lengths depend on the products used and are confirmed in your quote.</p>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="htp-inc" aria-labelledby="htb-inc">
+          <h3 class="tab-h">Also included as standard</h3>
+          <ul class="also-list reveal"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Building Regulations sign-off arranged</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Own scaffolding, no waiting</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Council framework standards on every roof</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Waste removed responsibly</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>£5m insured, CSCS &amp; DBS-checked team</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>12+ years’ roofing experience</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Pay by card, cash or BACS</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Finance on larger jobs</span></li></ul>
+        </div>
+      </div>
+      <div class="cta-strip cta-v2 reveal"><div class="cta-v2-txt"><strong>Ready for a fixed, written price?</strong><span>Free drone survey · call-back within 2 working hours · no obligation</span></div><div class="btn-row"><a class="btn btn--lime" href="#contact" data-type="Homeowner – roofing">Get my free quote</a><a class="btn btn--line" href="tel:+448001939030">Call<span class="d-only">&nbsp;0800 193 9030</span><span class="m-only">&nbsp;free</span></a></div></div>
     </div>
   </section>
 
@@ -1769,88 +1933,25 @@
     </div>
   </section>
 
-  <!-- ================= WHAT WE DO ================= -->
-  <section class="section" id="services">
+  <!-- ================= SAFETY & QUALITY (framework standards) ================= -->
+  <section class="section std-sec" id="standards">
     <div class="wrap">
-      <div class="sec-top">
-        <span class="eyebrow reveal">What we do</span>
-        <h2 class="reveal d1">Roofing, kitchens &amp; bathrooms, delivered by one team</h2>
-        <p class="lead reveal d2">Roofing for homeowners and landlords. Kitchens, bathrooms and roofing for housing providers, main contractors and commercial clients, as single trades or one framework package.</p>
-      </div>
-      <h3 class="svc-sub reveal">Roofing <span class="svc-tag">For homeowners, landlords &amp; business</span></h3>
-      <div class="tiles">
-          <a class="tile reveal" href="/roof-repair-peterborough"><img src="images/roof-repair-new-tiles-dry-ridge-peterborough.jpg" alt="New tiles and dry-fix ridge on a Peterborough roof repair" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Tiles, ridges &amp; leaks</small><strong>Roof repairs</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
-          <a class="tile reveal" href="/roof-replacement-peterborough"><img src="images/re-roof-new-tiles-grantham.jpg" alt="Completed re-roof with new concrete tiles near Grantham" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Full replacement</small><strong>New roofs &amp; re-roofs</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
-          <a class="tile reveal" href="/flat-roofing-peterborough"><img src="images/epdm-flat-roof-peterborough.jpg" alt="New EPDM rubber flat roof in Peterborough" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Garages &amp; extensions</small><strong>Flat roofs (EPDM)</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
-          <a class="tile reveal" href="/emergency-roof-repair-peterborough"><img src="images/broken-missing-roof-tiles-peterborough.jpg" alt="Storm-damaged roof with missing tiles in Peterborough" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Fast response</small><strong>Emergency &amp; storm repairs</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
-          <a class="tile reveal" href="/leadwork-chimney-repair-peterborough"><img src="images/pantile-roof-repair-abutment-lead-flashing-peterborough.jpg" alt="New lead flashing at a roof abutment in Peterborough" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Flashings &amp; valleys</small><strong>Leadwork &amp; chimneys</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
-          <a class="tile reveal" href="/gutters-fascias-soffits-peterborough"><img src="images/new-roof-tiles-house-peterborough.jpg" alt="House with new roof tiles, fascias and guttering in Peterborough" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Roofline renewals</small><strong>Gutters, fascias &amp; soffits</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
-      </div>
-      <h3 class="svc-sub reveal">Kitchens, bathrooms &amp; wet rooms <span class="svc-tag">For housing providers, contractors &amp; commercial</span></h3>
-      <div class="tiles tiles--3">
-          <a class="tile reveal" href="/kitchen-fitters-peterborough"><img src="images/shaker-kitchen-residential-peterborough.jpg" alt="Shaker kitchen fitted in a Peterborough home" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Fitted by one team</small><strong>Kitchens</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
-          <a class="tile reveal" href="/bathroom-fitters-peterborough"><img src="images/walk-in-shower-bathroom-peterborough.jpg" alt="Walk-in shower bathroom fitted in Peterborough" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Showers, suites &amp; tiling</small><strong>Bathrooms</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
-          <a class="tile reveal" href="/wet-rooms-peterborough"><img src="images/accessible-wet-room-after-peterborough.jpg" alt="Accessible level-access wet room in Peterborough" width="600" height="450" loading="lazy"><span class="tile-txt"><small>Level-access showers</small><strong>Wet rooms</strong></span><span class="tile-go" aria-hidden="true">→</span></a>
-      </div>
-      <h3 class="svc-sub reveal">Sectors we work in</h3>
-      <div class="sectors3">
-        <a class="sector reveal" href="/social-housing">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span>
-          <h3>Social housing &amp; frameworks</h3>
-          <p>Kitchen, bathroom, wet room and roofing packages for main contractors and housing providers, priced to your SOR.</p>
-          <span class="go">Find out more →</span>
-        </a>
-        <a class="sector reveal d1" href="/commercial">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M7 8V4h10v4M7 12h2M11 12h2M15 12h2M7 16h2M11 16h2M15 16h2"/></svg></span>
-          <h3>Commercial</h3>
-          <p>Kitchens, bathrooms and wet rooms, plus flat and pitched roofing, for commercial property.</p>
-          <span class="go">Find out more →</span>
-        </a>
-        <a class="sector reveal d2" href="/residential">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 12 3l10 9"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span>
-          <h3>Residential</h3>
-          <p>Roofing for homeowners and landlords, from one slipped tile to a full re-roof.</p>
-          <span class="go">Find out more →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= WHY CHOOSE US FOR YOUR ROOF (conversion) ================= -->
-  <section class="section soft" id="why-upsize">
-    <div class="wrap">
-      <div class="sec-top">
-        <span class="eyebrow reveal">Why choose us</span>
-        <h2 class="reveal d1">Why homeowners and contractors choose Upsize</h2>
-        <p class="lead reveal d2">The roofer who turns up, prices the same day and stands behind the work. Compare us with a typical local roofer.</p>
-      </div>
-      <div class="tabs reveal" data-tabs>
-        <div class="tab-list" role="tablist" aria-label="Why Upsize">
-          <button type="button" role="tab" aria-selected="true" aria-controls="htp-why" id="htb-why">6 reasons</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="htp-vs" id="htb-vs">Compare</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="htp-g" id="htb-g">Guarantees</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="htp-inc" id="htb-inc">Included</button>
+      <div class="std-head">
+        <div class="sec-top">
+          <span class="eyebrow reveal">Safety &amp; quality</span>
+          <h2 class="reveal d1">Council framework standards, on every home</h2>
+          <p class="lead reveal d2">We work in social housing, where safety, quality and paperwork are checked on every property. Homeowners get exactly the same standards on their roof.</p>
         </div>
-        <div class="tab-panel" role="tabpanel" id="htp-why" aria-labelledby="htb-why">
-          <h3 class="tab-h">6 reasons homeowners choose us</h3>
-          <div class="usp-grid usp-grid--3"><article class="usp reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="10" width="6" height="4" rx="1"/><path d="M9 11 5 8M15 11l4-3M9 13l-4 3M15 13l4 3"/><circle cx="4" cy="7" r="2"/><circle cx="20" cy="7" r="2"/><circle cx="4" cy="17" r="2"/><circle cx="20" cy="17" r="2"/></svg></span><h3>Free drone survey, worth £250</h3><p>A drone roof survey usually costs around £250. Ours is free: we fly it on the spot and show you every close-up.</p></article><article class="usp reveal d1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><h3>Same-day fixed price</h3><p>Latest survey technology means a written, fixed price on the spot or the same day. No pressure and no extras added later.</p></article><article class="usp reveal d2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M8.5 11l2 2 3.5-3.5"/></svg></span><h3>Competent RICS inspection</h3><p>On request, an independent, competent RICS surveyor inspects your finished roof, so you get an expert second opinion.</p></article><article class="usp reveal d3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>10-year guarantee</h3><p>Our written workmanship guarantee, handed over at completion, plus manufacturer guarantees of up to 20–25 years on the products.</p></article><article class="usp reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v7a2 2 0 0 0 4 0"/></svg></span><h3>Insurance-backed option</h3><p>Few local roofers offer it. Your guarantee is protected for its full term through a leading UK provider. T&amp;Cs apply.</p></article><article class="usp reveal d1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><h3>Clear, safe payments</h3><p>A deposit secures your date, larger jobs are paid in stages, and everything is in a written contract you sign first.</p></article></div>
-        </div>
-        <div class="tab-panel" role="tabpanel" id="htp-vs" aria-labelledby="htb-vs">
-          <h3 class="tab-h">Upsize compared with a typical local roofer</h3>
-          <div class="tbl-wrap reveal d1"><table class="vs"><thead><tr><th scope="col">What you get</th><th scope="col">With Upsize</th><th scope="col">Typical local competitor</th></tr></thead><tbody><tr><th scope="row">Roof survey</th><td class="y">Free drone survey (worth £250), you see the close-ups</td><td class="n">Ladder or ground check, few photos</td></tr><tr><th scope="row">Quote</th><td class="y">Fixed and written, on the spot or the same day</td><td class="n">Quote sent days later</td></tr><tr><th scope="row">Published prices</th><td class="y">Guide prices on our website, up to 25% below typical*</td><td class="n">Rarely published</td></tr><tr><th scope="row">Call-back</th><td class="y">Within 2 working hours</td><td class="n">Often days</td></tr><tr><th scope="row">Workmanship guarantee</th><td class="y">10 years in writing, handed over at completion</td><td class="n">Often not stated</td></tr><tr><th scope="row">Insurance-backed guarantee</th><td class="y">Available on request (T&amp;Cs apply)</td><td class="n">Rarely offered</td></tr><tr><th scope="row">Independent inspection</th><td class="y">Competent RICS roof inspection, on request</td><td class="n">Rarely offered</td></tr><tr><th scope="row">Paying</th><td class="y">Deposit secures your date, stages on larger jobs, signed contract</td><td class="n">Often not stated</td></tr><tr><th scope="row">Standards</th><td class="y">Council framework standards on every roof</td><td class="n">Varies</td></tr></tbody></table></div>
-          <p class="fine">Typical local competitor: based on our review of Peterborough roofers’ websites and directory listings, October 2026. *Illustrative comparison; see our guide prices below.</p>
-        </div>
-        <div class="tab-panel" role="tabpanel" id="htp-g" aria-labelledby="htb-g">
-          <h3 class="tab-h">Four layers of protection on your new roof</h3>
-          <div class="g-stack reveal"><div><strong>10 yrs</strong><h3>Workmanship guarantee</h3><p>Our own written guarantee on the work, handed to you at completion.</p></div><div><strong>20–25 yrs</strong><h3>Manufacturer guarantees</h3><p>On membranes, EPDM and tiles, depending on the products we use.</p></div><div><strong>IBG</strong><h3>Insurance-backed option</h3><p>Protects your guarantee for its full term with a UK provider. T&amp;Cs apply.</p></div><div><strong>RICS</strong><h3>Independent inspection</h3><p>A competent, independent RICS surveyor can inspect your finished roof, on request.</p></div></div>
-          <p class="fine">Insurance-backed guarantees are optional and provided by third-party insurers; T&amp;Cs apply. Manufacturer guarantee lengths depend on the products used and are confirmed in your quote.</p>
-        </div>
-        <div class="tab-panel" role="tabpanel" id="htp-inc" aria-labelledby="htb-inc">
-          <h3 class="tab-h">Also included as standard</h3>
-          <ul class="also-list reveal"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Building Regulations sign-off arranged</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Own scaffolding, no waiting</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Council framework standards on every roof</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Waste removed responsibly</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>£5m insured, CSCS &amp; DBS-checked team</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>12+ years’ roofing experience</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Pay by card, cash or BACS</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Finance on larger jobs</span></li></ul>
-        </div>
+        <div class="btn-row reveal d2"><a class="btn btn--navy" href="/policies">Our policies</a><a class="btn btn--line" href="/social-housing">Framework work</a></div>
       </div>
-      <div class="cta-strip cta-v2 reveal"><div class="cta-v2-txt"><strong>Ready for a fixed, written price?</strong><span>Free drone survey · call-back within 2 working hours · no obligation</span></div><div class="btn-row"><a class="btn btn--lime" href="#contact" data-type="Homeowner – roofing">Get my free quote</a><a class="btn btn--line" href="tel:+448001939030">Call<span class="d-only">&nbsp;0800 193 9030</span><span class="m-only">&nbsp;free</span></a></div></div>
+      <ul class="std-grid">
+        <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg><strong>RAMS on every job</strong><span>Risk assessments and method statements, the same as our council framework work.</span></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="m16 11 2 2 4-4"/></svg><strong>CSCS &amp; DBS-checked</strong><span>Our own trained team, safe to work in occupied and vulnerable homes.</span></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="M12 8v8M9 12h6"/></svg><strong>£5m public liability</strong><span>Fully insured, with certificates available on request.</span></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3"/></svg><strong>Photo records &amp; sign-off</strong><span>Photos at every stage and a signed-off handover, as frameworks require.</span></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><strong>10-year guarantee</strong><span>Written workmanship guarantee, with an insurance-backed option on roofs.</span></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12h6M9 16h6M7 3h10l2 3v15H5V6z"/></svg><strong>CHAS &amp; Constructionline</strong><span>Applications in progress (Q1 2027), with SSIP-standard policies in place.</span></li>
+      </ul>
     </div>
   </section>
 
@@ -1894,6 +1995,23 @@
 
 
 
+
+  <!-- ================= ABOUT (glimpse of /about-us) ================= -->
+  <section class="section soft" id="about">
+    <div class="wrap about-v2">
+      <div class="ab-photos reveal">
+        <figure><img src="images/director-alexandru-balan.jpg" alt="Alexandru Balan BSc MSc, co-director and project manager at Upsize Property Renovation Ltd" width="480" height="600" loading="lazy"><figcaption><strong>Alexandru Balan</strong>Co-director · Projects</figcaption></figure>
+        <figure><img src="images/director-laurentiu-dobinda.jpg" alt="Laurentiu Dobinda, co-director and commercial director at Upsize Property Renovation Ltd" width="480" height="600" loading="lazy"><figcaption><strong>Laurentiu Dobinda</strong>Co-director · Commercial</figcaption></figure>
+      </div>
+      <div class="ab-copy">
+        <span class="eyebrow reveal">About Upsize</span>
+        <h2 class="reveal d1">A director-led Peterborough contractor</h2>
+        <p class="reveal d2">Upsize Property Renovation Ltd is run by its two co-directors, Alex and Lari, who stay involved in every job from first visit to handover. Our team delivers kitchen, bathroom and roofing programmes for housing providers and main contractors, and roofing for homeowners across Peterborough and 40 miles around.</p>
+        <ul class="ab-facts reveal d2"><li><strong>12+ yrs</strong>roofing &amp; multi-trade experience</li><li><strong>240+</strong>projects completed</li><li><strong>PCVS</strong>member · free Weekend Roof Clinic</li></ul>
+        <div class="btn-row reveal d3"><a class="btn btn--navy" href="/about-us">Meet the team</a><a class="btn btn--line" href="/community">Our community work</a></div>
+      </div>
+    </div>
+  </section>
 
   <!-- ================= FAQ (marked up for Google and AI search) =================
        Prices are UK 2026 guide ranges: CONFIRM they match your own pricing, or edit them.
@@ -2178,7 +2296,8 @@
   </div>
   <div class="wrap foot-areas">
     <h3>Areas we cover</h3>
-    <ul class="area-chips"><li><a href="/areas/peterborough">Peterborough</a></li><li><a href="/areas/ailsworth">Ailsworth</a></li><li><a href="/areas/barnack">Barnack</a></li><li><a href="/areas/baston">Baston</a></li><li><a href="/areas/boston">Boston</a></li><li><a href="/areas/bourne">Bourne</a></li><li><a href="/areas/cambridge">Cambridge</a></li><li><a href="/areas/castor">Castor</a></li><li><a href="/areas/chatteris">Chatteris</a></li><li><a href="/areas/corby">Corby</a></li><li><a href="/areas/crowland">Crowland</a></li><li><a href="/areas/deenethorpe">Deenethorpe</a></li><li><a href="/areas/deeping-st-nicholas">Deeping St Nicholas</a></li><li><a href="/areas/doddington">Doddington</a></li><li><a href="/areas/eye">Eye</a></li><li><a href="/areas/fotheringhay">Fotheringhay</a></li><li><a href="/areas/glinton">Glinton</a></li><li><a href="/areas/godmanchester">Godmanchester</a></li><li><a href="/areas/grantham">Grantham</a></li><li><a href="/areas/grimsthorpe">Grimsthorpe</a></li><li><a href="/areas/guyhirn">Guyhirn</a></li><li><a href="/areas/holbeach">Holbeach</a></li><li><a href="/areas/huntingdon">Huntingdon</a></li><li><a href="/areas/kettering">Kettering</a></li><li><a href="/areas/ketton">Ketton</a></li><li><a href="/areas/kings-cliffe">Kings Cliffe</a></li><li><a href="/areas/kings-lynn">King’s Lynn</a></li><li><a href="/areas/long-sutton">Long Sutton</a></li><li><a href="/areas/march">March</a></li><li><a href="/areas/market-deeping">Market Deeping</a></li><li><a href="/areas/morton">Morton</a></li><li><a href="/areas/murrow">Murrow</a></li><li><a href="/areas/nassington">Nassington</a></li><li><a href="/areas/oakham">Oakham</a></li><li><a href="/areas/oundle">Oundle</a></li><li><a href="/areas/outwell">Outwell</a></li><li><a href="/areas/pinchbeck">Pinchbeck</a></li><li><a href="/areas/ryhall">Ryhall</a></li><li><a href="/areas/spalding">Spalding</a></li><li><a href="/areas/st-neots">St Neots</a></li><li><a href="/areas/stamford">Stamford</a></li><li><a href="/areas/sutton">Sutton</a></li><li><a href="/areas/thurlby">Thurlby</a></li><li><a href="/areas/upwell">Upwell</a></li><li><a href="/areas/wansford">Wansford</a></li><li><a href="/areas/weldon">Weldon</a></li><li><a href="/areas/wimblington">Wimblington</a></li><li><a href="/areas/wisbech">Wisbech</a></li><li><a href="/areas">All areas A–Z</a></li></ul>
+    <ul class="area-chips" id="area-chips"><li><a href="/areas/peterborough">Peterborough</a></li><li><a href="/areas/stamford">Stamford</a></li><li><a href="/areas/spalding">Spalding</a></li><li><a href="/areas/market-deeping">Market Deeping</a></li><li><a href="/areas/bourne">Bourne</a></li><li><a href="/areas/oundle">Oundle</a></li><li><a href="/areas/wisbech">Wisbech</a></li><li><a href="/areas/march">March</a></li><li><a href="/areas/huntingdon">Huntingdon</a></li><li><a href="/areas/holbeach">Holbeach</a></li><li><a href="/areas/crowland">Crowland</a></li><li><a href="/areas/kettering">Kettering</a></li><li class="more"><a href="/areas/ailsworth">Ailsworth</a></li><li class="more"><a href="/areas/barnack">Barnack</a></li><li class="more"><a href="/areas/baston">Baston</a></li><li class="more"><a href="/areas/boston">Boston</a></li><li class="more"><a href="/areas/cambridge">Cambridge</a></li><li class="more"><a href="/areas/castor">Castor</a></li><li class="more"><a href="/areas/chatteris">Chatteris</a></li><li class="more"><a href="/areas/corby">Corby</a></li><li class="more"><a href="/areas/deenethorpe">Deenethorpe</a></li><li class="more"><a href="/areas/deeping-st-nicholas">Deeping St Nicholas</a></li><li class="more"><a href="/areas/doddington">Doddington</a></li><li class="more"><a href="/areas/eye">Eye</a></li><li class="more"><a href="/areas/fotheringhay">Fotheringhay</a></li><li class="more"><a href="/areas/glinton">Glinton</a></li><li class="more"><a href="/areas/godmanchester">Godmanchester</a></li><li class="more"><a href="/areas/grantham">Grantham</a></li><li class="more"><a href="/areas/grimsthorpe">Grimsthorpe</a></li><li class="more"><a href="/areas/guyhirn">Guyhirn</a></li><li class="more"><a href="/areas/ketton">Ketton</a></li><li class="more"><a href="/areas/kings-cliffe">Kings Cliffe</a></li><li class="more"><a href="/areas/kings-lynn">King’s Lynn</a></li><li class="more"><a href="/areas/long-sutton">Long Sutton</a></li><li class="more"><a href="/areas/morton">Morton</a></li><li class="more"><a href="/areas/murrow">Murrow</a></li><li class="more"><a href="/areas/nassington">Nassington</a></li><li class="more"><a href="/areas/oakham">Oakham</a></li><li class="more"><a href="/areas/outwell">Outwell</a></li><li class="more"><a href="/areas/pinchbeck">Pinchbeck</a></li><li class="more"><a href="/areas/ryhall">Ryhall</a></li><li class="more"><a href="/areas/st-neots">St Neots</a></li><li class="more"><a href="/areas/sutton">Sutton</a></li><li class="more"><a href="/areas/thurlby">Thurlby</a></li><li class="more"><a href="/areas/upwell">Upwell</a></li><li class="more"><a href="/areas/wansford">Wansford</a></li><li class="more"><a href="/areas/weldon">Weldon</a></li><li class="more"><a href="/areas/wimblington">Wimblington</a></li><li class="more"><a href="/areas">All areas A–Z</a></li></ul>
+    <button type="button" class="area-more" aria-expanded="false" aria-controls="area-chips">Show all areas</button>
   </div>
   <div class="wrap legal">
     <span>© <span id="yr">2026</span> Upsize Property Renovation Ltd · Registered in England &amp; Wales · Company No. 15856524 · Registered office: 4 Blenheim Court, Suite 595, Peterborough, PE1 2DU · VAT No. GB510546327</span>
@@ -2328,6 +2447,10 @@
     }
     f.addEventListener('change',upd);
   });
+
+  // Footer areas: show the main towns, button reveals all
+  document.querySelectorAll('.area-more').forEach(function(b){var ul=document.getElementById(b.getAttribute('aria-controls'));if(!ul)return;var n=ul.querySelectorAll('li').length;b.textContent='Show all '+n+' areas';
+    b.addEventListener('click',function(){var o=ul.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Show fewer areas':'Show all '+n+' areas';});});
   // FAQ: show more / fewer
   document.querySelectorAll('.faq-toggle').forEach(function(b){
     var list=b.closest('.faq-list'), n=list.querySelectorAll('.faq-more').length;

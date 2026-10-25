@@ -321,7 +321,7 @@ const newsBlock = featured ? `  <!-- NEWS:START (filled automatically by build.j
       </div>
       <div class="nf-grid">
 ${featureCard(featured)}        <ul class="nf-list reveal d1">
-${others.slice(0, 3).map(listItem).join('')}        </ul>
+${others.slice(0, 2).map(listItem).join('')}        </ul>
       </div>
     </div>
   </section>
