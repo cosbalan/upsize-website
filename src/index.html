@@ -2678,7 +2678,7 @@
   document.querySelectorAll('.rot').forEach(function(r){var li=r.querySelectorAll('li');if(!li.length)return;var k=0;li[0].classList.add('on');
     if(li.length<2)return;setInterval(function(){li[k].classList.remove('on');k=(k+1)%li.length;li[k].classList.add('on');},2800);});
   // Count-up stats (final numbers are already in the HTML for Google and no-JS)
-  var nums=[];
+  var nums=document.querySelectorAll('.stats [data-count]');
   if(nums.length&&'IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     nums.forEach(function(el){el.textContent='0';});
     var sio=new IntersectionObserver(function(en){en.forEach(function(e){
@@ -2749,10 +2749,12 @@
       else{w.classList.remove('auto');void ind.offsetWidth;if(!user&&inView&&!rm)w.classList.add('auto');}}
     bs.forEach(function(b,i){b.addEventListener('click',function(){sel(i,true);});b.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=(i+(e.key==='ArrowRight'?1:bs.length-1))%bs.length;sel(n,true);bs[n].focus();}});});
     window.addEventListener('resize',function(){place(bs[cur]);});
+    function run(){clearInterval(timer);timer=setInterval(function(){if(!user)sel((cur+1)%bs.length,false);},6000);}
     sel(0,false);
     if(!rm&&'IntersectionObserver' in window){new IntersectionObserver(function(es){inView=es[0].isIntersecting;clearInterval(timer);
-      },{threshold:.35}).observe(w);}
+      if(inView&&!user){sel(cur,false);run();}},{threshold:.35}).observe(w);}
     w.addEventListener('mouseenter',function(){if(!user){clearInterval(timer);w.classList.remove('auto');}});
+    w.addEventListener('mouseleave',function(){if(!user&&inView){sel(cur,false);run();}});
     
   });
 
