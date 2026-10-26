@@ -99,8 +99,18 @@ const style = `<link rel="stylesheet" href="/site.${cssHash}.css">`;
 home = home.replace(/<style>[\s\S]*?<\/style>/, style);
 const businessLd = home.match(/<script type="application\/ld\+json">\s*\{\s*"@context": "https:\/\/schema.org",\s*"@type": \[[\s\S]*?<\/script>/)[0];
 const headerHtml = between(home, '<header class="site-header">', '</header>') + '</header>';
-const contactToMainEnd = between(home, '  <!-- ================= 7. CONTACT', '</main>');
-const findUsToMainEnd = between(home, '  <!-- ================= FIND US', '</main>');
+const partnersHtml = between(home, '<!-- PARTNERS:START -->', '<!-- PARTNERS:END -->');
+const findUsHtml = between(home, '<!-- FINDUS:START -->', '<!-- FINDUS:END -->');
+const contactToMainEnd = between(home, '  <!-- ================= 7. CONTACT', '</main>') + '  ' + partnersHtml + '\n';
+const findUsToMainEnd = `  <section class="section cta findus-solo">\n  ${findUsHtml}\n  </section>\n  ${partnersHtml}\n`;
+const rvQuotes = between(home, '<ul class="rv-quotes">', '</ul>');
+const reviewStrip = `  <section class="rv-strip" aria-label="Customer reviews">
+    <div class="wrap">
+      <div class="rvs-head"><p><span class="st" aria-hidden="true">★★★★★</span> <strong>5.0</strong> from 35+ five-star reviews on <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">Google</a></p><div class="rv-nav" hidden><button type="button" data-rv="-1" aria-label="Previous review">←</button><button type="button" data-rv="1" aria-label="Next review">→</button></div></div>
+      <ul class="rv-quotes rv-quotes--strip">${rvQuotes.replace(/^<ul class="rv-quotes">/, '')}</ul>
+    </div>
+  </section>
+`;
 const afterMain = home.slice(home.indexOf('</main>') + '</main>'.length);   // footer, bubble, scripts
 
 function navFor(key) {
@@ -166,7 +176,7 @@ function ctaBand(meta, withContact) {
 `;
 }
 function page({ meta, mainHtml, depth = 0, withContact = true }) {
-  const html = headFor({ ...meta, depth }) + navFor(meta.nav) + '\n\n<main id="main">\n' + mainHtml + '\n' + ctaBand(meta, withContact) + (withContact ? contactToMainEnd : findUsToMainEnd) + '</main>' + afterMain;
+  const html = headFor({ ...meta, depth }) + navFor(meta.nav) + '\n\n<main id="main">\n' + mainHtml + '\n' + ctaBand(meta, withContact) + (withContact && !meta.noindex && !/id="reviews"|rv-quotes/.test(mainHtml) ? reviewStrip : '') + (withContact ? contactToMainEnd : findUsToMainEnd) + '</main>' + afterMain;
   return relAssets(html, depth);
 }
 const crumbsLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([n, u], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: SITE + u })) });
@@ -310,22 +320,14 @@ for (const f of fs.existsSync(pdir) ? fs.readdirSync(pdir).filter(f => f.endsWit
 }
 
 /* ---------- homepage: latest news block ---------- */
+const newsRowItem = p => `          <a class="nr-item" href="${p.url}">${p.image ? `<img src="${esc(p.image)}" alt="" loading="lazy" width="160" height="110">` : ''}<span><small>${p.cat} · <time datetime="${p.date}">${fmtDate(p.date)}</time></small><strong>${esc(p.title)}</strong></span></a>
+`;
 const newsBlock = featured ? `  <!-- NEWS:START (filled automatically by build.js from content/news) -->
-  <section class="section" id="news">
-    <div class="wrap">
-      <div class="news-head">
-        <div class="sec-top">
-          <span class="eyebrow reveal">News &amp; press</span>
-          <h2 class="reveal d1">Latest news and press releases</h2>
-        </div>
-        <a class="btn btn--navy reveal d2" href="/news/">All news</a>
-      </div>
-      <div class="nf-grid">
-${featureCard(featured)}        <ul class="nf-list reveal d1">
-${others.slice(0, 2).map(listItem).join('')}        </ul>
-      </div>
+    <div class="wrap news-row" id="news">
+      <div class="nr-head"><h3>Latest guides &amp; news</h3><a class="link" href="/news/">All news →</a></div>
+      <div class="nr-grid">
+${[featured, ...others.slice(0, 2)].map(newsRowItem).join('')}      </div>
     </div>
-  </section>
   <!-- NEWS:END -->` : `  <!-- NEWS:START (filled automatically by build.js from content/news) -->\n  <!-- NEWS:END -->`;
 home = home.replace(/  <!-- NEWS:START[\s\S]*?<!-- NEWS:END -->/, newsBlock);
 fs.writeFileSync(path.join(OUT, 'index.html'), home.replace('data-nav="home"', 'data-nav="home" aria-current="page"'));
