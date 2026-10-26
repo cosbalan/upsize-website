@@ -28,3 +28,10 @@
 # Pages not built yet: temporary (302) until each page exists. A real page file always wins over these.
 /policies/*                                  /policies           301
 /cookie-notice                               /privacy-policy#cookies  301
+
+# Broken links shared on social media (text stuck to the end of the URL), 26 Oct 2026
+/community-roof-check                                   /community                                         301
+/community-roof-checkRead                               /community                                         301
+/community-roof-check.                                  /community                                         301
+/news/peterborough-directors-weekend-roof-clinicStay    /news/peterborough-directors-weekend-roof-clinic   301
+/news/peterborough-directors-weekend-roof-clinic.       /news/peterborough-directors-weekend-roof-clinic   301
