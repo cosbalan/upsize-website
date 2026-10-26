@@ -1971,7 +1971,9 @@
     .f2-trust svg{flex:none;width:40px;height:40px;padding:9px;border-radius:12px;background:rgba(186,218,85,.12);color:var(--lime)}
     .f2-trust strong{display:block;color:#fff;font-family:Lexend,sans-serif;font-weight:600;font-size:.95rem}
     .f2-trust span{font-size:.84rem}
-    .f2-main{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:44px;padding-top:48px;padding-bottom:40px}
+    .f2-main{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(4,minmax(0,1fr));gap:40px;padding-top:48px;padding-bottom:40px}
+    .f2-ct h3{margin:0 0 16px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+    .f2-ct .f2-contact{gap:12px}.f2-ct strong{font-size:1rem}
     .f2-brand img{height:52px;width:auto;margin-bottom:16px}
     .f2-brand>p{margin:0 0 20px;max-width:380px;line-height:1.6}
     .f2-contact{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px}
@@ -1994,7 +1996,8 @@
     .f2-legal nav{display:flex;flex-wrap:wrap;gap:6px 16px}
     .f2-legal nav a{color:#9aa8bf}
     .f2 .legal::before{display:none}.f2-legal{border-top:1px solid rgba(255,255,255,.08)}
-    @media (max-width:1100px){.f2-main{grid-template-columns:1fr 1fr 1fr;gap:32px}.f2-brand{grid-column:1/-1}.f2-trust ul{grid-template-columns:1fr 1fr}}
+    @media (max-width:1100px){.f2-main{grid-template-columns:1fr 1fr;gap:32px}.f2-brand{grid-column:1/-1}.f2-trust ul{grid-template-columns:1fr 1fr}}
+    @media (max-width:760px){.f2-ct{border-top:1px solid rgba(255,255,255,.08);padding:18px 0 20px;margin-top:4px;order:-1}.f2-ct h3{margin-bottom:14px}.f2-brand{order:-2}}
     @media (max-width:760px){
       .f2-trust{padding-top:26px;padding-bottom:22px}
       .f2-trust ul{gap:14px 12px}
@@ -2015,6 +2018,19 @@
     .bt--fw .bt-sub{display:block;font-style:normal;font-size:.92rem;color:#c9d3e6;margin-top:6px;max-width:520px;position:relative}
     .bt--fw small{white-space:normal}
     @media (max-width:760px){.bt--fw{min-height:230px}.bt--fw .bt-sub{font-size:.84rem}}
+    /* compact contact (26 Oct) */
+    #contact.section{padding-top:64px;padding-bottom:56px}
+    .contact{align-items:center}
+    .contact .lead{margin-bottom:0}
+    .ct-find{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);margin-top:40px}
+    .ctf-map,.ctf-map iframe{min-height:200px}
+    .ctf-info{padding:24px 26px;display:flex;flex-direction:column;justify-content:center}
+    .ctf-info h2{font-size:1.2rem;margin:0 0 8px}
+    .ctf-info address{border:0;padding:0;margin:0 0 4px;font-size:.95rem}
+    .ctf-hrs{margin:0 0 12px;font-size:.9rem;color:var(--muted)}
+    .ctf-info .link{align-self:flex-start;color:var(--navy)}
+    .contact .next-steps{display:none}
+    @media (max-width:860px){#contact.section{padding-top:44px;padding-bottom:40px}.ct-find{margin-top:28px;grid-template-columns:1fr}.ctf-map{order:2}.ctf-map,.ctf-map iframe{min-height:170px}.ctf-info{padding:18px 20px}}
     /* ===== sticky mini contact bar + header call (mobile) ===== */
     .hdr-call,.mbar{display:none}
     .ct-rating{margin:14px 0 0;font-size:.9rem;color:#cbd5e1}.ct-rating span{color:#F5B301;letter-spacing:2px}.ct-rating strong{color:#fff}.ct-rating a{color:#fff}
@@ -2513,16 +2529,11 @@
   <section class="section cta" id="contact">
     <div class="wrap contact">
       <div>
-        <span class="eyebrow reveal">Free quote · homes, contractors &amp; frameworks</span>
+        <span class="eyebrow reveal">Free quote</span>
         <h2 class="reveal d1">Talk to the people who do the work</h2>
-        <p class="lead reveal d2">From a single roof repair to a framework programme of kitchens, bathrooms and roofs, you deal directly with our directors, Alex and Lari, from first call to sign-off.</p>
-        <p class="ct-rating reveal d2"><span aria-hidden="true">★★★★★</span> <strong>5.0</strong> from 35+ five-star reviews on <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">Google</a> · call-back within 15 minutes</p>
+        <p class="lead reveal d2">Deal directly with our directors, Alex and Lari. We call back within 15 minutes during opening hours.</p>
+        <p class="ct-rating reveal d2"><span aria-hidden="true">★★★★★</span> <strong>5.0</strong> from 35+ five-star reviews on <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">Google</a></p>
         <div class="ct-actions reveal d2"><a class="btn btn--lime" href="tel:+448001939030"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call 0800 193 9030</a><a class="btn btn--wa" href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div>
-        <div class="ct-aud reveal d3">
-          <div><strong>Homeowners &amp; landlords</strong><ul><li>Free drone roof survey (worth £250)</li><li>Fixed written price, usually the same day</li><li>10-year guarantee, staged payments</li></ul></div>
-          <div><strong>Contractors &amp; housing providers</strong><ul><li>Kitchen, bathroom &amp; roofing packages</li><li>Priced to your SOR, fixed basket rates</li><li>Framework standards, RAMS &amp; £5m cover</li></ul></div>
-        </div>
-        <p class="ct-fomo reveal d3"><span class="dot" aria-hidden="true"></span>Winter roofing and Q1 programme slots are filling up. Book early.</p>
       </div>
       <form class="reveal d1 ff" name="enquiry" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company_website"><input type="hidden" name="lead_source" value=""><input type="hidden" name="landing_page" value="">
         <input type="hidden" name="form-name" value="enquiry">
@@ -2561,11 +2572,10 @@
     <div class="wrap ct-find reveal" id="find-us" aria-labelledby="findus-h">
       <div class="ctf-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19383.716123644328!2d-0.20783805!3d52.606412250000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80da6a7f946886ef%3A0xff350e2629baf145!2sUpsize%20Property%20Renovation%20Ltd!5e0!3m2!1sen!2suk!4v1792098921230!5m2!1sen!2suk" title="Upsize Property Renovation Ltd on Google Maps" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
       <div class="ctf-info">
-        <span class="eyebrow">Find us on Google</span>
-        <h2 id="findus-h">Peterborough-based, working 40 miles around</h2>
-        <address><a class="gbp" href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener"><strong>Upsize Property Renovation Ltd</strong></a>4 Blenheim Court, Suite 595, Peterborough, PE1 2DU</address>
-        <ul class="ctf-meta"><li><b>Hours</b>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</li><li><b>Covering</b>Peterborough, Cambridgeshire, South Lincolnshire &amp; East Midlands</li><li><b>Email</b><a href="mailto:alex@upsizeproperty.com">alex@upsizeproperty.com</a></li></ul>
-        <a class="btn btn--lime" href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener"><svg class="g" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 17.3 18.2 21l-1.6-7 5.4-4.7-7.2-.6L12 2 9.2 8.7 2 9.3l5.4 4.7-1.6 7z"/></svg>Read our Google reviews</a>
+        <h2 id="findus-h">Find us</h2>
+        <address>4 Blenheim Court, Suite 595, Peterborough, PE1 2DU</address>
+        <p class="ctf-hrs">Mon–Fri 7:30–19:00 · Sat 8:00–16:00</p>
+        <a class="link" href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">Open in Google Maps →</a>
       </div>
     </div>
   <!-- FINDUS:END -->
@@ -2587,15 +2597,8 @@
   <div class="wrap f2-main">
     <div class="f2-brand">
       <img src="images/upsize-logo-horizontal-white.svg" alt="Upsize Property Renovation Ltd" width="227" height="60" loading="lazy">
-      <p>Roofs done right. Better homes. Roofing for homeowners and landlords, and kitchen, bathroom and roofing packages for public sector frameworks across Peterborough and the East Midlands.</p>
-      <ul class="f2-contact">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+448001939030"><strong>0800 193 9030</strong></a><span>Freephone</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6z"/></svg><a href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Message us on WhatsApp</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:alex@upsizeproperty.com">alex@upsizeproperty.com</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">4 Blenheim Court, Suite 595, Peterborough, PE1 2DU</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</span></li>
-      </ul>
-      <div class="foot-socials f2-soc">
+      <p>Upsize Property Renovation Ltd is a multi-trade contractor based in Peterborough. We provide roofing for homeowners and landlords, and kitchen, bathroom and roofing packages for public sector frameworks across Peterborough and the East Midlands.</p>
+            <div class="foot-socials f2-soc">
         <a href="https://www.linkedin.com/company/upsizeproperty" target="_blank" rel="noopener" aria-label="Upsize on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
         <a href="https://www.facebook.com/upsizeproperty/" target="_blank" rel="noopener" aria-label="Upsize on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H8v3h2.6V21h2.9z"/></svg></a>
         <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener" aria-label="Upsize on Google"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="currentColor" opacity=".8" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="currentColor" opacity=".6" d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1a10 10 0 0 0 0 9.2L6.4 14z"/><path fill="currentColor" opacity=".9" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.4L6.4 10C7.2 7.7 9.4 6 12 6z"/></svg></a>
@@ -2606,13 +2609,23 @@
         <ul><li><a href="/roofing-services-peterborough">Roofing services</a></li><li><a href="/roof-repair-peterborough">Roof repairs</a></li><li><a href="/roof-replacement-peterborough">New roofs</a></li><li><a href="/flat-roofing-peterborough">Flat roofing (EPDM)</a></li><li><a href="/emergency-roof-repair-peterborough">Emergency roofer</a></li><li><a href="/roof-damage-repair-peterborough">Roof leak repair</a></li><li><a href="/leadwork-chimney-repair-peterborough">Chimneys &amp; lead</a></li><li><a href="/gutters-fascias-soffits-peterborough">Gutters &amp; fascias</a></li></ul>
       </details>
       <details class="f2-col" open>
-        <summary><h3>Frameworks &amp; sectors</h3></summary>
+        <summary><h3>Sectors</h3></summary>
         <ul><li><a href="/social-housing">Social housing &amp; frameworks</a></li><li><a href="/kitchens-bathrooms-peterborough">Kitchen &amp; bathroom packages</a></li><li><a href="/wet-rooms-peterborough">Wet rooms</a></li><li><a href="/commercial">Commercial</a></li><li><a href="/residential">Homeowners &amp; landlords</a></li><li><a href="/upsize-capability-statement.pdf" target="_blank" rel="noopener">Capability statement (PDF)</a></li></ul>
       </details>
       <details class="f2-col" open>
         <summary><h3>Company</h3></summary>
         <ul><li><a href="/about-us">About us</a></li><li><a href="/projects">Projects</a></li><li><a href="/news/">News &amp; guides</a></li><li><a href="/community">Weekend Roof Clinic</a></li><li><a href="/careers">Careers &amp; supply chain</a></li><li><a href="/policies">Policies</a></li><li><a href="/contact">Contact</a></li></ul>
       </details>
+      <div class="f2-col f2-ct">
+        <h3>Contact</h3>
+        <ul class="f2-contact">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+448001939030"><strong>0800 193 9030</strong></a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6z"/></svg><a href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Message us on WhatsApp</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:alex@upsizeproperty.com">alex@upsizeproperty.com</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">4 Blenheim Court, Suite 595, Peterborough, PE1 2DU</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</span></li>
+      </ul>
+      </div>
   </div>
   <div class="wrap foot-areas f2-areas">
     <h3>Areas we cover</h3>
