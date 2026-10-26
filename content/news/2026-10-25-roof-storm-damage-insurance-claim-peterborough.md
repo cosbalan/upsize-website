@@ -104,6 +104,6 @@ We provide the photos, the written report and the itemised price your insurer ne
 
 ## Storm damage? Get a free drone roof survey
 
-Upsize Roofing is the roofing division of Upsize Property Renovation Ltd, a Peterborough contractor trusted on council frameworks. We call back within 15 minutes during opening hours, carry out a free drone survey, and give you a fixed written price and photo evidence for your insurer.
+Upsize Roofing is the roofing division of Upsize Property Renovation Ltd, a Peterborough contractor trusted on public sector frameworks. We call back within 15 minutes during opening hours, carry out a free drone survey, and give you a fixed written price and photo evidence for your insurer.
 
 [Get my free roofing quote](/roofing-services-peterborough#contact) or call **0800 193 9030**.

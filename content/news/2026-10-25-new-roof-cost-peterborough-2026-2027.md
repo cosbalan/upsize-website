@@ -116,6 +116,6 @@ Most re-roofs on a terraced or semi-detached house take 4 to 7 working days, dep
 
 ## Get a free drone survey and fixed price
 
-Upsize Roofing is the roofing division of Upsize Property Renovation Ltd, a Peterborough contractor trusted on council frameworks. We offer a free drone roof survey, a fixed written price on the spot or the same day, a 10-year workmanship guarantee and manufacturer guarantees of up to 20–25 years.
+Upsize Roofing is the roofing division of Upsize Property Renovation Ltd, a Peterborough contractor trusted on public sector frameworks. We offer a free drone roof survey, a fixed written price on the spot or the same day, a 10-year workmanship guarantee and manufacturer guarantees of up to 20–25 years.
 
 [Get my free roofing quote](/roofing-services-peterborough#contact) or call **0800 193 9030**. We cover Peterborough, Stamford, Spalding, Oundle, Market Deeping and up to 40 miles around.
