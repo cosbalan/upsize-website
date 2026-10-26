@@ -1725,6 +1725,58 @@
     .emg-call{margin:22px 0 6px}.emg-call .btn{font-size:1.05rem}
     .emg-or{color:rgba(255,255,255,.85);font-size:.95rem;margin:14px 0 8px}
     .pol-link{align-self:center;color:var(--lime);font-weight:600;text-decoration:none;padding:10px 4px}.pol-link:hover{text-decoration:underline}
+    /* ===== v6 motion, sticky sections, cards (26 Oct 2026) ===== */
+    /* Staggered reveal: grids fade and rise in one after another */
+    .js .stg>*{opacity:0;transform:translate3d(0,22px,0);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out);transition-delay:calc(var(--i,0)*80ms)}
+    .js .stg.in>*{opacity:1;transform:none}
+    /* Section headings slide up slightly */
+    .js .sec-top .reveal,.js .faq-intro .reveal{transform:translate3d(0,14px,0);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+    .js .sec-top .reveal.in,.js .faq-intro .reveal.in{transform:none}
+    /* Image reveal: soft zoom-out as photos enter */
+    .js .zin img{transform:scale(1.08);transition:transform 1.2s var(--ease-out)}
+    .js .zin.in img{transform:scale(1)}
+    /* Reading progress on guides and news */
+    .read-prog{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--lime);transform-origin:0 50%;transform:scaleX(var(--p,0));z-index:60;pointer-events:none}
+    /* Cards: lift and image zoom on hover (pointer devices only) */
+    .svc,.steps li,.std-grid>*,.news-card,.fp-card,.post-card,.bt,.strip figure .photo,.usp,.area-col{transition:transform .35s var(--ease-out),box-shadow .35s var(--ease-out),border-color .25s}
+    .bt img,.strip .photo img,.news-card img,.fp-card img,.post-card img,.svc-card img{transition:transform .8s var(--ease-out)}
+    @media (hover:hover) and (pointer:fine){
+      .svc:hover,.steps li:hover,.news-card:hover,.post-card:hover,.usp:hover{transform:translateY(-5px);box-shadow:0 28px 50px -34px rgba(0,16,58,.45);border-color:#c5ced9}
+      .svc:hover .ico{background:var(--lime)}
+      .bt:hover{transform:translateY(-4px)}
+      .bt:hover img,.strip figure:hover .photo img,.news-card:hover img,.fp-card:hover img,.post-card:hover img,.svc-card:hover img{transform:scale(1.06)}
+      .fp-card:hover{transform:translateY(-3px)}
+    }
+    .svc .ico{transition:background .3s}
+    /* Before/after: hint the handle on first view */
+    .js .ba.hint .after{transition:clip-path 1.1s var(--ease-out)}
+    .js .ba.hint .ba-line{transition:left 1.1s var(--ease-out)}
+    .fp-img.fp-ba{height:100%}
+    .fp-img.fp-ba .ba{aspect-ratio:auto;height:100%;min-height:420px;border-radius:0}
+    @media (max-width:860px){.fp-img.fp-ba .ba{min-height:0;aspect-ratio:4/3}}
+    /* Sticky guide: heading and quote button stay in view while you read (desktop) */
+    .guide-cta,.guide-tel{display:none}
+    @media (min-width:1100px){
+      #guide .wrap.article{max-width:1180px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:72px;align-items:start}
+      .guide-head{height:100%}
+      .guide-stick{position:sticky;top:120px}
+      .guide-stick h2{margin-bottom:22px}
+      .guide-cta{display:inline-flex}
+      .guide-tel{display:block;margin-top:12px;font-size:.95rem;color:var(--muted);text-decoration:none}
+      .guide-tel:hover{color:var(--navy);text-decoration:underline}
+      .guide-body>:first-child{margin-top:0}
+      /* How it works: title pinned left, steps scroll past with a progress line */
+      #how-it-works .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:72px;align-items:start}
+      #how-it-works .sec-top{position:sticky;top:120px;margin:0}
+      #how-it-works .steps{grid-template-columns:1fr!important;gap:18px;position:relative;padding-left:34px}
+      #how-it-works .steps::before{content:"";position:absolute;left:8px;top:10px;bottom:10px;width:2px;background:var(--line)}
+      #how-it-works .steps::after{content:"";position:absolute;left:8px;top:10px;width:2px;height:calc((100% - 20px)*var(--sp,0));background:var(--lime-ink);transition:height .2s linear}
+      #how-it-works .steps li{display:grid;grid-template-columns:72px 1fr;column-gap:8px;padding:30px 32px;position:relative}
+      #how-it-works .steps li::before{grid-row:1/3;margin:0;font-size:2rem}
+      #how-it-works .steps li::after{content:"";position:absolute;left:-32px;top:38px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--lime-ink)}
+      #how-it-works .steps h3{font-size:1.18rem}
+    }
+    @media (prefers-reduced-motion:reduce){.js .stg>*,.js .zin img,.js .sec-top .reveal{opacity:1!important;transform:none!important;transition:none!important}.read-prog{display:none}}
     /* ===== sticky mini contact bar + header call (mobile) ===== */
     .hdr-call,.mbar{display:none}
     .ct-rating{margin:14px 0 0;font-size:.9rem;color:#cbd5e1}.ct-rating span{color:#F5B301;letter-spacing:2px}.ct-rating strong{color:#fff}.ct-rating a{color:#fff}
@@ -2001,20 +2053,26 @@
       </div>
       <div class="fp-grid">
         <article class="fp-main reveal">
-          <div class="fp-img"><img src="images/new-build-roof-scaffold-spalding.jpg" alt="Full pitched roof tiled on a new-build house in Spalding, with scaffold" width="1200" height="900" loading="lazy"></div>
+          <div class="fp-img fp-ba"><div class="ba">
+            <img src="images/re-roof-stripped-to-rafters-grantham.jpg" alt="Roof stripped back to the rafters during a full re-roof near Grantham" width="768" height="960" loading="lazy">
+            <img class="after" src="images/re-roof-new-tiles-grantham.jpg" alt="New concrete tiles going on over breathable membrane and battens, re-roof near Grantham" width="768" height="960" loading="lazy">
+            <span class="ba-label b">Stripped</span><span class="ba-label a">Re-tiled</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Compare roof stripped to rafters and re-tiled">
+            <span class="ba-line" aria-hidden="true"></span>
+          </div></div>
           <div class="fp-body">
-            <span class="tagline">Roofing · New build · Spalding</span>
-            <h3>Full pitched roof on a new-build home</h3>
-            <p class="case-client">Membrane, battens, tiles and rainwater goods, installed from full scaffold</p>
-            <div class="case-nums"><div><strong>Full</strong><small>roof</small></div><div><strong>1</strong><small>team</small></div><div><strong>Photo</strong><small>handover</small></div></div>
+            <span class="tagline">Roofing · Re-roof · Grantham</span>
+            <h3>Full re-roof, stripped to the rafters</h3>
+            <p class="case-client">Drag the handle to compare. Old tiles and felt off, new breathable membrane, treated battens and new tiles on.</p>
+            <div class="case-nums"><div><strong>Full</strong><small>re-roof</small></div><div><strong>New</strong><small>membrane</small></div><div><strong>Photo</strong><small>handover</small></div></div>
             <p class="fp-note">We run every roof to the same standards our council framework work demands: method statements, photo records at each stage and a signed-off handover.</p>
-            <a class="btn btn--navy" href="/roofing-services-peterborough#case-study">See the project</a>
+            <a class="btn btn--navy" href="/roofing-services-peterborough#work">See more roofs</a>
           </div>
         </article>
         <div class="fp-side">
-          <a class="fp-card reveal d1" href="/roofing-services-peterborough#work">
-            <img src="images/re-roof-strip-out-grantham.jpg" alt="Roof stripped back to the rafters during a full re-roof near Grantham" width="1024" height="768" loading="lazy">
-            <span><span class="tagline">Roofing · Grantham</span><strong>Full re-roof, stripped to the rafters</strong><small>New breathable membrane, treated battens and new tiles.</small><span class="go">See the project →</span></span>
+          <a class="fp-card reveal d1" href="/roofing-services-peterborough#case-study">
+            <img src="images/new-build-roof-scaffold-spalding.jpg" alt="Full pitched roof tiled on a new-build house in Spalding, with scaffold" width="1200" height="900" loading="lazy">
+            <span><span class="tagline">Roofing · New build · Spalding</span><strong>Full pitched roof on a new-build home</strong><small>Membrane, battens, tiles and rainwater goods from full scaffold.</small><span class="go">See the project →</span></span>
           </a>
           <a class="fp-card reveal d2" href="/social-housing">
             <img src="images/council-kitchen-replacement-south-holland.jpg" alt="Kitchen replaced in an occupied council home, South Holland" width="720" height="540" loading="lazy">
@@ -2578,5 +2636,27 @@
 })();
 </script>
 <script>(function(){if(window.matchMedia('(max-width:760px)').matches){document.querySelectorAll('details.m-fold').forEach(function(d){d.removeAttribute('open')})}})();</script>
+<script>(function(){
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!('IntersectionObserver' in window))return;
+  // Staggered grids
+  if(!rm){var sel='.nf-grid,.fp-side,.svc-grid,.steps,.std-grid,.news-grid,.bento,.est-opts,.next-steps,.svc-cards,.area-grid,.ct-aud,.usp-grid,.why-grid,.pay-terms,.refs,.case-nums,.trust-row,.hp-list';
+    document.querySelectorAll(sel).forEach(function(g){if(g.closest('.hero'))return;g.classList.add('stg');[].forEach.call(g.children,function(c,i){c.style.setProperty('--i',Math.min(i,8));c.classList.remove('reveal');});});
+    document.querySelectorAll('.fp-img:not(.fp-ba),.drone-media,.cs-img,.about-img').forEach(function(e){e.classList.add('zin');});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.stg,.zin').forEach(function(e){io.observe(e);});}
+  // Before/after: sweep the handle once when it comes into view, so people see it moves
+  if(!rm){var bio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;bio.unobserve(e.target);var el=e.target,r=el.querySelector('input');if(!r||el.dataset.touched)return;
+      el.classList.add('hint');el.style.setProperty('--pos','78%');setTimeout(function(){if(!el.dataset.touched)el.style.setProperty('--pos','30%');},1100);setTimeout(function(){if(!el.dataset.touched){el.style.setProperty('--pos','50%');r.value=50;}},2200);setTimeout(function(){el.classList.remove('hint');},3400);});},{threshold:.6});
+    document.querySelectorAll('.ba').forEach(function(el){var r=el.querySelector('input');if(r)r.addEventListener('input',function(){el.dataset.touched=1;el.classList.remove('hint');});bio.observe(el);});}
+  // Reading progress on guide and news pages
+  var art=document.querySelector('main article.article, #guide');
+  if(art&&!rm){var bar=document.createElement('div');bar.className='read-prog';bar.setAttribute('aria-hidden','true');document.body.appendChild(bar);var tk=false;
+    function up(){tk=false;var r=art.getBoundingClientRect(),h=r.height-innerHeight*.5,p=h>0?Math.min(1,Math.max(0,-r.top/h)):0;bar.style.setProperty('--p',p.toFixed(3));bar.style.opacity=(r.top<0&&r.bottom>0)?1:0;}
+    addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(up);}},{passive:true});up();}
+  // How it works: progress line fills as the steps scroll past (desktop)
+  var st=document.querySelector('#how-it-works .steps');
+  if(st&&!rm&&matchMedia('(min-width:1100px)').matches){var t2=false;function sp(){t2=false;var r=st.getBoundingClientRect(),p=(innerHeight*.6-r.top)/r.height;st.style.setProperty('--sp',Math.min(1,Math.max(0,p)).toFixed(3));}
+    addEventListener('scroll',function(){if(!t2){t2=true;requestAnimationFrame(sp);}},{passive:true});sp();}
+})();</script>
 </body>
 </html>
