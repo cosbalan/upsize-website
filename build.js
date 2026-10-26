@@ -137,8 +137,8 @@ function headFor({ title, description, url, ogImage, ldExtra = [], depth = 0, og
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="${'../'.repeat(depth)}images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="${'../'.repeat(depth)}images/apple-touch-icon.png">
-  <link rel="preload" as="font" href="${'../'.repeat(depth)}fonts/lexend-latin.woff" type="font/woff" crossorigin>
-  <link rel="preload" as="font" href="${'../'.repeat(depth)}fonts/source-sans-3-latin.woff" type="font/woff" crossorigin>
+  <link rel="preload" as="font" href="${'../'.repeat(depth)}fonts/lexend-latin.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="${'../'.repeat(depth)}fonts/source-sans-3-latin.woff2" type="font/woff2" crossorigin>
 ${extraHead}  ${businessLd}
 ${ldExtra.map(o => `  <script type="application/ld+json">\n${JSON.stringify(o, null, 1)}\n  </script>`).join('\n')}
   ${style}
@@ -379,5 +379,30 @@ fs.writeFileSync(path.join(OUT, 'llms.txt'), llms);
     if (out2 !== h) fs.writeFileSync(p, out2);
   }
 })(OUT);
+
+/* ---------- move shared inline scripts into one cached, deferred file ---------- */
+(function bundleJs() {
+  const homeHtml = fs.readFileSync(path.join(OUT, 'index.html'), 'utf8');
+  const re = /<script>([\s\S]*?)<\/script>\s*/g;
+  const shared = [];
+  let m;
+  while ((m = re.exec(homeHtml))) { if (!/className\+=' js'/.test(m[1])) shared.push(m[1].trim()); }
+  if (!shared.length) return;
+  const js = shared.map(b => `;${b}`).join('\n');
+  const h = require('crypto').createHash('md5').update(js).digest('hex').slice(0, 8);
+  fs.writeFileSync(path.join(OUT, `site.${h}.js`), js + '\n');
+  const set = new Set(shared);
+  (function walk(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) { if (e.name !== 'admin') walk(p); continue; }
+      if (!p.endsWith('.html')) continue;
+      const html = fs.readFileSync(p, 'utf8');
+      let found = false;
+      const out = html.replace(/<script>([\s\S]*?)<\/script>\s*/g, (all, body) => { if (set.has(body.trim())) { found = true; return ''; } return all; });
+      if (found) fs.writeFileSync(p, out.replace('</body>', `<script src="/site.${h}.js" defer></script>\n</body>`));
+    }
+  })(OUT);
+})();
 
 console.log(`Built ${pagesBuilt.length} page(s), ${posts.length} news post(s) -> dist/`);
