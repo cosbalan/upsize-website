@@ -2040,9 +2040,12 @@
     .rv-score .g-logo{flex:none;min-width:16px}
     .rv-score .rv-tat a{padding:0;border:0;background:none;border-radius:0;font-family:Lexend,sans-serif;font-size:1.05rem;font-weight:600;color:var(--navy)}
     .rv-tat small{font-size:.85rem;font-weight:600;color:var(--navy)}
-    @media (max-width:760px){.rv-score{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.rv-score>a,.rv-tat{padding:10px 10px;min-width:0}.rv-score strong{font-size:1.15rem}.rv-score .st{letter-spacing:0;font-size:.8rem}.rv-score>a{font-size:.76rem}.rv-score .rv-tat a{font-size:.82rem}.rv-tat small{font-size:.74rem}}
+    @media (max-width:760px){.rv-score{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.rv-score>a,.rv-tat{padding:10px 10px;min-width:0}.rv-score strong{font-size:1.15rem}.rv-score .st{letter-spacing:0;font-size:.8rem}.rv-score>a{font-size:.76rem}.rv-score .rv-tat a{font-size:.82rem}.rv-tat small{font-size:.74rem}}
     .rv-tat .tat-mark{width:26px;height:26px;font-size:.6rem}
     .tat-sm{width:18px!important;height:18px!important;font-size:.42rem!important;border-radius:5px!important;flex:none;margin-top:2px}
+    .tat-mini{font-size:.78rem;max-width:260px;max-height:60px;overflow:hidden;opacity:.85}
+    .tat-mini a{color:#9aa8bf}.tat-mini a:hover{color:var(--lime)}
+    .tat-mini img,.tat-mini svg{max-height:32px;width:auto}
     /* ===== sticky mini contact bar + header call (mobile) ===== */
     .hdr-call,.mbar{display:none}
     .ct-rating{margin:14px 0 0;font-size:.9rem;color:#cbd5e1}.ct-rating span{color:#F5B301;letter-spacing:2px}.ct-rating strong{color:#fff}.ct-rating a{color:#fff}
@@ -2194,15 +2197,7 @@
         <div class="rv-score reveal d1">
           <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener"><span class="rv-g"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span class="st" aria-hidden="true">★★★★★</span></span><strong>5.0</strong>30+ Google reviews</a>
           <a href="https://www.facebook.com/upsizeproperty/reviews" target="_blank" rel="noopener"><span class="st" aria-hidden="true">★★★★★</span><strong>5/5</strong>Facebook reviews</a>
-          <div class="rv-tat">
-            <span class="tat-mark" aria-hidden="true">TaT</span>
-            <div data-tt-review-snippet="no-reviews">
-              <a href="https://www.trustatrader.com/traders/upsize-property-renovation-ltd-roofers-roofing-peterborough-central" data-tt-trader-profile target="_blank" rel="noopener">TrustATrader</a>
-            </div>
-            <small>Verified member</small>
-          </div>
         </div>
-        <script src="https://www.trustatrader.com/api-v3/reviews-js?trader_id=33747" defer></script>
       </div>
       <ul class="rv-quotes">
         <li class="reveal"><span class="st" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“Alex and his team fixed our roof quickly after a leak. Good communication, fair price, and the work was done properly. Happy to recommend Upsize Property Renovation Ltd for roofing in Peterborough.”</blockquote><cite class="g-cite"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span class="sr">Google review</span></cite></li>
@@ -2644,7 +2639,6 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:alex@upsizeproperty.com">alex@upsizeproperty.com</a></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">4 Blenheim Court, Suite 595, Peterborough, PE1 2DU</a></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</span></li>
-        <li><span class="tat-mark tat-sm" aria-hidden="true">TaT</span><a href="https://www.trustatrader.com/traders/upsize-property-renovation-ltd-roofers-roofing-peterborough-central" target="_blank" rel="noopener">Verified on TrustATrader</a></li>
       </ul>
       </div>
   </div>
@@ -2656,6 +2650,8 @@
   <div class="wrap legal f2-legal">
     <span>© <span id="yr">2026</span> Upsize Property Renovation Ltd · Registered in England &amp; Wales · Company No. 15856524 · Registered office: 4 Blenheim Court, Suite 595, Peterborough, PE1 2DU · VAT No. GB510546327</span>
     <nav aria-label="Legal"><a href="/privacy-policy">Privacy</a><a href="/privacy-policy#cookies">Cookies</a><a href="/privacy-policy#cookies" data-ck-open>Cookie settings</a><a href="/terms-and-conditions">Terms</a><a href="/accessibility-statement">Accessibility</a><a href="/health-safety-policy">Health &amp; Safety</a><a href="/modern-slavery-statement">Modern Slavery</a></nav>
+    <div class="tat-mini"><div data-tt-review-snippet="no-reviews"><a href="https://www.trustatrader.com/traders/upsize-property-renovation-ltd-roofers-roofing-peterborough-central" data-tt-trader-profile target="_blank" rel="noopener">Verified on TrustATrader</a></div></div>
+    <script src="https://www.trustatrader.com/api-v3/reviews-js?trader_id=33747" defer></script>
   </div>
 </footer>
 
