@@ -2046,6 +2046,30 @@
     .tat-mini{font-size:.78rem;max-width:260px;max-height:60px;overflow:hidden;opacity:.85}
     .tat-mini a{color:#9aa8bf}.tat-mini a:hover{color:var(--lime)}
     .tat-mini img,.tat-mini svg{max-height:32px;width:auto}
+    /* ===== footer v3 (28 Oct 2026) ===== */
+    .f3-main{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:48px;padding-top:56px;padding-bottom:40px}
+    .f3-brand img{height:52px;width:auto;margin-bottom:16px}
+    .f3-brand>p{margin:0 0 14px;max-width:420px;line-height:1.6}
+    .f3-brand .f3-hl{font-size:.86rem;color:#cbd5e1;line-height:1.7;margin-bottom:20px}
+    .f3 h3{margin:0 0 18px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+    .f3-ct .f2-contact{gap:12px}.f3-ct strong{font-size:1rem}
+    .f3-acc{border-top:1px solid rgba(255,255,255,.1)}
+    .f3-acc:last-of-type{border-bottom:1px solid rgba(255,255,255,.1)}
+    .f3-acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:13px 0;font-family:Lexend,sans-serif;font-weight:600;font-size:.95rem;color:#e2e8f0}
+    .f3-acc summary::-webkit-details-marker{display:none}
+    .f3-acc summary::after{content:"+";color:var(--lime);font-size:1.25rem;line-height:1}
+    .f3-acc[open] summary::after{content:"\2013"}
+    .f3-acc summary:hover{color:var(--lime)}
+    .f3-acc ul{list-style:none;margin:0;padding:0 0 14px;display:grid;gap:9px}
+    .f3-acc ul a{color:#cbd5e1;text-decoration:none;font-size:.92rem}
+    .f3-acc ul a:hover{color:var(--lime)}
+    .f3-acc .area-chips{display:flex;flex-wrap:wrap;gap:8px}
+    .f3-acc .area-more{margin:12px 0 14px}
+    .f3 .f2-legal nav a[href*="trustatrader"],.f3 .f2-legal nav a[href*="preferences/source"]{color:#9aa8bf}
+    .tat-badge .tat-word{font-family:Lexend,sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;color:#6b7280;text-decoration:none;white-space:nowrap}
+    .tat-badge a{text-decoration:none}
+    @media (max-width:1000px){.f3-main{grid-template-columns:1fr 1fr}.f3-brand{grid-column:1/-1}}
+    @media (max-width:760px){.f3-main{grid-template-columns:1fr;gap:28px;padding-top:36px;padding-bottom:16px}.f3-brand>p{max-width:none}}
     /* ===== sticky mini contact bar + header call (mobile) ===== */
     .hdr-call,.mbar{display:none}
     .ct-rating{margin:14px 0 0;font-size:.9rem;color:#cbd5e1}.ct-rating span{color:#F5B301;letter-spacing:2px}.ct-rating strong{color:#fff}.ct-rating a{color:#fff}
@@ -2224,6 +2248,7 @@
         <li><img class="lg-wide" src="images/partners/howdens-kitchens.png" alt="Howdens kitchens logo, kitchen supplier" width="313" height="120" loading="lazy"></li>
         <li><img class="lg-xwide" src="images/partners/symphony-kitchens.png" alt="Symphony kitchens logo, kitchen supplier" width="549" height="120" loading="lazy"></li>
         <li><img class="lg-xwide" src="images/partners/travis-perkins.png" alt="Travis Perkins logo, building materials supplier" width="649" height="120" loading="lazy"></li>
+        <li class="acc tat-badge"><a href="https://www.trustatrader.com/traders/upsize-property-renovation-ltd-roofers-roofing-peterborough-central" target="_blank" rel="noopener"><span class="tat-word">TrustATrader</span></a><small>Verified member</small></li>
         <li class="acc"><img src="images/partners/chas-accreditation.png" alt="CHAS health and safety accreditation logo" width="191" height="120" loading="lazy"><small>In progress</small></li>
         <li class="acc"><img class="lg-light" src="images/partners/constructionline-gold.png" alt="Constructionline logo" width="238" height="120" loading="lazy"><small>In progress</small></li>
       
@@ -2234,6 +2259,7 @@
         <li><img class="lg-wide" src="images/partners/howdens-kitchens.png" alt="Howdens kitchens logo, kitchen supplier" data-alt="Howdens kitchens logo, kitchen supplier" width="313" height="120" loading="lazy"></li>
         <li><img class="lg-xwide" src="images/partners/symphony-kitchens.png" alt="Symphony kitchens logo, kitchen supplier" data-alt="Symphony kitchens logo, kitchen supplier" width="549" height="120" loading="lazy"></li>
         <li><img class="lg-xwide" src="images/partners/travis-perkins.png" alt="Travis Perkins logo, building materials supplier" data-alt="Travis Perkins logo, building materials supplier" width="649" height="120" loading="lazy"></li>
+        <li class="acc tat-badge"><span class="tat-word">TrustATrader</span><small>Verified member</small></li>
         <li class="acc"><img src="images/partners/chas-accreditation.png" alt="CHAS health and safety accreditation logo" data-alt="CHAS health and safety accreditation logo" width="191" height="120" loading="lazy"><small>In progress</small></li>
         <li class="acc"><img class="lg-light" src="images/partners/constructionline-gold.png" alt="Constructionline logo" data-alt="Constructionline logo" width="238" height="120" loading="lazy"><small>In progress</small></li>
       
@@ -2600,58 +2626,56 @@
 
 </main>
 
-<footer class="site-footer f2">
-  <div class="wrap f2-trust">
-    <ul>
-      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><span><strong>5.0 on Google</strong>30+ Google reviews</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg><span><strong>£5m insured</strong>public liability</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="m16 11 2 2 4-4"/></svg><span><strong>CSCS &amp; DBS</strong>checked team</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><span><strong>10-yr guarantee</strong>written, at sign-off</span></li>
-    </ul>
-  </div>
-  <div class="wrap f2-main">
-    <div class="f2-brand">
+<footer class="site-footer f2 f3">
+  <div class="wrap f3-main">
+    <div class="f3-brand">
       <img src="images/upsize-logo-horizontal-white.svg" alt="Upsize Property Renovation Ltd" width="227" height="60" loading="lazy">
-      <p>Upsize Property Renovation Ltd is a multi-trade contractor based in Peterborough. We provide roofing for homeowners and landlords, and kitchen, bathroom and roofing packages for public sector frameworks across Peterborough and the East Midlands.</p>
-            <div class="foot-socials f2-soc">
+      <p>Upsize Property Renovation Ltd is a multi-trade contractor based in Peterborough, delivering roofing, kitchen and bathroom solutions for public sector frameworks, commercial and residential clients across Peterborough and the East Midlands.</p>
+      <p class="f3-hl">5.0 on Google from 30+ reviews · £5m public liability insurance · CSCS &amp; DBS-checked team · 10-year written guarantee</p>
+      <div class="foot-socials f2-soc">
         <a href="https://www.linkedin.com/company/upsizeproperty" target="_blank" rel="noopener" aria-label="Upsize on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
         <a href="https://www.facebook.com/upsizeproperty/" target="_blank" rel="noopener" aria-label="Upsize on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H8v3h2.6V21h2.9z"/></svg></a>
         <a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener" aria-label="Upsize on Google"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="currentColor" opacity=".8" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="currentColor" opacity=".6" d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1a10 10 0 0 0 0 9.2L6.4 14z"/><path fill="currentColor" opacity=".9" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.4L6.4 10C7.2 7.7 9.4 6 12 6z"/></svg></a>
       </div>
     </div>
-      <details class="f2-col" open>
-        <summary><h3>Roofing</h3></summary>
-        <ul><li><a href="/roofing-services-peterborough">Roofing services</a></li><li><a href="/roof-repair-peterborough">Roof repairs</a></li><li><a href="/roof-replacement-peterborough">New roofs</a></li><li><a href="/flat-roofing-peterborough">Flat roofing (EPDM)</a></li><li><a href="/emergency-roof-repair-peterborough">Emergency roofer</a></li><li><a href="/roof-damage-repair-peterborough">Roof leak repair</a></li><li><a href="/leadwork-chimney-repair-peterborough">Chimneys &amp; lead</a></li><li><a href="/gutters-fascias-soffits-peterborough">Gutters &amp; fascias</a></li></ul>
-      </details>
-      <details class="f2-col" open>
-        <summary><h3>Sectors</h3></summary>
-        <ul><li><a href="/social-housing">Social housing &amp; frameworks</a></li><li><a href="/kitchens-bathrooms-peterborough">Kitchen &amp; bathroom packages</a></li><li><a href="/wet-rooms-peterborough">Wet rooms</a></li><li><a href="/commercial">Commercial</a></li><li><a href="/residential">Homeowners &amp; landlords</a></li><li><a href="/upsize-capability-statement.pdf" target="_blank" rel="noopener">Capability statement (PDF)</a></li></ul>
-      </details>
-      <details class="f2-col" open>
-        <summary><h3>Company</h3></summary>
-        <ul><li><a href="/about-us">About us</a></li><li><a href="/projects">Projects</a></li><li><a href="/news/">News &amp; guides</a></li><li><a href="/community">Weekend Roof Clinic</a></li><li><a href="/careers">Careers &amp; supply chain</a></li><li><a href="/policies">Policies</a></li><li><a href="/contact">Contact</a></li></ul>
-      </details>
-      <div class="f2-col f2-ct">
-        <h3>Contact</h3>
-        <ul class="f2-contact">
+    <div class="f3-ct">
+      <h3>Contact</h3>
+      <ul class="f2-contact">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+448001939030"><strong>0800 193 9030</strong></a></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6z"/></svg><a href="https://wa.me/447802373253?text=Hi%20Upsize%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Message us on WhatsApp</a></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:alex@upsizeproperty.com">alex@upsizeproperty.com</a></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><a href="https://maps.google.com/?cid=18389620210508951877" target="_blank" rel="noopener">4 Blenheim Court, Suite 595, Peterborough, PE1 2DU</a></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Mon–Fri 7:30–19:00 · Sat 8:00–16:00</span></li>
       </ul>
-      </div>
-  </div>
-  <div class="wrap foot-areas f2-areas">
-    <h3>Areas we cover</h3>
-    <ul class="area-chips" id="area-chips"><li><a href="/areas/peterborough">Peterborough</a></li><li><a href="/areas/stamford">Stamford</a></li><li><a href="/areas/spalding">Spalding</a></li><li><a href="/areas/market-deeping">Market Deeping</a></li><li><a href="/areas/bourne">Bourne</a></li><li><a href="/areas/oundle">Oundle</a></li><li><a href="/areas/wisbech">Wisbech</a></li><li><a href="/areas/march">March</a></li><li><a href="/areas/huntingdon">Huntingdon</a></li><li><a href="/areas/holbeach">Holbeach</a></li><li><a href="/areas/crowland">Crowland</a></li><li><a href="/areas/kettering">Kettering</a></li><li class="more"><a href="/areas/ailsworth">Ailsworth</a></li><li class="more"><a href="/areas/barnack">Barnack</a></li><li class="more"><a href="/areas/baston">Baston</a></li><li class="more"><a href="/areas/boston">Boston</a></li><li class="more"><a href="/areas/cambridge">Cambridge</a></li><li class="more"><a href="/areas/castor">Castor</a></li><li class="more"><a href="/areas/chatteris">Chatteris</a></li><li class="more"><a href="/areas/corby">Corby</a></li><li class="more"><a href="/areas/deenethorpe">Deenethorpe</a></li><li class="more"><a href="/areas/deeping-st-nicholas">Deeping St Nicholas</a></li><li class="more"><a href="/areas/doddington">Doddington</a></li><li class="more"><a href="/areas/eye">Eye</a></li><li class="more"><a href="/areas/fotheringhay">Fotheringhay</a></li><li class="more"><a href="/areas/glinton">Glinton</a></li><li class="more"><a href="/areas/godmanchester">Godmanchester</a></li><li class="more"><a href="/areas/grantham">Grantham</a></li><li class="more"><a href="/areas/grimsthorpe">Grimsthorpe</a></li><li class="more"><a href="/areas/guyhirn">Guyhirn</a></li><li class="more"><a href="/areas/ketton">Ketton</a></li><li class="more"><a href="/areas/kings-cliffe">Kings Cliffe</a></li><li class="more"><a href="/areas/kings-lynn">King’s Lynn</a></li><li class="more"><a href="/areas/long-sutton">Long Sutton</a></li><li class="more"><a href="/areas/morton">Morton</a></li><li class="more"><a href="/areas/murrow">Murrow</a></li><li class="more"><a href="/areas/nassington">Nassington</a></li><li class="more"><a href="/areas/oakham">Oakham</a></li><li class="more"><a href="/areas/outwell">Outwell</a></li><li class="more"><a href="/areas/pinchbeck">Pinchbeck</a></li><li class="more"><a href="/areas/ryhall">Ryhall</a></li><li class="more"><a href="/areas/st-neots">St Neots</a></li><li class="more"><a href="/areas/sutton">Sutton</a></li><li class="more"><a href="/areas/thurlby">Thurlby</a></li><li class="more"><a href="/areas/upwell">Upwell</a></li><li class="more"><a href="/areas/wansford">Wansford</a></li><li class="more"><a href="/areas/weldon">Weldon</a></li><li class="more"><a href="/areas/wimblington">Wimblington</a></li><li class="more"><a href="/areas">All areas A–Z</a></li></ul>
-    <button type="button" class="area-more" aria-expanded="false" aria-controls="area-chips">Show all areas</button>
+    </div>
+    <nav class="f3-links" aria-label="Useful links">
+      <h3>Useful links</h3>
+        <details class="f3-acc">
+          <summary>Roofing</summary>
+          <ul><li><a href="/roofing-services-peterborough">Roofing services</a></li><li><a href="/roof-repair-peterborough">Roof repairs</a></li><li><a href="/roof-replacement-peterborough">New roofs</a></li><li><a href="/flat-roofing-peterborough">Flat roofing (EPDM)</a></li><li><a href="/emergency-roof-repair-peterborough">Emergency roofer</a></li><li><a href="/roof-damage-repair-peterborough">Roof leak repair</a></li><li><a href="/leadwork-chimney-repair-peterborough">Chimneys &amp; lead</a></li><li><a href="/gutters-fascias-soffits-peterborough">Gutters &amp; fascias</a></li></ul>
+        </details>
+        <details class="f3-acc">
+          <summary>Sectors</summary>
+          <ul><li><a href="/social-housing">Social housing &amp; frameworks</a></li><li><a href="/kitchens-bathrooms-peterborough">Kitchen &amp; bathroom packages</a></li><li><a href="/wet-rooms-peterborough">Wet rooms</a></li><li><a href="/commercial">Commercial</a></li><li><a href="/residential">Homeowners &amp; landlords</a></li><li><a href="/upsize-capability-statement.pdf" target="_blank" rel="noopener">Capability statement (PDF)</a></li></ul>
+        </details>
+        <details class="f3-acc">
+          <summary>Company</summary>
+          <ul><li><a href="/about-us">About us</a></li><li><a href="/projects">Projects</a></li><li><a href="/news/">News &amp; guides</a></li><li><a href="/community">Weekend Roof Clinic</a></li><li><a href="/careers">Careers &amp; supply chain</a></li><li><a href="/policies">Policies</a></li><li><a href="/contact">Contact</a></li></ul>
+        </details>
+        <details class="f3-acc">
+          <summary>Policies</summary>
+          <ul><li><a href="/health-safety-policy">Health &amp; Safety</a></li><li><a href="/quality-management-policy">Quality management</a></li><li><a href="/environmental-policy">Environmental</a></li><li><a href="/safeguarding-policy">Safeguarding</a></li><li><a href="/equality-diversity-policy">Equality &amp; diversity</a></li><li><a href="/modern-slavery-statement">Modern slavery statement</a></li><li><a href="/anti-bribery-policy">Anti-bribery</a></li><li><a href="/drug-alcohol-policy">Drug &amp; alcohol</a></li><li><a href="/whistleblowing-policy">Whistleblowing</a></li><li><a href="/complaints-policy">Complaints</a></li><li><a href="/policies">All policies</a></li></ul>
+        </details>
+        <details class="f3-acc">
+          <summary>Areas we cover</summary>
+          <ul class="area-chips" id="area-chips"><li><a href="/areas/peterborough">Peterborough</a></li><li><a href="/areas/stamford">Stamford</a></li><li><a href="/areas/spalding">Spalding</a></li><li><a href="/areas/market-deeping">Market Deeping</a></li><li><a href="/areas/bourne">Bourne</a></li><li><a href="/areas/oundle">Oundle</a></li><li><a href="/areas/wisbech">Wisbech</a></li><li><a href="/areas/march">March</a></li><li><a href="/areas/huntingdon">Huntingdon</a></li><li><a href="/areas/holbeach">Holbeach</a></li><li><a href="/areas/crowland">Crowland</a></li><li><a href="/areas/kettering">Kettering</a></li><li class="more"><a href="/areas/ailsworth">Ailsworth</a></li><li class="more"><a href="/areas/barnack">Barnack</a></li><li class="more"><a href="/areas/baston">Baston</a></li><li class="more"><a href="/areas/boston">Boston</a></li><li class="more"><a href="/areas/cambridge">Cambridge</a></li><li class="more"><a href="/areas/castor">Castor</a></li><li class="more"><a href="/areas/chatteris">Chatteris</a></li><li class="more"><a href="/areas/corby">Corby</a></li><li class="more"><a href="/areas/deenethorpe">Deenethorpe</a></li><li class="more"><a href="/areas/deeping-st-nicholas">Deeping St Nicholas</a></li><li class="more"><a href="/areas/doddington">Doddington</a></li><li class="more"><a href="/areas/eye">Eye</a></li><li class="more"><a href="/areas/fotheringhay">Fotheringhay</a></li><li class="more"><a href="/areas/glinton">Glinton</a></li><li class="more"><a href="/areas/godmanchester">Godmanchester</a></li><li class="more"><a href="/areas/grantham">Grantham</a></li><li class="more"><a href="/areas/grimsthorpe">Grimsthorpe</a></li><li class="more"><a href="/areas/guyhirn">Guyhirn</a></li><li class="more"><a href="/areas/ketton">Ketton</a></li><li class="more"><a href="/areas/kings-cliffe">Kings Cliffe</a></li><li class="more"><a href="/areas/kings-lynn">King’s Lynn</a></li><li class="more"><a href="/areas/long-sutton">Long Sutton</a></li><li class="more"><a href="/areas/morton">Morton</a></li><li class="more"><a href="/areas/murrow">Murrow</a></li><li class="more"><a href="/areas/nassington">Nassington</a></li><li class="more"><a href="/areas/oakham">Oakham</a></li><li class="more"><a href="/areas/outwell">Outwell</a></li><li class="more"><a href="/areas/pinchbeck">Pinchbeck</a></li><li class="more"><a href="/areas/ryhall">Ryhall</a></li><li class="more"><a href="/areas/st-neots">St Neots</a></li><li class="more"><a href="/areas/sutton">Sutton</a></li><li class="more"><a href="/areas/thurlby">Thurlby</a></li><li class="more"><a href="/areas/upwell">Upwell</a></li><li class="more"><a href="/areas/wansford">Wansford</a></li><li class="more"><a href="/areas/weldon">Weldon</a></li><li class="more"><a href="/areas/wimblington">Wimblington</a></li><li class="more"><a href="/areas">All areas A–Z</a></li></ul>
+          <button type="button" class="area-more" aria-expanded="false" aria-controls="area-chips">Show all areas</button>
+        </details>
+    </nav>
   </div>
   <div class="wrap legal f2-legal">
     <span>© <span id="yr">2026</span> Upsize Property Renovation Ltd · Registered in England &amp; Wales · Company No. 15856524 · Registered office: 4 Blenheim Court, Suite 595, Peterborough, PE1 2DU · VAT No. GB510546327</span>
-    <nav aria-label="Legal"><a href="/privacy-policy">Privacy</a><a href="/privacy-policy#cookies">Cookies</a><a href="/privacy-policy#cookies" data-ck-open>Cookie settings</a><a href="/terms-and-conditions">Terms</a><a href="/accessibility-statement">Accessibility</a><a href="/health-safety-policy">Health &amp; Safety</a><a href="/modern-slavery-statement">Modern Slavery</a></nav>
-    <div class="tat-mini"><div data-tt-review-snippet="no-reviews"><a href="https://www.trustatrader.com/traders/upsize-property-renovation-ltd-roofers-roofing-peterborough-central" data-tt-trader-profile target="_blank" rel="noopener">Verified on TrustATrader</a></div></div>
-    <script src="https://www.trustatrader.com/api-v3/reviews-js?trader_id=33747" defer></script>
+    <nav aria-label="Legal"><a href="/privacy-policy">Privacy</a><a href="/privacy-policy#cookies">Cookies</a><a href="/privacy-policy#cookies" data-ck-open>Cookie settings</a><a href="/terms-and-conditions">Terms</a><a href="/accessibility-statement">Accessibility</a><a href="https://www.trustatrader.com/traders/upsize-property-renovation-ltd-roofers-roofing-peterborough-central" target="_blank" rel="noopener">Verified on TrustATrader</a><a href="https://www.google.com/preferences/source?q=upsizeproperty.com" target="_blank" rel="noopener">Add us as a preferred source on Google</a></nav>
   </div>
 </footer>
 
@@ -2888,7 +2912,7 @@
   document.addEventListener('submit',function(e){var f=e.target;if(f.matches&&f.matches('form[data-netlify]'))track('form_submit',{form_name:f.getAttribute('name')||'',page_path:location.pathname,lead_source:(f.querySelector('[name=lead_source]')||{}).value||''});},true);
 })();
 </script>
-<script>(function(){var mq=window.matchMedia('(max-width:760px)');if(mq.matches){document.querySelectorAll('details.m-fold,details.f2-col').forEach(function(d){d.removeAttribute('open')})}document.querySelectorAll('details.f2-col summary').forEach(function(s){s.addEventListener('click',function(e){if(!mq.matches)e.preventDefault();});});})();</script>
+<script>(function(){if(window.matchMedia('(max-width:760px)').matches){document.querySelectorAll('details.m-fold').forEach(function(d){d.removeAttribute('open')})}})();</script>
 <script>(function(){
   var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!('IntersectionObserver' in window))return;
   // Staggered grids
