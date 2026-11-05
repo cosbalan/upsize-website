@@ -11,7 +11,7 @@ draft: false
 ---
 Most storm damage we see in Peterborough starts as a small problem that was already there: one slipped tile, a loose ridge or a cracked lead flashing. Winter wind and rain then turn a £200 repair into a ceiling stain, wet insulation and an insurance claim.
 
-This checklist shows what you can safely check yourself from the ground and the loft, what each problem usually costs to fix, and when it is worth calling a roofer.
+If you need a hand, our [roofing team in Peterborough](/roofing-services-peterborough) can check it for you. This checklist shows what you can safely check yourself from the ground and the loft, what each problem usually costs to fix, and when it is worth calling a roofer.
 
 **Stay safe:** never climb onto the roof or lean a ladder against a gutter. Everything below can be checked from the ground, a window or the loft.
 
