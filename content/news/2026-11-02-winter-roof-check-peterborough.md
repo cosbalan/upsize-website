@@ -1,7 +1,7 @@
 ---
 title: "Winter roof check: 8 things to look at before the storms"
 seo_title: "Winter Roof Check Peterborough: 8-Point Checklist | Upsize"
-seo_description: "Check your roof before winter storms: slipped tiles, ridges, lead, gutters, flat roofs and loft leaks. What to look for, repair prices and when to call a roofer."
+seo_description: "Check your roof before winter storms: slipped tiles, ridges, lead, gutters, flat roofs and loft leaks. What to look for, repair costs and when to call a roofer."
 category: "Blog"
 date: 2026-11-02
 summary: "An 8-point winter roof checklist for Peterborough homeowners: what you can safely check from the ground and the loft, typical repair prices, and when to book a free drone survey."
