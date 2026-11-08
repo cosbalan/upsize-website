@@ -41,3 +41,7 @@
 /areas/peterborough        /    301
 /areas/peterborough.html   /    301
 /area-peterborough         /    301
+
+# Short links for review requests (SMS / WhatsApp / van / cards)
+/reviews                   https://g.page/r/CUXxuikmDjX_EAE/review    302
+/review                    https://g.page/r/CUXxuikmDjX_EAE/review    302
