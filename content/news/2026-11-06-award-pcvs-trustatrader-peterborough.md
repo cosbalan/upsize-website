@@ -1,16 +1,16 @@
 ---
 title: "Award-winning Peterborough roofers become members of PCVS"
 seo_title: "Award-Winning Roofers Peterborough | PCVS Member | Upsize"
-seo_description: "Upsize Property Renovation: Quality Business Awards 2026 Best Roofing Peterborough, PCVS member, verified on TrustATrader with 41 reviews."
+seo_description: "Upsize Property Renovation: Quality Business Awards 2026 Best Roofing Peterborough, PCVS member, verified on TrustATrader with 44 reviews."
 category: "News"
 date: 2026-11-06
 slug: award-pcvs-trustatrader-peterborough
-summary: "Upsize Property Renovation has been named Best Roofing, Peterborough in the Quality Business Awards 2026, joined Peterborough Council for Voluntary Service as a member, and passed 41 reviews on TrustATrader."
+summary: "Upsize Property Renovation has been named Best Roofing, Peterborough in the Quality Business Awards 2026, joined Peterborough Council for Voluntary Service as a member, and passed 44 reviews on TrustATrader."
 image: images/upsize-award-pcvs-trustatrader-peterborough.jpg
 image_alt: "Upsize Property Renovation: Quality Business Awards 2026 winner, PCVS member and verified on TrustATrader, shown over a roof repair in Peterborough"
 draft: false
 ---
-Peterborough roofing contractor Upsize Property Renovation Ltd has had a busy autumn. The company has been named **Best Roofing, Peterborough** in the Quality Business Awards 2026, has joined **Peterborough Council for Voluntary Service (PCVS)** as a member, and now has **41 verified reviews on TrustATrader**.
+Peterborough roofing contractor Upsize Property Renovation Ltd has had a busy autumn. The company has been named **Best Roofing, Peterborough** in the Quality Business Awards 2026, has joined **Peterborough Council for Voluntary Service (PCVS)** as a member, and now has **44 verified reviews on TrustATrader**.
 
 For homeowners choosing a roofer, these are three independent ways to check who you are letting onto your roof before you pick up the phone.
 
@@ -32,9 +32,9 @@ We joined to work properly alongside the local voluntary sector. Through PCVS's 
 
 PCVS supports charities and community groups. It does not deliver or take referrals for our Weekend Roof Clinic, so residents and support workers should contact us directly.
 
-## Verified on TrustATrader: 41 reviews
+## Verified on TrustATrader: 44 reviews
 
-Upsize is a verified member of [TrustATrader](https://www.trustatrader.com/traders/upsize-property-renovation-ltd-roofers-roofing-peterborough-central). Before a trader is listed, TrustATrader checks their identity, company address, customer references and insurance. Our profile currently shows **41 reviews with an average of 4.98 out of 5**.
+Upsize is a verified member of [TrustATrader](https://www.trustatrader.com/traders/upsize-property-renovation-ltd-roofers-roofing-peterborough-central). Before a trader is listed, TrustATrader checks their identity, company address, customer references and insurance. Our profile currently shows **44 reviews with an average of 4.98 out of 5**.
 
 Together with Google and Facebook, homeowners have left us more than 50 five-star reviews. You can read them before you book.
 
