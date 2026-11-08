@@ -1,0 +1,21 @@
+# Security headers on every page
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Fingerprinted CSS/JS: file name changes on every edit, so cache for a year
+/site.*.css
+  Cache-Control: public, max-age=31536000, immutable
+/site.*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts never change
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images: 30 days (names can be reused when a photo is replaced)
+/images/*
+  Cache-Control: public, max-age=2592000
