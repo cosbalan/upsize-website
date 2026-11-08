@@ -36,3 +36,8 @@
 /news/peterborough-directors-weekend-roof-clinicStay    /news/peterborough-directors-weekend-roof-clinic   301
 /news/peterborough-directors-weekend-roof-clinic.       /news/peterborough-directors-weekend-roof-clinic   301
 /residential                                /roofing-services-peterborough    301
+
+# Peterborough area page merged into the homepage (homepage owns "roofer Peterborough")
+/areas/peterborough        /    301
+/areas/peterborough.html   /    301
+/area-peterborough         /    301
